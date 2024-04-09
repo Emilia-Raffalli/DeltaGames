@@ -1,0 +1,50 @@
+.bg00 {
+    background: url(../images/bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bg01 {
+    background: url(../images/01.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.text-primary{
+    color: #003A70 !important;
+}
+
+.selected {
+    border: 5px solid darkblue;
+}
+
+.bg-dark-red{
+    background-color: #991933;
+}
+
+.bg-dark-red:hover{
+    background-color: #721326;
+}
+
+.fly_button{
+    margin-top: 53.5%;
+    margin-left: 20px;
+    bottom: 0;
+    letter-spacing: 4px;
+    text-shadow: 1px 2px 4px yellow;
+}
+.text-box{
+    height: 400px;
+    background-color: #fff;
+}
+@media (max-width: 600px) {
+
+    .w-75,
+    .w-50 {
+        width: 100% !important;
+    }
+}
