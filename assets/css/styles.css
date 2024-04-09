@@ -31,14 +31,26 @@
 }
 
 .fly_button{
-    margin-top: 53.5%;
+    top: 53.5%;
     margin-left: 20px;
     bottom: 0;
     letter-spacing: 4px;
     text-shadow: 1px 2px 4px yellow;
 }
+
+.force_top{
+    margin-top: 53.5% !important;
+
+}
+input::placeholder{
+    font-weight: 900;
+}
 .text-box{
-    height: 400px;
+    height:400px;
+    background-color: #fff;
+}
+.text-box-won{
+    height:fit-content;
     background-color: #fff;
 }
 @media (max-width: 600px) {
