@@ -91,15 +91,17 @@ input::placeholder{
     }
 }
 
-/* input.form-delta {
-background-color:rgb(241, 247, 249) ;
-} */
-
 .form-delta::placeholder {
-    color: #83898d; 
+    color: #003A70; 
     font-weight:400;
+
 }
 
+input.form-delta {
+    color: #003A70 !important;
+    background-color: #f9f9f9 !important;
+    font-weight: bold !important;
+}
 
 
 /* @font-face {
