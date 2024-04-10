@@ -1,7 +1,20 @@
 * {
     font-family: 'Calibri', sans-serif;
     font-style: bold;
+    margin:0;
 }
+
+
+
+body {
+    height:100vh;
+}
+
+
+/* footer {
+    position:fixed;
+    bottom:0;
+}  */
 
 .bg00 {
     background: url(../images/bg.png) no-repeat center center fixed;
@@ -76,20 +89,32 @@ input::placeholder{
     font-weight: 900;
 }
 .text-box{
-    height:400px;
+    height:auto;
     background-color: #fff;
 }
 .text-box-won{
     height:fit-content;
     background-color: #fff;
 }
+
 @media (max-width: 600px) {
 
     .w-75,
     .w-50 {
         width: 100% !important;
     }
+
+    h3 {
+        font-size:1.2rem;
+    }
+
+    .btn-delta {
+        width:100%;
+    }
 }
+
+
+
 
 .form-delta::placeholder {
     color: #003A70; 
@@ -103,6 +128,9 @@ input.form-delta {
     font-weight: bold !important;
 }
 
+.btn-delta {
+    font-size:1.5rem;
+}
 
 @font-face {
     font-family: 'Calibri';
