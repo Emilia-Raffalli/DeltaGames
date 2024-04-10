@@ -1,3 +1,8 @@
+* {
+    font-family: 'Calibri', sans-serif;
+    font-style: bold;
+}
+
 .bg00 {
     background: url(../images/bg.png) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -18,25 +23,50 @@
     color: #003A70 !important;
 }
 
-.selected {
+.bg-delta-red {
+    background-color:#c01933;
+}
+
+/* .selected {
     border: 5px solid darkblue;
+} */
+
+.selected {
+    border: 2px solid white!important;
+    background-color: #799fca!important;
+    color: white !important;
 }
 
 .bg-dark-red{
-    background-color: #991933;
+    background-color: #c01933;
 }
 
-.bg-dark-red:hover{
-    background-color: #721326;
+.btn:hover{
+    background-color: #9f1429;
+}
+
+
+.fly_box {
+    position:relative;
 }
 
 .fly_button{
     top: 53.5%;
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    bottom: 0;
+    letter-spacing: 4px;
+    text-shadow: 1px 0px 4px yellow;
+    cursor:default!important;
+}
+
+.fly_button_start{
+    position:absolute;
     bottom: 0;
     letter-spacing: 4px;
     text-shadow: 1px 2px 4px yellow;
+    cursor:default!important;
 }
+
 
 .force_top{
     margin-top: 53.5% !important;
@@ -60,3 +90,97 @@ input::placeholder{
         width: 100% !important;
     }
 }
+
+/* input.form-delta {
+background-color:rgb(241, 247, 249) ;
+} */
+
+.form-delta::placeholder {
+    color: #83898d; 
+    font-weight:400;
+}
+
+
+
+/* @font-face {
+    font-family: 'Calibri';
+    /* src: url('/quiz/assets/fonts/calibri-font-family/calibri-bold-italic.ttf') format('woff2'),   */
+    /* src: 
+    url('/quiz/assets/fonts/calibri-font-family/calibri-bold.ttf') format('woff2'),
+    url('/quiz/assets/fonts/calibri-font-family/calibri-regular.ttf') format('woff2'),  
+    url('/quiz/assets/fonts/calibri-font-family/calibri-italic.ttf') format('woff2'),   */
+/* } */ 
+
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('Calibri-LightItalic.eot');
+    src: local('Calibri Light Italic'), local('Calibri-LightItalic'),
+        url('Calibri-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Calibri-LightItalic.woff2') format('woff2'),
+        url('Calibri-LightItalic.woff') format('woff'),
+        url('Calibri-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('Calibri-Italic.eot');
+    src: local('Calibri Italic'), local('Calibri-Italic'),
+        url('Calibri-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Calibri-Italic.woff2') format('woff2'),
+        url('Calibri-Italic.woff') format('woff'),
+        url('Calibri-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('Calibri-Light.eot');
+    src: local('Calibri Light'), local('Calibri-Light'),
+        url('Calibri-Light.eot?#iefix') format('embedded-opentype'),
+        url('Calibri-Light.woff2') format('woff2'),
+        url('Calibri-Light.woff') format('woff'),
+        url('Calibri-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('Calibri-Bold.eot');
+    src: local('Calibri Bold'), local('Calibri-Bold'),
+        url('Calibri-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Calibri-Bold.woff2') format('woff2'),
+        url('Calibri-Bold.woff') format('woff'),
+        url('Calibri-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('Calibri.eot');
+    src: local('Calibri'),
+        url('Calibri.eot?#iefix') format('embedded-opentype'),
+        url('Calibri.woff2') format('woff2'),
+        url('Calibri.woff') format('woff'),
+        url('Calibri.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('Calibri-BoldItalic.eot');
+    src: local('Calibri Bold Italic'), local('Calibri-BoldItalic'),
+        url('Calibri-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Calibri-BoldItalic.woff2') format('woff2'),
+        url('Calibri-BoldItalic.woff') format('woff'),
+        url('Calibri-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
