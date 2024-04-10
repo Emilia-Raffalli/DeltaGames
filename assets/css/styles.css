@@ -5,16 +5,15 @@
 }
 
 
-
 body {
     height:100vh;
 }
 
-
-/* footer {
-    position:fixed;
+footer {
+    position:static;
     bottom:0;
-}  */
+    padding-bottom: 10px;
+} 
 
 .bg00 {
     background: url(../images/bg.png) no-repeat center center fixed;
@@ -22,6 +21,8 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height:100vh;
+
 }
 
 .bg01 {
@@ -30,6 +31,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height:100vh;
 }
 
 .text-primary{
@@ -111,6 +113,7 @@ input::placeholder{
     .btn-delta {
         width:100%;
     }
+
 }
 
 
