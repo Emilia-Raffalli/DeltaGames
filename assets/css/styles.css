@@ -104,16 +104,6 @@ input.form-delta {
 }
 
 
-/* @font-face {
-    font-family: 'Calibri';
-    /* src: url('/quiz/assets/fonts/calibri-font-family/calibri-bold-italic.ttf') format('woff2'),   */
-    /* src: 
-    url('/quiz/assets/fonts/calibri-font-family/calibri-bold.ttf') format('woff2'),
-    url('/quiz/assets/fonts/calibri-font-family/calibri-regular.ttf') format('woff2'),  
-    url('/quiz/assets/fonts/calibri-font-family/calibri-italic.ttf') format('woff2'),   */
-/* } */ 
-
-
 @font-face {
     font-family: 'Calibri';
     src: url('Calibri-LightItalic.eot');
