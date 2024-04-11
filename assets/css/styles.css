@@ -34,6 +34,12 @@ html {
     overflow: hidden;
 }*/
 
+@media screen and (max-width: 480px) {
+    body {
+       max-height: 100vh;
+       overflow-y: hidden;
+    }
+}
 
 .bg01 {
     background: url(../images/01.png) no-repeat center;
