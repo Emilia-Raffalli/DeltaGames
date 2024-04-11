@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/styles.css?v=2">
 </head>
 <body class="bg01 bg-blue-delta">
-    <div class="container text-center d-flex flex-column">
+    <div class="container text-center d-flex flex-column transition">
 
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-lg-6 ">
@@ -77,12 +77,6 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-        $(".answers").on('click',function(){
-            $('.answers').removeClass('selected');
-            $(this).addClass('selected');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
