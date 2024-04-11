@@ -111,10 +111,12 @@ input::placeholder{
 
     .bg01 {
         background-size: cover;
+        background-color:#003A70;
     }
 
     .bg00 {
         background-size: cover;
+        background-color:#003A70;
     }
 
 }
