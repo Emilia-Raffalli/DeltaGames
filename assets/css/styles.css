@@ -8,6 +8,13 @@
     height: 100vh;
 }
 
+.gif-box {
+    background: url('../images/animated\ stickers\ draft.gif') no-repeat center;
+    background-size: contain;
+    min-height:400px;
+    background-color: #fff;
+    border-radius: 2rem;
+}
 
 .first {
     background-color:none;
@@ -109,8 +116,8 @@ input::placeholder{
         width:100%;
     }
 
-    .text-box {
-        min-height:200px;
+    .text-box, .gif-box {
+        min-height:220px;
     }
 
     .container {
