@@ -11,7 +11,29 @@
     <link rel="stylesheet" href="assets/css/styles.css?v=2">
 </head>
 
+
+
 <body class="bg01 bg-blue-delta">
+    <!-- <select class="selectpicker" data-width="fit">
+        <option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
+        <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>Español</option>
+    </select> -->
+    <!-- <select class="form-select" aria-label="Default select example">
+        <option selected>Select your langage</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select> -->
+    <div class="row">
+        <div class="row">
+        <div class="offset-md-10 col-md-2">
+            <select class="selectpicker" data-width="fit">
+                <option data-content="<span class=&quot;flag-icon flag-icon-us&quot;></span> English">English</option>
+              <option data-content="<span class=&quot;flag-icon flag-icon-mx&quot;></span> Español">Español</option>
+            </select>
+        </div>
+    </div>
+
     <div class="container text-center d-flex flex-column">
 
         <div class="row d-flex justify-content-center">
@@ -73,7 +95,14 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js" integrity="sha512-yDlE7vpGDP7o2eftkCiPZ+yuUyEcaBwoJoIhdXv71KZWugFqEphIS3PU60lEkFaz8RxaVsMpSvQxMBaKVwA5xg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
+
+    <script>
+    $(function(){
+        $('.selectpicker').selectpicker();
+    });
+</script>
 
     <!-- <script>
         AOS.init();
