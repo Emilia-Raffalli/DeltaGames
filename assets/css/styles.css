@@ -24,6 +24,10 @@
     align-items:center;
 }
 
+.height-less {
+    height:140px;
+}
+
 /* @media screen and (max-width: 480px) {
     .bgnoscroll {
        max-height: 100vh;
