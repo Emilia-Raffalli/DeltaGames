@@ -34,7 +34,7 @@
 .bg01 {
     background: url(../images/01.png) no-repeat center;
     background-size: 110%; 
-    background-position-y: 15%; 
+    background-position-y:30%; 
     min-height: 100vh;
 }
 
@@ -101,7 +101,7 @@ input::placeholder{
     background-color: #fff;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     .w-75,
     .w-50 {
@@ -143,6 +143,18 @@ input::placeholder{
         min-height: 100vh;
     }
 
+    .img-statue {
+        display:none;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .bg01 {
+        background: url(../images/01.png) no-repeat center;
+        background-size: cover; 
+        min-height: 100vh;
+    }
 }
 
 /* @media screen and (min-width: 601px) {
@@ -168,7 +180,7 @@ input.form-delta {
     color: #003A70 !important;
     background-color: #f9f9f9 !important;
     font-weight: bold !important;
-    height: 48px;
+    height:48px;
 }
 
 .btn-delta {
@@ -263,3 +275,13 @@ footer {
     transform: translateY(-500px); 
     transition: opacity 0.5s ease-in, transform 0.6s ease-out; 
 } */
+
+.footer {
+    position:relative;
+}
+
+.img-statue {
+    position:absolute;
+    bottom:0;
+    left:110px;
+}
