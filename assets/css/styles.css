@@ -1,3 +1,4 @@
+
 * {
     font-family: 'Calibri', sans-serif;
     font-style: bold;
@@ -290,4 +291,64 @@ footer {
     position:absolute;
     bottom:0;
     left:180px;
+}
+
+/* .selectpicker {
+    font-size:14px!important;
+    width:150px;
+} */
+
+.langage {
+    color:black;
+    width:200px;
+}
+
+
+.select_wrap {
+    /* position:absolute; */
+    right:15px;
+    bottom:15px;
+    display:inline-block;
+    width:150px;
+    /* height:35px; */
+    background:url('http://www.foxrep.com/wp-content/uploads/2017/11/Down-Arrow-PNG.png') no-repeat right 10px center #ffffff;
+    background-size:20px auto;
+    border:1px solid #000000;
+}
+
+.select_wrap span {
+    display:block;
+    line-height:35px;
+    padding:0 10px;
+    cursor:pointer;
+}
+
+.select_wrap ul {
+    display:none;
+    position:absolute;
+    top:36px;
+    width:150px;
+    list-style-type:none;
+    background:#ffffff;
+    margin:0;
+    padding:10px 0;
+    /* border:1px solid #000000; */
+    /* border-top:0; */
+}
+
+.select_wrap ul li {
+padding:5px 10px;
+cursor:pointer;
+}
+
+.select_wrap span img,
+.select_wrap ul li img {
+display:inline-block;
+vertical-align:middle;
+width:20px;
+margin-right:5px;
+}
+
+.select_wrap ul li:hover {
+    background-color:#acd4f7;
 }
