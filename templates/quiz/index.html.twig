@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ pageTitle }} {% endblock %}
+
+{% block body %}
+
+<body class="bg01 bg-blue-delta d-flex flex-column">
+
+    <div class="container text-center d-flex flex-column">
+            <div class="row">
+                <div class="col-12">
+                    <div class="js mt-3 text-end">
+                        <div class="language-picker js-language-picker" data-trigger-class="btn btn--subtle">
+                            <form action="" class="language-picker__form pull-right">
+                                <label for="language-picker-select  bg-white">Select your language</label>
+                                <select name="language-picker-select" id="language-picker-select">
+                                    <option lang="fr" value="francais">FR</option>
+                                    <option lang="en" value="english" selected>EN</option>
+                                    <option lang="nl" value="netherland">NL</option>
+                                    <option lang="de" value="deutsch">DE</option>
+                                    <option lang="it" value="italiano">IT</option>
+                                    <option lang="es" value="spain">ES</option>
+
+                                </select>
+                            </form>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col col-lg-6 col-md-9 col-12 ">
+                    <div class="first">
+                    <p>{{ 'hello2'|trans }}</p>
+                        <h3 class="text-primary text-start fw-bold" data-aos="zoom-in-down">Êtes-vous incollable sur les compagnies aériennes ? Un génie Delta ?<br> Testez vos connaissances et tentez de gagner des stickers Delta amusants.</h3>
+                    </div>
+                    <form class="row g-3 mb-1 mx-5">
+                        <div class="gif-box">
+                        </div>
+
+                        <div class="col-12 mt-4 mt-lg-5 mb-5">
+                            <a href="{{ path('app_quiz') }}"
+                                class="btn-delta text-white btn border-2 bg-delta-red fw-bold border-white rounded-5 px-5 fs-4">
+                                C'est parti !</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+        {% include "_partials/_footer.html.twig" %}
+
+</body>
+
+{% endblock %}

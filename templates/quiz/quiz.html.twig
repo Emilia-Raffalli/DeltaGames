@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ pageTitle }} {% endblock %}
+
+{% block body %}
+
+<body class="bg01 bg-blue-delta d-flex flex-column">
+
+    <div class="container text-center d-flex flex-column transition">
+
+        {% if question %}
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 col-lg-6 ">
+                    <div class="first d-flex flex-column justify-content-center height-less">
+                        <h3 class="fs-3 text-center text-white fw-bold" data-aos="zoom-in-down"> QUESTION {{ question.id }}</h3>
+                        <p class="text-light m-0">{{ question.hint }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col" data-controller="quiz">
+                    {{ form_start(form, {'attr': {'class': 'row g-3 w-50 mx-auto mb-1 d-flex flex-column justify-content-center'}})}}
+
+                        <div class="col-md-12">
+                            <div class="text-box-won rounded-5">
+                                <p class="fs-3 py-3 px-4 p-lg-4 fw-bold text-start text-primary text-start">
+                                    What's your favorite new route in the Delta Summer 2024 network &nbsp;? 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-4">
+
+                            {% for answer in form.answer %}
+                                <div class="col-12 col-md-9 col-lg-9 mb-3">
+                                    <div class="custom-answer fw-bold form-control btn-answer rounded-5 mx-auto choice bg-light fs-4 text-primary text-start px-4 pointer">
+                                        {{ form_widget(answer) }}
+                                        {{ form_label(answer, null, {'label_attr': {'class': 'w-100 pointer'}}) }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                            <div class="col-12 mt-4 mt-lg-5 mb-5">
+                                {{ form_row(form.submit) }}
+                            </div>
+                        </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    {% include "_partials/_footer.html.twig" %}
+</body>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ pageTitle }} {% endblock %}
+
+{% block body %}
+
+<body class="bg01 bg-blue-delta d-flex flex-column">
+
+    <div class="container text-center d-flex flex-column">
+        <div class="row d-flex justify-content-center">
+
+                <div class="col col-lg-6 col-12 ">
+                    <div class="first">
+                        
+                    </div>
+                    <div class="col-md-12 ">
+                        <div class="text-box fly_box d-flex flex-column justify-content-center align-items-center">
+                            <p class="fs-3 p-5 fw-bold text-start text-primary text-center">Merci !<br>
+                                Un email de confirmation vous a été envoyé. Vous reverez vos Fun Stickers d’ici quelques semaines.<br> 
+                                Veuillez prévoir 4 à 8 semaines.
+                            </p>
+                            <!-- <div class="d-flex justify-content-center text-center mt-3">
+                                <div class="fs-4 text-white bg-dark-red rounded-0 fly_button px-3">FLY DELTA JETS</div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-12 mt-4 mt-lg-5 mb-5">
+                        <a href="" class="btn-delta text-white btn border-2 bg-delta-red fw-bold border-white rounded-5 px-5 fs-4">CLOSE</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+        {% include "_partials/_footer.html.twig" %}
+</body>
+
+{% endblock %}

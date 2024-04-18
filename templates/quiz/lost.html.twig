@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ pageTitle }} {% endblock %}
+
+{% block body %}
+
+    <body class="bg01 bgnoscroll bg-blue-delta d-flex flex-column">
+        <div class="container text-center d-flex flex-column align-items-center">
+            <div class="row d-flex justify-content-center">
+                <div class="col col-lg-6 col-12 ">
+                    <div class="first"></div>
+                    <div class="col-md-12 ">
+                        <div class="text-box fly_box d-flex flex-column justify-content-center align-items-center">
+                            <p class="fs-3 p-5 fw-bold text-start text-primary">
+                                Dommage !<br>
+                                Si proche du but... Désolé, vous n'avez pas gagné, mais nous espérons que vous avez aimé découvrir le réseau Delta et tout ce que nous avons sur l'offre d'été. <br>Merci pour votre participation et votre soutien à Delta.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-4 mt-lg-5 mb-5">
+                        <a href="{{ path('app_answers') }}" class="btn-delta text-white btn border-2 bg-delta-red fw-bold border-white rounded-5 px-5 fs-4">CHECK THE CORRECT ANSWERS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            {% include "_partials/_footer.html.twig" %}
+    </body>
+
+{% endblock %}

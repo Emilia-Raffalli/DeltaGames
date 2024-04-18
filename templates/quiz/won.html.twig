@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ pageTitle }} {% endblock %}
+
+{% block body %}
+
+<body class="bg01 bg-blue-delta d-flex flex-column">
+
+    <div class="container text-center d-flex flex-column">
+        <div class="row d-flex justify-content-center">
+            <div class="col col-lg-6 col-12 ">
+                <div class="first">
+                    <h3 class="text-primary text-start fw-bold" data-aos="zoom-in-down">Félicitations ! Vous êtes un vrai génie Delta. Pour utiliser vos tickets delta, veuillez nous fournir vos coordonnées.
+                    </h3>
+                </div>
+
+                {{ form_start(form, {'attr': {'class': 'row g-3 mx-auto mb-1'}}) }}
+                    <div class="col-md-12">
+                        <div class="text-box d-flex flex-column justify-content-center align-items-center">
+                            <div class="row g-3 p-3 p-lg-4 text-start gy-4 align-items-center">
+                                <div class="col-md-6">
+                                    {{ form_row(form.firstName) }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form_row(form.lastName) }}
+                                </div>
+                                <div class="col-md-12">
+                                    {{ form_row(form.email) }}
+                                </div>
+                                <div class="col-12">
+                                    {{ form_row(form.adress) }}
+                                </div>
+                                <div class="col-12">
+                                    {{ form_row(form.adress2) }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form_row(form.zipCode) }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form_row(form.city) }}
+                                </div>
+                                <div class="col-md-12">
+                                    {{ form_row(form.country) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-4 mt-lg-5 mb-5">
+                        {{ form_row(form.submit) }}
+                    </div>
+                {{ form_end(form)}}
+            </div>
+        </div>
+    </div>
+        {% include "_partials/_footer.html.twig" %}
+</body>
+
+{% endblock %}
