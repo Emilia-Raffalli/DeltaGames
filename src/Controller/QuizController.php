@@ -24,7 +24,6 @@ class QuizController extends AbstractController
 {
 
     #[Route('/', name: 'app_start')]
-    #[Route('/quiz', name: 'app_quiz')]
     public function homeQuiz(SessionInterface $session,
     ): Response
     {
@@ -48,8 +47,13 @@ class QuizController extends AbstractController
         QuestionRepository $questionRepository, 
         ParticipationRepository $participationRepository, 
         EntityManagerInterface $em,
-        int $id =1
+        int $id = null
     ): Response {
+
+        if ($id == null) {
+            $this->redirectToRoute('app_start');
+        }
+        else $id = 1;
 
         $questionId = $id; 
 
