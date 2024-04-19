@@ -51,9 +51,8 @@ class QuizController extends AbstractController
     ): Response {
 
         if ($id == null) {
-            $this->redirectToRoute('app_start');
+            return $this->redirectToRoute('app_start');
         }
-        else $id = 1;
 
         $questionId = $id; 
 
