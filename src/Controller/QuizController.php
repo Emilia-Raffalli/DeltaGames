@@ -175,17 +175,17 @@ class QuizController extends AbstractController
         $em->persist($user);
         $em->flush();
 
-        $email = (new TemplatedEmail())
-        ->from('e.raffalli@hotmail.fr')
-        ->to(new Address($user->getEmail()))
-        ->subject('Merci pour votre participation!')
-        ->htmlTemplate('email/signup.html.twig')
-        ->locale('fr')
-        ->context([
-            'username' => $user->getFirstName().' '.$user->getLastName(),
-        ]);
+        // $email = (new TemplatedEmail())
+        // ->from('e.raffalli@hotmail.fr')
+        // ->to(new Address($user->getEmail()))
+        // ->subject('Merci pour votre participation!')
+        // ->htmlTemplate('email/signup.html.twig')
+        // ->locale('fr')
+        // ->context([
+        //     'username' => $user->getFirstName().' '.$user->getLastName(),
+        // ]);
 
-        $mailer->send($email);
+        // $mailer->send($email);
 
         return $this->redirectToRoute('app_success');
 
