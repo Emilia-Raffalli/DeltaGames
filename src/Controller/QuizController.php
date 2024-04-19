@@ -24,6 +24,7 @@ class QuizController extends AbstractController
 {
 
     #[Route('/', name: 'app_start')]
+    #[Route('/quiz', name: 'app_quiz')]
     public function homeQuiz(SessionInterface $session,
     ): Response
     {
@@ -38,6 +39,7 @@ class QuizController extends AbstractController
             'pageTitle' => 'Start Now',
         ]);
     }
+
 
     #[Route('/quiz/{id}', name: 'app_quiz')]
     public function quiz(
