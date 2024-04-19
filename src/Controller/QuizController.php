@@ -16,7 +16,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\Mime\Address;
@@ -84,6 +83,7 @@ class QuizController extends AbstractController
         $form = $this->createForm(QuizAnswerType::class, null, [
             'answers' => $answers, 
         ]);
+        // dd($answers);
 
         $form->handleRequest($request);
 
@@ -134,6 +134,7 @@ class QuizController extends AbstractController
         }
     }
 
+    // dd($question);
         return $this->render('quiz/quiz.html.twig', [
             'pageTitle' => 'Delta Air',
             'question' => $question,
@@ -143,7 +144,6 @@ class QuizController extends AbstractController
     }
 
 
-    
     #[Route('/won', name: 'app_won')]
     public function wonQuiz(
         SessionInterface $session, 
@@ -161,76 +161,29 @@ class QuizController extends AbstractController
     $errorMessage = null; 
 
     $user = new User();
-    $form = $this->createForm(UserType::class,$user);
+    $form = $this->createForm(UserType::class, $user);
 
     $form->handleRequest($request);
 
     if ($form->isSubmitted() && $form->isValid()) {
 
-        
         $em->persist($user);
         $em->flush();
-
 
         $email = (new TemplatedEmail())
         ->from('e.raffalli@hotmail.fr')
         ->to(new Address($user->getEmail()))
-        //->cc('cc@example.com')
-        //->bcc('bcc@example.com')
-        //->replyTo('fabien@example.com')
-        //->priority(Email::PRIORITY_HIGH)
         ->subject('Merci pour votre participation!')
-        // ->text('Sending emails is fun again!')
-        // ->html('<p>See Twig integration for better HTML integration!</p>')
         ->htmlTemplate('email/signup.html.twig')
-          // change locale used in the template, e.g. to match user's locale
-        ->locale('de')
-
-        // pass variables (name => value) to the template
+        ->locale('fr')
         ->context([
-            'expiration_date' => new \DateTime('+7 days'),
             'username' => $user->getFirstName().' '.$user->getLastName(),
         ]);
 
-
-    $mailer->send($email);
-
-
-
-
+        $mailer->send($email);
 
         return $this->redirectToRoute('app_success');
 
-
-       /* $em->flush();
-        
-        $userData = $form->getData();
-
-        $submittedEmail = $userData->getEmail();
-
-        // Vérification si l'email n'est pas déjà existant
-        $existingUser = $userRepository->findOneBy(['email' => $submittedEmail]);
-
-        if ($existingUser) {
-            $errorMessage = "Email déjà enregistré.";
-        } else {
-            $user = new User();
-            $user->setFirstName($userData->getFirstName());
-            $user->setLastName($userData->getLastName());
-            $user->setEmail($submittedEmail); 
-            $user->setAdress($userData->getAdress());
-            $user->setAdress2($userData->getAdress2());
-            $user->setZipCode($userData->getZipCode());
-            $user->setCity($userData->getCity());
-            $user->setCountry($userData->getCountry());
-    
-            $em->persist($user);
-            $em->flush();
-
-            return $this->redirectToRoute('app_success');
-
-            // dd($user);
-        }*/
     }
 
         return $this->render('quiz/won.html.twig', [
@@ -253,7 +206,7 @@ class QuizController extends AbstractController
     #[Route('/answers', name: 'app_answers')]
     public function showAnswers(QuestionRepository $questionRepository): Response
     {
-        $title = 'QUIZ ANSWERS';
+        $title = 'RÉPONSES DU QUIZ';
         $questions = $questionRepository->findAll();
 
         return $this->render('quiz/answers.html.twig', [
@@ -271,64 +224,5 @@ class QuizController extends AbstractController
         ]);
     }
 
-
-
 }
 
-
-
-// public function quizPage(Request $request)
-//     {
-//         $entityManager = $this->getDoctrine()->getManager();
-//         $questionRepository = $entityManager->getRepository(Question::class);
-//         $answerRepository = $entityManager->getRepository(Answer::class);
-//         $participationRepository = $entityManager->getRepository(Participation::class);
-
-//         // Récupérer l'ID de la première question
-//         $firstQuestionId = 1; // Vous pouvez définir l'ID de la première question ici
-
-//         // Récupérer la participation de l'utilisateur
-//         $userSession = $request->getSession()->getId();
-//         $participation = $participationRepository->findOneBy(['userSession' => $userSession]);
-
-//         // Créer une participation si elle n'existe pas
-//         if (!$participation) {
-//             $participation = new Participation();
-//             $participation->setUserSession($userSession);
-//             $entityManager->persist($participation);
-//             $entityManager->flush();
-//         }
-
-//         // Récupérer la première question et ses réponses associées
-//         $firstQuestion = $questionRepository->find($firstQuestionId);
-//         $answers = $answerRepository->findBy(['question' => $firstQuestion]);
-
-//         // Gérer la soumission du formulaire
-//         $submitted = false;
-//         $selectedAnswer = null;
-
-//         if ($request->isMethod('POST')) {
-//             $submitted = true;
-//             $selectedAnswerId = $request->request->get('selected_answer_id');
-
-//             if ($selectedAnswerId) {
-//                 $selectedAnswer = $answerRepository->find($selectedAnswerId);
-//                 // Ajouter les données à la session de participation
-//                 $participation->addQuestion($firstQuestion);
-//                 $participation->addSelectedAnswer($selectedAnswer);
-//                 $entityManager->flush();
-
-//                 // Passer à la question suivante
-//                 $nextQuestionId = $firstQuestionId + 1;
-//                 // Rediriger vers la page du quiz avec la prochaine question
-//                 return $this->redirectToRoute('quiz_page', ['question_id' => $nextQuestionId]);
-//             }
-//         }
-
-//         return $this->render('quiz/quiz_page.html.twig', [
-//             'question' => $firstQuestion,
-//             'answers' => $answers,
-//             'submitted' => $submitted,
-//             'selected_answer' => $selectedAnswer
-//         ]);
-//     }

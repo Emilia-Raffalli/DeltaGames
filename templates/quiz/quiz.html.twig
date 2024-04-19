@@ -3,6 +3,13 @@
 {% block title %} {{ pageTitle }} {% endblock %}
 
 {% block body %}
+{% set questionTmp = 'questions.question_'~ question.id ~ '.questionText' %}
+{% set hint = 'questions.question_'~ question.id ~ '.hint' %}
+{% set answerTmp = 'questions.question_'~ question.id ~ '.answers.answer_' %}
+
+{# <p>{{ 'questions.question_1.answers.answer_1'|trans }} #}
+
+
 
 <body class="bg01 bg-blue-delta d-flex flex-column">
 
@@ -13,8 +20,10 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-12 col-lg-6 ">
                     <div class="first d-flex flex-column justify-content-center height-less">
-                        <h3 class="fs-3 text-center text-white fw-bold" data-aos="zoom-in-down"> QUESTION {{ question.id }}</h3>
-                        <p class="text-light m-0">{{ question.hint }}</p>
+                        <h3 class="fs-3 text-center text-white fw-bold" data-aos="zoom-in-down"> QUESTION {{ question.id }} </h3>
+                        <p class="text-light m-0">{{ hint|trans }}</p>
+                        {# <p>{{ 'questions.question_1.answers.answer_1'|trans }} #}
+</p>
                     </div>
                 </div>
             </div>
@@ -26,12 +35,13 @@
                         <div class="col-md-12">
                             <div class="text-box-won rounded-5">
                                 <p class="fs-3 py-3 px-4 p-lg-4 fw-bold text-start text-primary text-start">
-                                    What's your favorite new route in the Delta Summer 2024 network &nbsp;? 
+                                    {{ questionTmp | trans|raw }}
                                 </p>
                             </div>
                         </div>
 
                         <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-4">
+
 
                             {% for answer in form.answer %}
                                 <div class="col-12 col-md-9 col-lg-9 mb-3">

@@ -50,6 +50,7 @@ class UserType extends AbstractType
             ])     
             ->add('adress2', TypeTextType::class, [
                 'label'=> false,
+                'required' => false,
                 'attr' => [
                     'placeholder' => "Complément d'adresse",
                     'class' => 'form-control border-0 form-delta'

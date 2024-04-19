@@ -1,2 +1,63 @@
 # translations/messages.fr.yaml
-hello: Bonjour
+# hello: Bonjour
+h3Home: Êtes-vous un passionné d'aviation ? Un expert de Delta ?<br> Dans ce cas, voici votre chance de tester vos connaissances et de gagner quelques stickers amusants Delta. Inscrivez-vous aux bulletins d'information des ventes Delta et commencez le test.
+
+question: "QUESTION"
+action-buttons:
+  close: "Fermer"
+  next: "Suivant"
+  play: "Je me lance !"
+
+questions:
+  question_1: 
+    questionText: "Quelle est votre nouvelle liaison préférée dans le programme Delta Summer 2024 ?"
+    hint: "Échauffement"
+    answers:
+      answer_1: "A. Munich à New York-JFK"
+      answer_2: "B. Naples à New York-JFK"
+      answer_3: "C. Shannon à New York-JFK"
+      answer_4: "D. Dublin à Minneapolis-St. Paul"
+      answer_5: "E. Toutes les réponses ci-dessus"
+    correctAnswerDescription: "Il n'y a pas de mauvaises réponses. Vous pouvez aimer tous nos vols."
+  
+  question_2: 
+    questionText: "Au départ de combien de pays d'Europe, du Moyen-Orient, d'Afrique et d'Inde (EMEAI) Delta propose-t-elle un service sans escale vers les États-Unis ?"
+    hint: "Quel que soit votre pays d'origine, Delta est le choix idéal pour vous rendre aux États-Unis."
+    answers:
+      answer_1: "A. 20"
+      answer_2: "B. 25"
+      answer_3: "C. 22"
+      answer_4: "D. 30"
+    correctAnswerDescription: "20 pays de la région EMEAI, sont desservis par Delta en vols directs des USA."
+
+  question_3: 
+    questionText: "Quelle est la destination principale de Delta vers les États-Unis ?"
+    hint: "Cette ville n'a jamais été aussi proche avec des vols sans escale depuis 29 villes de la zone EMEAI. "
+    answers:
+      answer_1: "A. Los Angeles "
+      answer_2: "B. New York-JFK"
+      answer_3: "C. Atlanta "
+      answer_4: "D. Boston "
+    correctAnswerDescription: "New York n'a jamais été aussi proche! C'est la destination transatlantique numéro 1 de Delta."
+
+  question_4: 
+    questionText: "Quel est le nombre de vols hebdomadaires sans escale assurés par Delta au départ de la zone EMEAI cet été ?"
+    hint: "Chacun trouvera forcément un siège à sa convenance avec le plus grand programme transatlantique jamais proposé par Delta. "
+    answers:
+      answer_1: "A. Plus de 700"
+      answer_2: "B. Moins de 600"
+      answer_3: "C. Jusqu'à 680"
+      answer_4: "D. Aucune de ces réponses"
+    correctAnswerDescription: "Delta va opérer jusqu'à 680 vols par semaine cet été au départ de la région EMEAI."
+
+  question_5: 
+    questionText: "Pour combien de destinations aux États-Unis Delta propose-t-elle des correspondances faciles ?"
+    hint: "Plus à découvrir dans tous les États-Unis."
+    answers:
+      answer_1: "A. Moins de 150"
+      answer_2: "B. Plus de 200"
+      answer_3: "C. Jusqu'à 100"
+      answer_4: "D. Aucune de ces réponses"
+    correctAnswerDescription: "Delta offre des correspondances faciles vers plus de 200 destinations à travers les États-Unis."
+
+

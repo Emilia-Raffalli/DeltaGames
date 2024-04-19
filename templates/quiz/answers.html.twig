@@ -21,13 +21,17 @@
                         <div class="col-md-12">
                             <div class="text-box-won rounded-5 p-4">
                                 {% for question in questions %}
+                                {% set correctAnswerDescription = 'questions.question_'~ question.id ~ '.correctAnswerDescription' %}
+
                                     <div class="row p-3 {% if loop.last %}{% else %}border-bottom{% endif %} align-items-center">
                                         <div class="col-12 col-lg-4">
                                             <h3 class="fw-bold fs-5 text-primary">Question {{ question.id}}</h3>
                                         </div>
                                         <div class="col-12 col-lg-8">
                                             <p class="m-0 text-center text-lg-start">
-                                                {{ question.correctAnswerDescription }}
+                                                {# {{ question.correctAnswerDescription }} #}
+                                                {{ correctAnswerDescription|trans|raw }}
+
                                             </p>
                                         </div>
                                     </div>
@@ -37,7 +41,7 @@
 
                         <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-4 mb-5">
                             <div class="col-12 mt-4 mt-lg-5">
-                                <a href="" class="bg-delta-red text-white btn border-2 fw-bold border-white rounded-5 w-50 fs-4">CLOSE</a>
+                                <a href="" class="bg-delta-red text-white btn border-2 fw-bold border-white rounded-5 w-50 fs-4">Fermer</a>
                             </div>
                         </div>
                     </div>

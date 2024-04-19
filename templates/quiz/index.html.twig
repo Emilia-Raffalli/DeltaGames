@@ -9,7 +9,7 @@
     <div class="container text-center d-flex flex-column">
             <div class="row">
                 <div class="col-12">
-                    <div class="js mt-3 text-end">
+                    <div class="js text-end">
                         <div class="language-picker js-language-picker" data-trigger-class="btn btn--subtle">
                             <form action="" class="language-picker__form pull-right">
                                 <label for="language-picker-select  bg-white">Select your language</label>
@@ -20,7 +20,6 @@
                                     <option lang="de" value="deutsch">DE</option>
                                     <option lang="it" value="italiano">IT</option>
                                     <option lang="es" value="spain">ES</option>
-
                                 </select>
                             </form>
                         </div>
@@ -28,13 +27,13 @@
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
-                <div class="col col-lg-6 col-md-9 col-12 ">
+                <div class="col col-12 col-md-9 col-lg-8   ">
                     <div class="first">
-                    <p>{{ 'hello2'|trans }}</p>
-                        <h3 class="text-primary text-start fw-bold" data-aos="zoom-in-down">Êtes-vous incollable sur les compagnies aériennes ? Un génie Delta ?<br> Testez vos connaissances et tentez de gagner des stickers Delta amusants.</h3>
+                    {# <p>{{ 'hello'|trans }}</p> #}
+                        <h3 class="text-primary text-start fw-bold fs-4" data-aos="zoom-in-down">{{ 'h3Home'|trans|raw }}</h3>
                     </div>
-                    <form class="row g-3 mb-1 mx-5">
-                        <div class="gif-box">
+                    <div class="row g-3 mb-1 mx-5 d-flex justify-content-center">
+                        <div class="gif-box col-12 col-lg-9">
                         </div>
 
                         <div class="col-12 mt-4 mt-lg-5 mb-5">

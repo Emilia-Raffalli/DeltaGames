@@ -1,3 +1,26 @@
 # translations/messages.fr.yaml
-hello: Hello1
-hello2: coucou
+# hello: Hello1
+
+h3Home: "Are you an airline geek? A Delta genius? If so, now is your chance to test your knowledge and win some fun Delta stickers. Sign up for Delta Sales communications and start the quiz."
+
+questions:
+  question_1: 
+    questionText: "What‘s your favorite new route in the Delta Summer 2024 network ?"
+    hint: "Warm up question​ ​"
+    answers:
+      answer_1: "A. Munich to New York-JFK​ "
+      answer_2: "B. Naples to New York-JFK​ "
+      answer_3: "C. Shannon to New York-JFK​"
+      answer_4: "D. Dublin to Minneapolis-St. Paul"
+      answer_5: "E. All of the above​ "
+
+
+  question_2: 
+    questionText: "From how many countries in Europe, Middle East, Africa and India (EMEAI) does Delta offer nonstop service to the U.S.?"
+    hint: "No matter what country you're coming from, Delta is your perfect choice to the U.S. ​"
+    answers:
+      answer_1: "A. 20"
+      answer_2: "B. 25"
+      answer_3: "C. 22"
+      answer_4: "D. 30"
+

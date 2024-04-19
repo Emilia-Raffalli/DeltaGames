@@ -7,4 +7,4 @@ controllers:
     # requirements:
     #   _locale: '%app_locales%'
     defaults:
-      _locales: 'en'
+      _locales: 'fr'
