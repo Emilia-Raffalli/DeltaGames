@@ -211,12 +211,10 @@ class QuizController extends AbstractController
     #[Route('/answers', name: 'app_answers')]
     public function showAnswers(QuestionRepository $questionRepository): Response
     {
-        $title = 'RÉPONSES DU QUIZ';
         $questions = $questionRepository->findAll();
 
         return $this->render('quiz/answers.html.twig', [
             'pageTitle' => 'Réponses du quiz',
-            'title' => $title,
             'questions' => $questions
         ]);
     }

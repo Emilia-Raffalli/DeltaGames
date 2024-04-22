@@ -20,10 +20,8 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-12 col-lg-6 ">
                     <div class="first d-flex flex-column justify-content-center height-less">
-                        <h3 class="fs-3 text-center text-white fw-bold" data-aos="zoom-in-down"> QUESTION {{ question.id }} </h3>
+                        <h3 class="fs-3 text-center text-white fw-bold" data-aos="zoom-in-down"> {{'question'|trans}} {{ question.id }} </h3>
                         <p class="text-light m-0">{{ hint|trans }}</p>
-                        {# <p>{{ 'questions.question_1.answers.answer_1'|trans }} #}
-</p>
                     </div>
                 </div>
             </div>
@@ -45,6 +43,9 @@
 
                             {% for answer in form.answer %}
                                 <div class="col-12 col-md-9 col-lg-9 mb-3">
+                                
+                                {# <p>{{ 'questions.question_1.answers.answer_1'|trans }}</p> #}
+
                                     <div class="custom-answer fw-bold form-control btn-answer rounded-5 mx-auto choice bg-light fs-4 text-primary text-start px-4 pointer">
                                         {{ form_widget(answer) }}
                                         {{ form_label(answer, null, {'label_attr': {'class': 'w-100 pointer'}}) }}

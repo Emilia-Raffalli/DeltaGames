@@ -3,24 +3,79 @@
 
 h3Home: "Are you an airline geek? A Delta genius? If so, now is your chance to test your knowledge and win some fun Delta stickers. Sign up for Delta Sales communications and start the quiz."
 
+question: "QUESTION"
+summary-answers: "SUMMARY OF CORRECT ANSWERS"
+
+action-buttons:
+  close: "Close"
+  next: "Next"
+  play: "I am ready, let's go!"
+  confirm: "I confirm my details"
+  check-correct-answers: "Check the correct answers!"
+
+
+confirmation-text: "Thank you !<br>Your details have been confirmed.
+You’ll be receiving your fun stickers within 4 to 8 weeks."
+
+non-winner-text: "Bummer! So close. Sorry you didn't win, but we hope you enjoyed learning about Delta's network and all we have to offer this summer. Thank you for your participation and support of Delta."
+
+winner-text: "Congratulations!<br>You're a true Delta genius. To redeem your Delta stickers, please provide us with your details."
+
 questions:
   question_1: 
-    questionText: "What‘s your favorite new route in the Delta Summer 2024 network ?"
-    hint: "Warm up question​ ​"
+    questionText: "What's your favorite new route in the Delta Summer 2024 network ?"
+    hint: "Warm up question"
     answers:
-      answer_1: "A. Munich to New York-JFK​ "
-      answer_2: "B. Naples to New York-JFK​ "
-      answer_3: "C. Shannon to New York-JFK​"
+      answer_1: "A. Munich to New York-JFK"
+      answer_2: "B. Naples to New York-JFK"
+      answer_3: "C. Shannon to New York-JFK"
       answer_4: "D. Dublin to Minneapolis-St. Paul"
-      answer_5: "E. All of the above​ "
+      answer_5: "E. All of the above"
+    correctAnswerDescription: "All answers are correct. Any new route could be your favorite."
+
 
 
   question_2: 
-    questionText: "From how many countries in Europe, Middle East, Africa and India (EMEAI) does Delta offer nonstop service to the U.S.?"
-    hint: "No matter what country you're coming from, Delta is your perfect choice to the U.S. ​"
+    questionText: "From how many countries in Europe, Middle East, Africa and India (EMEAI) does Delta offer nonstop service to the U.S.?"
+    hint: "No matter what country you're coming from, Delta is your perfect choice to the U.S."
     answers:
       answer_1: "A. 20"
       answer_2: "B. 25"
       answer_3: "C. 22"
       answer_4: "D. 30"
+    correctAnswerDescription: "Delta serves 20 countries with nonstop flights to the USA from EMEAI."
+
+
+  question_3: 
+    questionText: "What is Delta's number 1 destination to the U.S. ?"
+    hint: "This city has never been closer with nonstop flights from 29 cities in EMEAI."
+    answers:
+      answer_1: "A. Los Angeles"
+      answer_2: "B. New York-JFK"
+      answer_3: "C. Atlanta"
+      answer_4: "D. Boston"
+    correctAnswerDescription: "New York has never been closer and is Delta’s number 1 destination from EMEAI."
+
+
+  question_4: 
+    questionText: "How many weekly nonstop flights is Delta operating from EMEAI this summer?"
+    hint: "There's a seat for everyone with Delta's largest ever transatlantic schedule."
+    answers:
+      answer_1: "A. More than 700"
+      answer_2: "B. Less than 600"
+      answer_3: "C. Up to 680"
+      answer_4: "D. None of the above"
+    correctAnswerDescription: "Delta will operate up to 680 weekly flights this summer from EMEAI."
+
+
+  question_5: 
+    questionText: "Delta offers easy connections to how many destinations throughout the U.S.?"
+    hint: "More to explore throughout the U.S."
+    answers:
+      answer_1: "A. Less than 150"
+      answer_2: "B. More than 200"
+      answer_3: "C. Up to 100"
+      answer_4: "D. None of the above"
+    correctAnswerDescription: "Delta offers easy connections to more than 200 destinations throughout the USA."
+
 

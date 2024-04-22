@@ -1,0 +1,82 @@
+# translations/messages.fr.yaml
+# hello: Hello1
+
+h3Home: >
+  ¿Eres friki de las aerolíneas? ¿Eres "Delta genius"? Si es así, esta es tu oportunidad para poner a prueba tus conocimientos y ganar unos divertidos stickers de Delta. Inscríbete en las comunicaciones de ventas de Delta y empieza el cuestionario.
+
+question: "PREGUNTA"
+summary-answers: "RESUMEN DE RESPUESTAS CORRECTAS"
+
+action-buttons:
+  close: "Cerrar"
+  next: "Siguientes"
+  play: "¡valos a ello! "
+  confirm: "Confirmo mis datos"
+  check-correct-answers: "¡comprueba las respuestas que has acertado!"
+
+confirmation-text: >
+  ¡Gracias!<br>Tus datos se han confirmado.
+  Recibirás tus divertidos stickers dentro de 4-8 semanas.
+
+non-winner-text: >
+  ¡Qué pena! Por los pelos. Sentimos que no hayas ganado, pero esperamos que hayas disfrutado conociendo la red Delta y todo lo que podemos ofrecerte este verano. Gracias por tu participación y apoyo a Delta.
+
+winner-text: >
+  ¡Enhorabuena! Sí que eres Delta genius. Para canjear tus stickers Delta, indica aquí tus datos.
+
+questions:
+  question_1: 
+    questionText: "¿Cuál es tu nueva ruta favorita de la red Delta Verano 2024?"
+    hint: "Pregunta para calentar "
+    answers:
+      answer_1: "A. Múnich - Nueva York-JFK​"
+      answer_2: "B. Nápoles - Nueva York-JFK"
+      answer_3: "C. Shannon - Nueva York-JFK"
+      answer_4: "D. Dublín - Minneapolis-St.​"
+      answer_5: "E. Todas los anteriores"
+    correctAnswerDescription: "Todas las respuestas son correctas. Cualquier ruta nueva podría ser tu favorita."
+
+
+  question_2: 
+    questionText: "¿Desde cuántos países de Europa, Oriente Medio, África e India (EMEAI) ofrece Delta servicio sin escalas a EE.UU.?"
+    hint: "Sea desde el país que sea, Delta es la opción perfecta para viajar a EE.UU."
+    answers:
+      answer_1: "A. 20"
+      answer_2: "B. 25"
+      answer_3: "C. 22"
+      answer_4: "D. 30"
+    correctAnswerDescription: "Delta presta servicio en 20 países con vuelos sin escalas a EE.UU. desde EMEAI."
+
+
+  question_3: 
+    questionText: "¿Cuál es el destino número 1 de Delta a EE.UU.?"
+    hint: "Nunca has estado tan cerca de esta ciudad gracias a los vuelos sin escalas desde 29 ciudades de EMEAI."
+    answers:
+      answer_1: "A. Los Ángeles"
+      answer_2: "B. Nueva York-JFK "
+      answer_3: "C. Atlanta"
+      answer_4: "D. Boston"
+    correctAnswerDescription: "Nunca has estado tan cerca de Nueva York, destino número 1 de Delta desde EMEAI."
+
+
+  question_4: 
+    questionText: "¿Cuántos vuelos semanales sin escalas operará Delta desde EMEAI este verano?"
+    hint: "Hay sitio para todos gracias al mayor horario transatlántico de la historia de Delta."
+    answers:
+      answer_1: "A. Más de 700"
+      answer_2: "B. Menos de 600 "
+      answer_3: "C. Hasta 680 ​"
+      answer_4: "D. Ninguna de las anteriores"
+    correctAnswerDescription: "Delta operará hasta 680 vuelos semanales este verano desde EMEAI"
+
+
+  question_5: 
+    questionText: "¿A cuántos destinos de EE.UU. ofrece Delta conexiones cómodas?"
+    hint: "Más para explorar EE.UU."
+    answers:
+      answer_1: "A. A menos de 150"
+      answer_2: "B. A más de 200 "
+      answer_3: "C. Hasta 100 "
+      answer_4: "D. Ninguna de las anteriores"
+    correctAnswerDescription: "Delta ofrece conexiones cómodas a más de 200 destinos en todo EE.UU."
+

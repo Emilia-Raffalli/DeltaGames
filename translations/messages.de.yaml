@@ -1,0 +1,81 @@
+# translations/messages.fr.yaml
+# hello: Hello1
+
+h3Home: "Sind Sie ein Airline-Geek? Ein Delta-Experte? Wenn ja, haben Sie jetzt die Chance, Ihr Wissen zu testen und ein paar lustige Delta-Aufkleber zu gewinnen. Melden Sie sich bei Delta Sales Communications an und starten Sie das Quiz."
+
+question: "FRAGE"
+summary-answers: "QUIZ-ANTWORTEN"
+
+action-buttons:
+  close: "Schließen"
+  next: "Weiter"
+  play: "Ich bin bereit, es kann losgehen!"
+  confirm: "Daten bestätigen und absenden"
+  check-correct-answers: "Zu den richtigen Antworten!"
+
+
+confirmation-text: "Vielen Dank !<br>
+Ihre Daten wurden übermittelt. Sie erhalten Ihre Delta Aufkleber innerhalb der nächsten 4-8 Wochen."
+
+non-winner-text: "Schade !<br> Das war knapp. Es tut uns sehr leid, dass Sie nicht gewonnen haben. Wir hoffen, dass es Ihnen gefallen hat, mehr über das Delta-Netzwerk und alles, was wir diesen Sommer zu bieten haben, zu erfahren. Vielen Dank für Ihre Teilnahme und Ihre Unterstützung von Delta."
+
+winner-text: "Herzlichen Glückwunsch!<br>Sie sind ein wahres Delta-Genie. Um Ihre Delta-Aufkleber einzulösen, teilen Sie uns bitte Ihre Adressdaten mit."
+
+questions:
+  question_1: 
+    questionText: "Was ist Ihre neue Delta Lieblingsstrecke im Sommerflugplan 2024 ?"
+    hint: "Eine Frage zum Aufwärmen"
+    answers:
+      answer_1: "A. München - New York-JFK"
+      answer_2: "B. Neapel - New York-JFK "
+      answer_3: "C. Shannon - New York-JFK"
+      answer_4: "D. Dublin - Minneapolis-St.Paul"
+      answer_5: "E. Alle der oben genannten Strecken"
+    correctAnswerDescription: "Es sind Ihre Favoriten, deshalb ist jede Antwort richtig."
+
+
+
+  question_2: 
+    questionText: "Von wie vielen Ländern in Europa, dem Nahen Osten, Afrika und Indien (EMEAI) bietet Delta Nonstop-Flüge in die USA an?"
+    hint: "Ganz gleich, aus welchem Land Sie kommen, Delta ist die perfekte Wahl für Ihre Reise in die USA."
+    answers:
+      answer_1: "A. 20"
+      answer_2: "B. 25"
+      answer_3: "C. 22"
+      answer_4: "D. 30"
+    correctAnswerDescription: "Delta fliegt aus 20 Ländern in der EMEAI Region nonstop in die USA."
+
+
+  question_3: 
+    questionText: "Welches ist Deltas Nummer 1 Destination in den USA ?"
+    hint: "Diese Stadt war noch nie so nah mit Nonstop-Flügen von 29 Städten in EMEAI."
+    answers:
+      answer_1: "A. Los Angeles"
+      answer_2: "B. New York-JFK"
+      answer_3: "C. Atlanta"
+      answer_4: "D. Boston"
+    correctAnswerDescription: "New York war noch niemals so nah und ist Deltas Nummer 1 Destination aus EMEAI."
+
+
+  question_4: 
+    questionText: "Wie viele wöchentliche Nonstop-Flüge bietet Delta in diesem Sommer von EMEAI aus an ?"
+    hint: "Mit Deltas größtem Transatlantikflugplan aller Zeiten gibt es einen Sitzplatz für jeden."
+    answers:
+      answer_1: "A. Mehr als 700 "
+      answer_2: "B. Weniger als 600 "
+      answer_3: "C. Bis zu 680 "
+      answer_4: "D. Keine der oben genannten Möglichkeiten"
+    correctAnswerDescription: "Diesen Sommer führt Delta bis zu 680 wöchentliche Flüge von EMEAI in die USA durch."
+
+
+  question_5: 
+    questionText: "Delta bietet bequeme Verbindungen zu wie vielen Zielen in den USA an ?"
+    hint: "Mehr zu entdecken in den USA."
+    answers:
+      answer_1: "A. Weniger als 150"
+      answer_2: "B. Mehr als 200"
+      answer_3: "C. Bis zu 100 "
+      answer_4: "D. Keiner der oben genannten Punkte"
+    correctAnswerDescription: "Delta bietet bequeme Verbindungen zu über 200 Zielen in den USA an."
+
+

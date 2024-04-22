@@ -29,7 +29,6 @@
             <div class="row d-flex justify-content-center">
                 <div class="col col-12 col-md-9 col-lg-7   ">
                     <div class="first">
-                    {# <p>{{ 'hello'|trans }}</p> #}
                         <h3 class="text-primary text-start fw-bold fs-4" data-aos="zoom-in-down">{{ 'h3Home'|trans|raw }}</h3>
                     </div>
                     <div class="row g-3 mb-1 mx-5 d-flex justify-content-center">
@@ -39,14 +38,13 @@
                         <div class="col-12 mt-4 mt-lg-5 mb-5">
                             <a href="{{ path('app_quiz', {'id':1}) }}"
                                 class="btn-delta text-white btn border-2 bg-delta-red fw-bold border-white rounded-5 px-5 fs-4">
-                                C'est parti !</a>
+                                {{'action-buttons.play'|trans|raw}}</a>
                         </div>
                     </form>
                 </div>
             </div>
     </div>
         {% include "_partials/_footer.html.twig" %}
-
 </body>
 
 {% endblock %}

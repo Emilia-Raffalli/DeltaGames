@@ -1,0 +1,81 @@
+# translations/messages.fr.yaml
+# hello: Hello1
+
+h3Home: "Bent u een luchtvaartfan? Een Delta-kenner? Zo ja, dan is dit uw kans om uw kennis te testen en een aantal leuke Delta-stickers te winnen. Meld u aan voor Delta Sales-berichten en start de quiz."
+
+question: "VRAAG"
+summary-answers: "DE JUISTE ANTWOORDEN OP DE QUIZVRAGEN"
+
+
+action-buttons:
+  close: "Sluit af"
+  next: "Ga door"
+  play: "Ik zit klaar, starten maar!"
+  confirm: "Bevestig en verstuur"
+  check-correct-answers: "Controleer de juiste antwoorden!"
+
+
+confirmation-text: "Hartelijk dank!<br> Wij hebben uw contactgegevens ontvangen. Binnen 4 tot 8 weken ontvangt u uw Delta funstickers."
+
+non-winner-text: "Helaas! U was zo dichtbij. Jammer dat u niet won, maar we hopen dat u met plezier iets hebt opgestoken over Delta’s netwerk en alles wat we deze zomer hebben te bieden. Hartelijk dank voor uw deelname en vertrouwen in Delta."
+
+winner-text: "Congratulazioni!<br>Sei un vero genio Delta. Per ottenere gli adesivi Delta, ti preghiamo di fornirci i tuoi dati."
+
+questions:
+  question_1: 
+    questionText: "Wat is uw favoriete route in het Delta Zomernetwerk 2024 ?"
+    hint: "Startvraag"
+    answers:
+      answer_1: "A. München naar New York-JFK​"
+      answer_2: "B. Napels naar New York-JFK​"
+      answer_3: "C. Shannon naar New York-JFK"
+      answer_4: "D. Dublin naar Minneapolis-St. Paul​"
+      answer_5: "E. Alle bovenstaande"
+    correctAnswerDescription: "Alle antwoorden zijn juist. Elke nieuwe route kan uw favoriet zijn."
+
+
+
+  question_2: 
+    questionText: "Vanuit hoeveel landen in Europa, het Midden-Oosten, Afrika en India (EMEAI) biedt Delta rechtstreekse vluchten aan naar de VS ?"
+    hint: "Uit welk land u ook komt, Delta is uw perfecte keuze naar de VS."
+    answers:
+      answer_1: "A. 20"
+      answer_2: "B. 25"
+      answer_3: "C. 22"
+      answer_4: "D. 30"
+    correctAnswerDescription: "Delta bedient 20 landen met rechtstreekse vluchten naar de VS vanuit EMEAI."
+
+
+  question_3: 
+    questionText: "Wat is Delta’s nummer 1-bestemming naar de VS?"
+    hint: "Deze stad was niet eerder zo dichtbij met rechtstreekse vluchten vanuit 29 steden in EMEAI."
+    answers:
+      answer_1: "A. Los Angeles"
+      answer_2: "B. New York-JFK"
+      answer_3: "C. Atlanta"
+      answer_4: "D. Boston"
+    correctAnswerDescription: "New York was nog nooit zo dichtbij en is Delta's nummer 1-bestemming vanuit EMEAI."
+
+
+  question_4: 
+    questionText: "Hoeveel wekelijkse rechtstreekse vluchten voert Delta uit vanuit EMEAI deze zomer?"
+    hint: "Er is een stoel voor iedereen in Delta’s grootste trans-Atlantische schema ooit."
+    answers:
+      answer_1: "A. Meer dan 700"
+      answer_2: "B. Minder dan 600"
+      answer_3: "C. Tot 680​"
+      answer_4: "D. Geen van bovenstaande"
+    correctAnswerDescription: "Delta voert komende zomer vanuit EMEAI tot 680 wekelijkse vluchten uit."
+
+
+  question_5: 
+    questionText: "Naar hoeveel bestemmingen verspreid over de VS biedt Delta soepele aansluitingen?"
+    hint: "Er valt meer te ontdekken in de VS."
+    answers:
+      answer_1: "A. Minder dan 150"
+      answer_2: "B. Meer dan 200"
+      answer_3: "C. Tot 100"
+      answer_4: "D. Geen van bovenstaande"
+    correctAnswerDescription: "Delta biedt soepele aansluitingen naar meer dan 200 bestemmingen verspreid over de VS."
+
+

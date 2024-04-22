@@ -6,11 +6,10 @@
 
     <body class="bg01 bg-blue-delta d-flex flex-column">
         <div class="container text-center d-flex flex-column">
-
             <div class="row d-flex justify-content-center">
                 <div class="col-12 col-lg-6 ">
                     <div class="first height-less">
-                        <h3 class="fs-2 text-center fw-bold text-white mb-0" data-aos="zoom-in-down">{{ title }}</h3>
+                        <h3 class="fs-2 text-center fw-bold text-white mb-0" data-aos="zoom-in-down">{{ 'summary-answers'|trans|raw }}</h3>
                     </div>
                 </div>
             </div>
@@ -21,16 +20,15 @@
                         <div class="col-md-12">
                             <div class="text-box-won rounded-5 p-4">
                                 {% for question in questions %}
-                                {% set correctAnswerDescription = 'questions.question_'~ question.id ~ '.correctAnswerDescription' %}
-
+                                {% set correctAnswerDescription = 'questions.question_' ~ question.id ~ '.correctAnswerDescription' %}
                                     <div class="row p-3 {% if loop.last %}{% else %}border-bottom{% endif %} align-items-center">
                                         <div class="col-12 col-lg-4">
-                                            <h3 class="fw-bold fs-5 text-primary">Question {{ question.id}}</h3>
+                                            <h3 class="fw-bold fs-5 text-primary">{{'question'|trans}} {{ question.id}}</h3>
                                         </div>
                                         <div class="col-12 col-lg-8">
                                             <p class="m-0 text-center text-lg-start">
                                                 {# {{ question.correctAnswerDescription }} #}
-                                                {{ correctAnswerDescription|trans|raw }}
+                                                {{ correctAnswerDescription |trans|raw }}
 
                                             </p>
                                         </div>
@@ -41,7 +39,7 @@
 
                         <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-4 mb-5">
                             <div class="col-12 mt-4 mt-lg-5">
-                                <a href="" class="bg-delta-red text-white btn border-2 fw-bold border-white rounded-5 w-50 fs-4">Fermer</a>
+                                <a href="" class="bg-delta-red text-white btn border-2 fw-bold border-white rounded-5 w-50 fs-4">{{'action-buttons.close'|trans|raw}}</a>
                             </div>
                         </div>
                     </div>
