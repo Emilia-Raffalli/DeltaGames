@@ -16,12 +16,6 @@ class User
     #[ORM\Column(length: 180)]
     private ?string $email = null;
 
-    /**
-     * @var list<string> The user roles
-     */
-    #[ORM\Column]
-    private array $roles = [];
-
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $firstName = null;
 
