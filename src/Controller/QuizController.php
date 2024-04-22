@@ -18,6 +18,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
+use Symfony\Component\Form\FormError;
 use Symfony\Component\Mime\Address;
 
 class QuizController extends AbstractController
@@ -92,10 +93,15 @@ class QuizController extends AbstractController
 
         $form->handleRequest($request);
 
+        if($form->isSubmitted() && $form->get('answer')->getData() == null ) {
+            $formError = 'Vous devez sélectionner une réponse.';
+        }
+
         if ($form->isSubmitted() && $form->isValid()) {
 
             $selectedAnswer = $form->get('answer')->getData();
             // dd($selectedAnswer);
+
              // Ajouter les données à la session de participation
             if (!$participation->getQuestions()->contains($question)) {
                 $participation->addQuestion($question);
@@ -144,7 +150,8 @@ class QuizController extends AbstractController
             'pageTitle' => 'Delta Air',
             'question' => $question,
             'form' => $question ? $form->createView() : null,
-            'answers' => $answers
+            'answers' => $answers,
+            'formError' => isset($formError) ? $formError : null 
         ]);
     }
 

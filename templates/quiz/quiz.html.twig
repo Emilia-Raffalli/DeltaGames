@@ -5,7 +5,6 @@
 {% block body %}
 {% set questionTmp = 'questions.question_'~ question.id ~ '.questionText' %}
 {% set hint = 'questions.question_'~ question.id ~ '.hint' %}
-{% set answerTmp = 'questions.question_'~ question.id ~ '.answers.answer_' %}
 
 {# <p>{{ 'questions.question_1.answers.answer_1'|trans }} #}
 
@@ -15,8 +14,9 @@
 
     <div class="container text-center d-flex flex-column transition">
 
-        {% if question %}
 
+        {% if question %}
+            
             <div class="row d-flex justify-content-center">
                 <div class="col-12 col-lg-6 ">
                     <div class="first d-flex flex-column justify-content-center height-less">
@@ -42,13 +42,12 @@
 
 
                             {% for answer in form.answer %}
+                                {% set answerKey = 'questions.question_' ~ question.id ~ '.answers.answer_' ~ loop.index %}
                                 <div class="col-12 col-md-9 col-lg-9 mb-3">
-                                
-                                {# <p>{{ 'questions.question_1.answers.answer_1'|trans }}</p> #}
-
+                                {# {{dump(answer)}} #}
                                     <div class="custom-answer fw-bold form-control btn-answer rounded-5 mx-auto choice bg-light fs-4 text-primary text-start px-4 pointer">
                                         {{ form_widget(answer) }}
-                                        {{ form_label(answer, null, {'label_attr': {'class': 'w-100 pointer'}}) }}
+                                        {{ form_label(answer, answerKey|trans, {'label_attr': {'class': 'w-100 pointer'}}) }}
                                     </div>
                                 </div>
                             {% endfor %}

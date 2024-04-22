@@ -26,9 +26,11 @@ class QuizAnswerType extends AbstractType
                 ],
                 'choices' => $options['answers'], 
                 'choice_label' => 'answer', 
+                'choice_translation_domain' =>'messages',
                 'expanded' => true, // bouton radio
                 'multiple' => false, 
-                'required' => true,
+                // 'required' => true,
+
             
             ])
             // ->add('question', TextType::class, [
@@ -40,11 +42,13 @@ class QuizAnswerType extends AbstractType
             //     'required' => true, 
             // ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Suivant',
+                'label' => 'action-buttons.next',
                 'attr' => [
                     'class' => 'btn-delta text-white btn border-2 bg-delta-red fw-bold border-white rounded-5 px-5 fs-4'
                 ]
-            ]);
+            ])
+            ->setAttribute('answer_translation_keys', $options['answer_translation_keys']);
+            ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
@@ -52,6 +56,7 @@ class QuizAnswerType extends AbstractType
         $resolver->setDefaults([
             'data_class' => Answer::class, 
             'answers' => [], 
+            'answer_translation_keys' => [],
         ]);
     }
 }
