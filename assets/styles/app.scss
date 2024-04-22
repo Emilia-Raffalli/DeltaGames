@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
+//@import "../fonts/WhitneyCond-Semibold.otf";
 
 * {
     font-family: 'Calibri', sans-serif;
@@ -9,10 +10,12 @@
 h3 {
     letter-spacing:-1px;
     font-size:1.4rem;
+    text-transform: uppercase;
 }
 
+
 .gif-box {
-    background: url('../images/animated stickers draft.gif') no-repeat center;
+    background: url('../images/DL-Stickers_FINAL.gif') no-repeat center;
     background-size: contain;
     min-height: 400px;
     background-color: #fff;
@@ -33,7 +36,7 @@ h3 {
 
 .bg01 {
     // background: url(../images/01.png) no-repeat center;
-    background: url('../images/01.png') no-repeat center;
+    background: url('../images/Welcome-Screen_Background-Plane_1920x1080_FINAL-new-bg.png') no-repeat center;
     background-size: 110%;
     background-position-y: 30%;
     min-height: 100vh!important;

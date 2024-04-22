@@ -1,8 +1,8 @@
 # translations/messages.fr.yaml
 # hello: Hello1
 
-h3Home: >
-  ¿Eres friki de las aerolíneas? ¿Eres "Delta genius"? Si es así, esta es tu oportunidad para poner a prueba tus conocimientos y ganar unos divertidos stickers de Delta. Inscríbete en las comunicaciones de ventas de Delta y empieza el cuestionario.
+h3Home: "¿Eres friki de las aerolìneas ? ¿Eres Delta genius ?"
+sub-header: "Si es así, esta es tu oportunidad para poner a prueba tus conocimientos y ganar unos divertidos stickers de Delta."
 
 question: "PREGUNTA"
 summary-answers: "RESUMEN DE RESPUESTAS CORRECTAS"
@@ -14,20 +14,21 @@ action-buttons:
   confirm: "Confirmo mis datos"
   check-correct-answers: "¡comprueba las respuestas que has acertado!"
 
-confirmation-text: >
-  ¡Gracias!<br>Tus datos se han confirmado.
-  Recibirás tus divertidos stickers dentro de 4-8 semanas.
+thank-you: "¡Gracias!"
+thank-you-sub: "TUS DATOS SE HAN CONFIRMADO."
+confirmation-text: "Recibirás tus stickers Delta dentro de 4-8 semanas."
 
-non-winner-text: >
-  ¡Qué pena! Por los pelos. Sentimos que no hayas ganado, pero esperamos que hayas disfrutado conociendo la red Delta y todo lo que podemos ofrecerte este verano. Gracias por tu participación y apoyo a Delta.
+non-winner-sentence: "¡QUÉ PENA!"
+non-winner-sub: "Por los pelos. Sentimos que no hayas ganado."
+non-winner-text: "Sentimos que no hayas ganado, pero esperamos que hayas disfrutado conociendo la red Delta y todo lo que podemos ofrecerte este verano. Gracias por tu participación y apoyo a Delta."
 
-winner-text: >
-  ¡Enhorabuena! Sí que eres Delta genius. Para canjear tus stickers Delta, indica aquí tus datos.
+winner-sentence: "¡ENHORABUENA!"
+winner-text: "Sí que eres Delta genius. Para canjear tus stickers Delta, indica aquí tus datos."
 
 questions:
   question_1: 
     questionText: "¿Cuál es tu nueva ruta favorita de la red Delta Verano 2024?"
-    hint: "Pregunta para calentar "
+    hint: "No te preocupes, lo harás bien."
     answers:
       answer_1: "A. Múnich - Nueva York-JFK​"
       answer_2: "B. Nápoles - Nueva York-JFK"

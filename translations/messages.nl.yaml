@@ -1,7 +1,8 @@
 # translations/messages.fr.yaml
 # hello: Hello1
 
-h3Home: "Bent u een luchtvaartfan? Een Delta-kenner? Zo ja, dan is dit uw kans om uw kennis te testen en een aantal leuke Delta-stickers te winnen. Meld u aan voor Delta Sales-berichten en start de quiz."
+h3Home: "Bent u een Luchtvaartfan ? Een Delta-Kenner ?"
+sub-header: "Zo ja, dan is dit uw kans om uw kennis te testen en een aantal leuke Delta-stickers te winnen."
 
 question: "VRAAG"
 summary-answers: "DE JUISTE ANTWOORDEN OP DE QUIZVRAGEN"
@@ -15,16 +16,23 @@ action-buttons:
   check-correct-answers: "Controleer de juiste antwoorden!"
 
 
-confirmation-text: "Hartelijk dank!<br> Wij hebben uw contactgegevens ontvangen. Binnen 4 tot 8 weken ontvangt u uw Delta funstickers."
+thank-you: "HARTELIJK DANK!"
+thank-you-sub: "WIJ HEBBEN UW CONTACTGEGEVENS ONTVANGEN."
+confirmation-text: "Binnen 4 tot 8 weken ontvangt u uw Delta stickers."
 
-non-winner-text: "Helaas! U was zo dichtbij. Jammer dat u niet won, maar we hopen dat u met plezier iets hebt opgestoken over Delta’s netwerk en alles wat we deze zomer hebben te bieden. Hartelijk dank voor uw deelname en vertrouwen in Delta."
 
-winner-text: "Congratulazioni!<br>Sei un vero genio Delta. Per ottenere gli adesivi Delta, ti preghiamo di fornirci i tuoi dati."
+non-winner-sentence: "HELAAS!"
+non-winner-sub: "U was zo dichtbij. Jammer dat u niet won."
+non-winner-text: "Jammer dat u niet won, maar we hopen dat u met plezier iets hebt opgestoken over Delta’s netwerk en alles wat we deze zomer hebben te bieden. Hartelijk dank voor uw deelname en vertrouwen in Delta."
+
+
+winner-sentence: "GEFELICITEERD!"
+winner-text: "U bent een echte Delta-kenner. Geef uw contactgegevens aan ons door om uw Delta-stickers te ontvangen."
 
 questions:
   question_1: 
     questionText: "Wat is uw favoriete route in het Delta Zomernetwerk 2024 ?"
-    hint: "Startvraag"
+    hint: "Geen zorgen, het komt goed."
     answers:
       answer_1: "A. München naar New York-JFK​"
       answer_2: "B. Napels naar New York-JFK​"

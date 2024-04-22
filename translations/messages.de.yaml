@@ -1,7 +1,8 @@
 # translations/messages.fr.yaml
 # hello: Hello1
 
-h3Home: "Sind Sie ein Airline-Geek? Ein Delta-Experte? Wenn ja, haben Sie jetzt die Chance, Ihr Wissen zu testen und ein paar lustige Delta-Aufkleber zu gewinnen. Melden Sie sich bei Delta Sales Communications an und starten Sie das Quiz."
+h3Home: "Sind Sie einAirline-Geek ? Ein Delta-Experte ?"
+sub-header: "Wenn ja, haben Sie jetzt die Chance, Ihr Wissen zu testen und ein paar lustige Delta-Aufkleber zu gewinnen."
 
 question: "FRAGE"
 summary-answers: "QUIZ-ANTWORTEN"
@@ -14,17 +15,21 @@ action-buttons:
   check-correct-answers: "Zu den richtigen Antworten!"
 
 
-confirmation-text: "Vielen Dank !<br>
-Ihre Daten wurden übermittelt. Sie erhalten Ihre Delta Aufkleber innerhalb der nächsten 4-8 Wochen."
+thank-you: "VIELEN DANK!"
+thank-you-sub: "IHRE DATEN WURDEN ÜBERMITTELT."
+confirmation-text: "Sie erhalten Ihre Delta Aufkleber innerhalb der nächsten 4-8 Wochen."
 
-non-winner-text: "Schade !<br> Das war knapp. Es tut uns sehr leid, dass Sie nicht gewonnen haben. Wir hoffen, dass es Ihnen gefallen hat, mehr über das Delta-Netzwerk und alles, was wir diesen Sommer zu bieten haben, zu erfahren. Vielen Dank für Ihre Teilnahme und Ihre Unterstützung von Delta."
+non-winner-sentence: "SCHADE!"
+non-winner-sub: "Das war knapp. Es tut uns sehr leid, dass Sie nicht gewonnen haben."
+non-winner-text: "Es tut uns sehr leid, dass Sie nicht gewonnen haben. Wir hoffen, dass es Ihnen gefallen hat, mehr über das Delta-Netzwerk und alles, was wir diesen Sommer zu bieten haben, zu erfahren. Vielen Dank für Ihre Teilnahme und Ihre Unterstützung von Delta."
 
-winner-text: "Herzlichen Glückwunsch!<br>Sie sind ein wahres Delta-Genie. Um Ihre Delta-Aufkleber einzulösen, teilen Sie uns bitte Ihre Adressdaten mit."
+winner-sentence: "HERZLICHEN GLÜCKWUNSCH!"
+winner-text: "Sie sind ein wahres Delta-Genie. Um Ihre Delta-Aufkleber einzulösen, teilen Sie uns bitte Ihre Adressdaten mit."
 
 questions:
   question_1: 
     questionText: "Was ist Ihre neue Delta Lieblingsstrecke im Sommerflugplan 2024 ?"
-    hint: "Eine Frage zum Aufwärmen"
+    hint: "Keine Sorge, Sie schaffen das."
     answers:
       answer_1: "A. München - New York-JFK"
       answer_2: "B. Neapel - New York-JFK "

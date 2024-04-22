@@ -1,6 +1,7 @@
 # translations/messages.fr.yaml
 # hello: Bonjour
-h3Home: Êtes-vous un passionné d'aviation ? Un expert de Delta ?<br> Dans ce cas, voici votre chance de tester vos connaissances et de gagner quelques stickers amusants Delta. Inscrivez-vous aux bulletins d'information des ventes Delta et commencez le test.
+h3Home: "Êtes-vous un passionné d'aviation ? Un expert de Delta ?"
+sub-header: "Dans ce cas, voici votre chance de tester vos connaissances et de gagner quelques stickers amusants Delta. "
 
 question: "QUESTION"
 summary-answers: "RÉPONSES DU QUIZ"
@@ -12,18 +13,22 @@ action-buttons:
   confirm: "Je confirme mes coordonnées"
   check-correct-answers: "Cliquez pour connaître les réponses!"
 
-confirmation-text: "Merci!<br>
-Vos coordonnées ont bien été prises en compte. Vous recevrez vos autocollants Delta d'ici 4 à 8 semaines."
+thank-you: "MERCI!"
+thank-you-sub: "VOS COORDONNEES ONT BIEN ETE PRISES EN COMPTE."
+confirmation-text: "Vous recevrez vos autocollants Delta d'ici 4 à 8 semaines."
 
-non-winner-text: "Pas de chance ! Il s'en est fallu de peu. Nous sommes désolés que vous n'ayez pas gagné, mais nous espérons que vous avez aimé découvrir notre réseau et tout ce que nous avons à offrir cet été. Nous vous remercions de votre participation et de votre soutien à Delta."
+non-winner-sentence: "PAS DE CHANCE !"
+non-winner-sub: "Il s'en est fallu de peu. Nous sommes désolés que vous n'ayez pas gagné."
+non-winner-text: "Nous sommes désolés que vous n'ayez pas gagné, mais nous espérons que vous avez aimé découvrir notre réseau et tout ce que nous avons à offrir cet été. Nous vous remercions de votre participation et de votre soutien à Delta. "
 
-winner-text: "Félicitations !<br> Vous êtes un véritable expert de Delta. Pour recevoir vos stickers Delta, veuillez nous communiquer vos coordonnées."
+winner-sentence: "FÉLICITATIONS!"
+winner-text: "Vous êtes un véritable expert de Delta. Pour recevoir vos stickers Delta, veuillez nous communiquer vos coordonnées."
 
 
 questions:
   question_1: 
     questionText: "Quelle est votre nouvelle liaison préférée dans le programme Delta Summer 2024 ?"
-    hint: "Échauffement"
+    hint: "Ne vous inquiétez pas, vous y arriverez."
     answers:
       answer_1: "A. Munich à New York-JFK"
       answer_2: "B. Naples à New York-JFK"
