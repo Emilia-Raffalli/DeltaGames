@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ pageTitle }} {% endblock %}
+
+{% block body %}
+
+<body class="bg01 bg-blue-delta d-flex flex-column">
+
+    <div class="container text-center d-flex flex-column">
+        <div class="row d-flex justify-content-center">
+            <div class="col col-lg-6 col-12 ">
+
+                {% if app.request.attributes.get('_route') == 'app_won'%}
+
+                    <div class="first d-flex flex-column justify-content-center">
+                            <h3 class="text-primary text-start fw-bold" data-aos="zoom-in-down">
+                                {{ 'winner-sentence'|trans|raw }}
+                            </h3>
+                            <p class="sub-header text-primary">{{'winner-text'|trans|raw}}</p>
+                        {# {% elseif app.request.attributes.get('_route') == 'app_lost'%}
+                            <h3 class="text-primary text-start fw-bold" data-aos="zoom-in-down">
+                                {{ 'non-winner-sentence'|trans|raw }}
+                            </h3>
+                            <p class="sub-header text-primary">{{'non-winner-text'|trans|raw}}</p>
+                        {% endif %} #}
+                    </div>
+
+                    {{ form_start(form, {'attr': {'class': 'row g-3 mx-auto mb-1'}}) }}
+                        <div class="col-md-12">
+                            <div class="text-box d-flex flex-column justify-content-center align-items-center">
+                                <div class="row g-3 p-3 p-lg-4 text-start gy-4 align-items-center">
+                                    <div class="col-md-6">
+                                        {{ form_row(form.firstName) }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form_row(form.lastName) }}
+                                    </div>
+                                    <div class="col-md-12">
+                                        {{ form_row(form.email) }}
+                                    </div>
+                                    <div class="col-12">
+                                        {{ form_row(form.adress) }}
+                                    </div>
+                                    <div class="col-12">
+                                        {{ form_row(form.adress2) }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form_row(form.zipCode) }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form_row(form.city) }}
+                                    </div>
+                                    <div class="col-md-12">
+                                        {{ form_row(form.country) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4 mt-lg-5 mb-5">
+                            {{ form_row(form.submit) }}
+                        </div>
+                    {{ form_end(form)}}
+
+
+                {% elseif app.request.attributes.get('_route') == 'app_lost'%}
+
+                    <div class="first d-flex flex-column justify-content-center">
+                            <h3 class="text-primary text-start fw-bold" data-aos="zoom-in-down">
+                                {{ 'non-winner-sentence'|trans|raw }}
+                            </h3>
+                            <p class="sub-header text-primary">{{'non-winner-sub'|trans|raw}}</p>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class=" col-12 col-md-12 col-lg-12 text-box fly_box d-flex flex-column justify-content-center align-items-center">
+                            <p class="fs-3 p-5 fw-bold text-start text-primary">
+                                {{'non-winner-text'|trans|raw }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-4 mt-lg-5 mb-5">
+                        <a href="{{ path('app_answers') }}" class="btn-delta text-white btn border-2 bg-delta-red fw-bold border-white rounded-5 px-5 fs-4">{{'action-buttons.check-correct-answers'|trans|raw}}</a>
+                    </div>
+
+                {% elseif app.request.attributes.get('_route') == 'app_answers'%}
+                    <div class="first d-flex flex-column justify-content-center">
+                            <h3 class="text-primary text-start fw-bold" data-aos="zoom-in-down">
+                                {{ 'summary-answers'|trans|raw }}
+                            </h3>
+                            <p class="sub-header text-primary">{{'non-winner-sub'|trans|raw}}</p>
+                    </div>
+                    <div class="text-box-won rounded-5 p-4">
+                        {% for question in allQuestions %}
+                        {% set correctAnswerDescription = 'questions.question_' ~ question.id ~ '.correctAnswerDescription' %}
+                            <div class="row p-3 {% if loop.last %}{% else %}border-bottom{% endif %} align-items-center">
+                                <div class="col-12 col-lg-4">
+                                    <h3 class="fw-bold fs-5 text-primary">{{'question'|trans}} {{ question.id}}</h3>
+                                </div>
+                                <div class="col-12 col-lg-8">
+                                    <p class="m-0 text-center text-lg-start">
+                                        {# {{ question.correctAnswerDescription }} #}
+                                        {{ correctAnswerDescription |trans|raw }}
+
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="col-12 mt-4 mt-lg-5 mb-5">
+                        <a href="" class="btn-delta text-white btn border-2 bg-delta-red fw-bold border-white rounded-5 px-5 fs-4">{{'action-buttons.close'|trans|raw}}</a>
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+        {% include "_partials/_footer.html.twig" %}
+</body>
+
+{% endblock %}

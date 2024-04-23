@@ -9,10 +9,11 @@
     <div class="container text-center d-flex flex-column">
         <div class="row d-flex justify-content-center">
             <div class="col col-lg-6 col-12 ">
-                <div class="first">
+                <div class="first d-flex flex-column justify-content-center">
                     <h3 class="text-primary text-start fw-bold" data-aos="zoom-in-down">
                         {{ 'winner-sentence'|trans|raw }}
                     </h3>
+                    <p class="sub-header text-primary">{{'winner-text'|trans|raw}}</p>
                 </div>
 
                 {{ form_start(form, {'attr': {'class': 'row g-3 mx-auto mb-1'}}) }}

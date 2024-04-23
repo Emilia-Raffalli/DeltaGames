@@ -25,16 +25,14 @@ class QuizController extends AbstractController
 {
 
     #[Route('/', name: 'app_start')]
+    #[Route('/thank-you', name: 'app_success')]
     public function homeQuiz(SessionInterface $session,
     ): Response
     {
-
         if (!$session->isStarted()) {
             $session->start();
         }
 
-        // return $this->redirectToRoute('next_page_route');
-    
         return $this->render('quiz/index.html.twig', [
             'pageTitle' => 'Start Now',
         ]);
@@ -73,23 +71,10 @@ class QuizController extends AbstractController
         $question = $questionRepository->find($questionId);
         if($question != null) {
             $answers = $question->getAnswers()->toArray();
-            // dd($answers);
-        // dd($answers);
 
-        //gestion des questions déjà cochées
-        // $answered = false;
-        // $selectedAnswer = null;
-        // if ($participation && $participation->getQuestions()->contains($question)) {
-        //     $answered = true;
-        //     $selectedAnswer = $participation->getSelectedAnswers($question);
-        // }
-
-
-        //formulaire
         $form = $this->createForm(QuizAnswerType::class, null, [
             'answers' => $answers, 
         ]);
-        // dd($answers);
 
         $form->handleRequest($request);
 
@@ -124,11 +109,6 @@ class QuizController extends AbstractController
                         break;
                     }
                 }
-                // dd($countCorrectAnswers);
-                //$countAllQuestions = count($questionRepository->findAll());
-                // dd($countAllQuestions);
-
-                //if ($countCorrectAnswers == $countAllQuestions) {
                     if ($hasWin) {
                     return $this->redirectToRoute(('app_won'));
                 } else {
@@ -136,16 +116,12 @@ class QuizController extends AbstractController
                 }
             }
 
-            // dd($participation->getSelectedAnswers());
-
-            // dd($participation);
             $nextQuestionId = $questionId + 1;
 
             return $this->redirectToRoute('app_quiz', ['id' => $nextQuestionId]);
         }
     }
 
-    // dd($question);
         return $this->render('quiz/quiz.html.twig', [
             'pageTitle' => 'Delta Air',
             'question' => $question,
@@ -156,7 +132,10 @@ class QuizController extends AbstractController
     }
 
 
+
     #[Route('/won', name: 'app_won')]
+    #[Route('/lost', name: 'app_lost')]
+    #[Route('/answers', name: 'app_answers')]
     public function wonQuiz(
         SessionInterface $session, 
         Request $request, 
@@ -164,9 +143,13 @@ class QuizController extends AbstractController
         EntityManagerInterface $em,
         UserRepository $userRepository,
         MailerInterface $mailer,
+        QuestionRepository $questionRepository
         ): Response
     {
     
+    $allQuestions = $questionRepository->findAll();
+
+
     $userSession = $session->getId();
     $participation = $participationRepository->findOneBy(['userSession' => $userSession]);
 
@@ -195,44 +178,26 @@ class QuizController extends AbstractController
         // $mailer->send($email);
 
         return $this->redirectToRoute('app_success');
-
     }
 
-        return $this->render('quiz/won.html.twig', [
+        return $this->render('quiz/template-quiz.html.twig', [
             'pageTitle' => 'Game win',
             'participation' => $participation,
             'form' => $form->createView(),
             'errorMessage' => isset($errorMessage) ? $errorMessage : null,
+            'allQuestions' => $allQuestions
         ]);
     }
 
-    #[Route('/lost', name: 'app_lost')]
-    public function looseQuiz(SessionInterface $session, Request $request): Response
-    {
-        // dd($session);
-        return $this->render('quiz/lost.html.twig', [
-            'pageTitle' => 'Game lost',
-        ]);
-    }
 
-    #[Route('/answers', name: 'app_answers')]
-    public function showAnswers(QuestionRepository $questionRepository): Response
-    {
-        $questions = $questionRepository->findAll();
 
-        return $this->render('quiz/answers.html.twig', [
-            'pageTitle' => 'Réponses du quiz',
-            'questions' => $questions
-        ]);
-    }
 
-    #[Route('/thank-you', name: 'app_success')]
-    public function thankYou(): Response
-    {
-        return $this->render('quiz/thank-you.html.twig', [
-            'pageTitle' => 'Thank you',
-        ]);
-    }
+
+
+
+
+
+
 
 }
 

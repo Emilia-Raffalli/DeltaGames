@@ -1,7 +1,7 @@
 # translations/messages.fr.yaml
 # hello: Hello1
 
-h3Home: "Are you an airline geek? A Delta genius&nbsp;?"
+h3Home: "Are you an airline geek&nbsp;? A Delta genius&nbsp;?"
 sub-header: "If so, now is your chance to test your knowledge and win some fun Delta stickers."
 question: "QUESTION"
 summary-answers: "SUMMARY OF CORRECT ANSWERS"
@@ -14,7 +14,7 @@ action-buttons:
   check-correct-answers: "Check the correct answers!"
 
 
-thank-you: "THANK YOU!"
+thank-you: "THANK YOU !"
 thank-you-sub: "YOUR DETAILS HAVE BEEN CONFIRMED."
 confirmation-text: "You’ll be receiving your Delta stickers within 4 to 8 weeks."
 

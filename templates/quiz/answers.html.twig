@@ -19,7 +19,7 @@
                     <div class="row g-3 w-50 mx-auto mb-1 ">
                         <div class="col-md-12">
                             <div class="text-box-won rounded-5 p-4">
-                                {% for question in questions %}
+                                {% for question in allQuestions %}
                                 {% set correctAnswerDescription = 'questions.question_' ~ question.id ~ '.correctAnswerDescription' %}
                                     <div class="row p-3 {% if loop.last %}{% else %}border-bottom{% endif %} align-items-center">
                                         <div class="col-12 col-lg-4">
