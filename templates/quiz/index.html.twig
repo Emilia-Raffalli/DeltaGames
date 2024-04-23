@@ -9,31 +9,39 @@
     <div class="container text-center d-flex flex-column">
             <div class="row">
                 <div class="col-12">
-                    <div class="js text-end">
-                        <div class="language-picker js-language-picker" data-trigger-class="btn btn--subtle">
-                            <form action="" class="language-picker__form pull-right">
-                                <label for="language-picker-select  bg-white">Select your language</label>
-                                <select name="language-picker-select" id="language-picker-select">
-                                    <option lang="fr" value="francais">FR</option>
-                                    <option lang="en" value="english" selected>EN</option>
-                                    <option lang="nl" value="netherland">NL</option>
-                                    <option lang="de" value="deutsch">DE</option>
-                                    <option lang="it" value="italiano">IT</option>
-                                    <option lang="es" value="spain">ES</option>
-                                </select>
-                            </form>
+                    <div class="languagewrapper">
+
+                        <div class="languagemenu d-flex mx-auto justify-content-end">
+                            <a href="./fr/" class="flag_link"><img
+                                    src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/France_flat.png"
+                                    alt="Français" title="Français" class="flag">FR</a>
+                            <a href="./en/" class="flag_link"><img
+                                    src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/England_flat.png"
+                                    alt="English" title="English" class="flag">EN</a>
+                            <a href="./nl/" class="flag_link"><img
+                                    src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Netherlands.png"
+                                    alt="netherland" title="netherland" class="flag">NL</a>
+                            <a href="./de/" class="flag_link"><img
+                                    src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Germany_flat.png"
+                                    alt="Deutsch" title="Deutsch" class="flag">DE</a>
+                            <a href="./it/" class="flag_link"><img
+                                    src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Italy_flat.png"
+                                    alt="Italiano" title="Italiano" class="flag">IT</a>
+                            <a href="./es/" class="flag_link"><img
+                                    src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Spain_flat.png"
+                                    alt="Spain" title="Spain" class="flag">ES</a>
                         </div>
-                    </div>   
+                    </div>
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
-                <div class="col col-12 col-md-9 col-lg-7   ">
+                <div class="col col-12 col-md-9 col-lg-9   ">
                     <div class="first d-flex flex-column">
-                        <h3 class="text-primary text-start fw-bold fs-4" data-aos="zoom-in-down">{{ 'h3Home'|trans|raw}}</h3>
-                        <p class="sub-header">{{'sub-header'|trans|raw}}</p>
+                        <h3 class="text-primary text-start fw-bold" data-aos="zoom-in-down">{{ 'h3Home'|trans|raw}}</h3>
+                        <p class="sub-header text-primary">{{'sub-header'|trans|raw}}</p>
                     </div>
                     <div class="row g-3 mb-1 mx-5 d-flex justify-content-center">
-                        <div class="gif-box col-12 col-lg-9">
+                        <div class="gif-box col-12 col-lg-12">
                         </div>
 
                         <div class="col-12 mt-4 mt-lg-5 mb-5">
@@ -41,11 +49,35 @@
                                 class="btn-delta text-white btn border-2 bg-delta-red fw-bold border-white rounded-5 px-5 fs-4">
                                 {{'action-buttons.play'|trans|raw}}</a>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
     </div>
         {% include "_partials/_footer.html.twig" %}
+            <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/lang.js"> </script>
+
+    <script>
+        AOS.init();
+        $(".answers").on('click', function () {
+            $('.answers').removeClass('selected');
+            $(this).addClass('selected');
+        });
+        $(document).ready(function () {
+            $('.languagemenu a').each(function () {
+                var alt = $(this).children('img').attr('alt');
+                $(this).append('<span class="languagetext">' + alt + '</span>');
+            });
+        });
+    </script>
 </body>
 
 {% endblock %}

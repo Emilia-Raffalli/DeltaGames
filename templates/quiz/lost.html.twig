@@ -7,17 +7,24 @@
     <body class="bg01 bgnoscroll bg-blue-delta d-flex flex-column">
         <div class="container text-center d-flex flex-column align-items-center">
             <div class="row d-flex justify-content-center">
-                <div class="col col-lg-6 col-12 ">
-                    <div class="first"></div>
-                    <div class="col-md-12 ">
-                        <div class="text-box fly_box d-flex flex-column justify-content-center align-items-center">
+                <div class="col-12">
+                    <div class="row first d-flex flex-column ">
+                        <h3 class=" col-12 text-primary text-center fw-bold" data-aos="zoom-in-down">
+                            {{'non-winner-sentence'|trans|raw}}
+                        </h3>
+                        <p class=" col-12 sub-header text-primary">
+                        {{'non-winner-sub'|trans|raw}}
+                        </p>  
+                    </div>
+                   <div class="row d-flex justify-content-center">
+                        <div class=" col-12 col-md-12 col-lg-6 text-box fly_box d-flex flex-column justify-content-center align-items-center">
                             <p class="fs-3 p-5 fw-bold text-start text-primary">
-                               {{'non-winner-text'|trans|raw}}
+                                {{'non-winner-text'|trans|raw }}
                             </p>
                         </div>
                     </div>
                     <div class="col-12 mt-4 mt-lg-5 mb-5">
-                        <a href="{{ path('app_answers') }}" class="btn-delta text-white btn border-2 bg-delta-red fw-bold border-white rounded-5 px-5 fs-4">Voir les bonnes réponses</a>
+                        <a href="{{ path('app_answers') }}" class="btn-delta text-white btn border-2 bg-delta-red fw-bold border-white rounded-5 px-5 fs-4">{{'action-buttons.check-correct-answers'|trans|raw}}</a>
                     </div>
                 </div>
             </div>

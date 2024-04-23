@@ -1,7 +1,7 @@
 # translations/messages.fr.yaml
 # hello: Hello1
 
-h3Home: "Are you an airline geek? A Delta genius ?"
+h3Home: "Are you an airline geek? A Delta genius&nbsp;?"
 sub-header: "If so, now is your chance to test your knowledge and win some fun Delta stickers."
 question: "QUESTION"
 summary-answers: "SUMMARY OF CORRECT ANSWERS"
@@ -20,7 +20,9 @@ confirmation-text: "You’ll be receiving your Delta stickers within 4 to 8 week
 
 non-winner-sentence: "BUMMER!"
 non-winner-sub: "So close. Sorry you didn't win."
-non-winner-text: ""
+non-winner-text: "Sorry you didn’t win, but we hope
+you enjoyed learning about Delta’s network and all we have to offer this
+summer.Thank you for your participation and support of Delta."
 
 winner-sentence: "CONGRATULATIONS!!"
 winner-text: "You're a true Delta genius. To redeem your Delta stickers, please provide us with your details."

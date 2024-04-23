@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
+@import "_font.scss";
 //@import "../fonts/WhitneyCond-Semibold.otf";
 
 * {
@@ -9,8 +10,18 @@
 
 h3 {
     letter-spacing:-1px;
-    font-size:1.4rem;
+    font-size:2.8rem;
     text-transform: uppercase;
+    font-family: 'WhitneyCond-Semibold';
+    font-weight:500;
+    letter-spacing:0.8px;
+}
+
+.sub-header {
+    font-family: 'WhitneyCond-Semibold';
+    letter-spacing:0.8px;
+    font-size:1.7rem;
+
 }
 
 
@@ -18,8 +29,8 @@ h3 {
     background: url('../images/DL-Stickers_FINAL.gif') no-repeat center;
     background-size: contain;
     min-height: 400px;
-    background-color: #fff;
-    border-radius: 2rem;
+    // background-color: #fff;
+    // border-radius: 2rem;
 }
 
 .first {
@@ -222,6 +233,8 @@ input.form-delta {
 .btn-delta {
     font-size: 1.5rem;
     cursor:pointer!important;
+    text-transform: uppercase;
+    font-family: 'WhitneyCond-Semibold';
 }
 
 .choice {

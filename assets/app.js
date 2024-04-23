@@ -52,3 +52,15 @@ $('.select_wrap ul li').click(function() {
     //on attribue sa valeur à l'input
     $('.select_wrap input').val(valeur);
 });
+
+AOS.init();
+$(".answers").on('click', function () {
+    $('.answers').removeClass('selected');
+    $(this).addClass('selected');
+});
+$(document).ready(function () {
+    $('.languagemenu a').each(function () {
+        var alt = $(this).children('img').attr('alt');
+        $(this).append('<span class="languagetext">' + alt + '</span>');
+    });
+});

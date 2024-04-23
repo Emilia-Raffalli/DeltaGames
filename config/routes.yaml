@@ -4,10 +4,7 @@ controllers:
         namespace: App\Controller
     type: attribute
     prefix: /{_locale}
-    # requirements:
-    #   _locale: '%app_locales%'
     defaults:
-      _locales: 'fr'
-    # prefix:
-    #         fr: ''
-    #         en: /{_locale}
+        _locale: 'fr' 
+    requirements:
+        _locale: 'fr|en|de|it|nl|es' 
