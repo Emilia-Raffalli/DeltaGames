@@ -84,3 +84,12 @@ questions:
     correctAnswerDescription: "Delta bietet bequeme Verbindungen zu über 200 Zielen in den USA an."
 
 
+userForm:
+  firstName: "Vorname"
+  lastName: "Nachname"
+  email: "Email"
+  adress: "Adresse Sonstiges"
+  adress2: "Straße/Hausnummer"
+  zipCode: "Postleitzahl"
+  city: "Ort"
+  country: "Land"

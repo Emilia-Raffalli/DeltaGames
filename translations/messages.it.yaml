@@ -84,3 +84,12 @@ questions:
     correctAnswerDescription: "Delta offre comodi voli in coincidenza verso oltre 200 destinazioni in tutti gli Stati Uniti."
 
 
+userForm:
+  firstName: "Nome"
+  lastName: "Cognome"
+  email: "E-mail"
+  adress: "Indirizzo 1 "
+  adress2: "Indirizzo 2"
+  zipCode: "Cap"
+  city: "Città"
+  country: "Paese"

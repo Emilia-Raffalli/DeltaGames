@@ -1,10 +1,16 @@
 # translations/messages.fr.yaml
-# hello: Bonjour
+
+
+# HOME
+
 h3Home: "Êtes-vous un passionné d'aviation&nbsp;? Un expert de Delta&nbsp;?"
 sub-header: "Dans ce cas, voici votre chance de tester vos connaissances et de gagner quelques stickers amusants Delta. "
 
 question: "QUESTION"
 summary-answers: "RÉPONSES DU QUIZ"
+
+
+# BUTTONS
 
 action-buttons:
   close: "Fermer"
@@ -13,17 +19,27 @@ action-buttons:
   confirm: "Je confirme mes coordonnées"
   check-correct-answers: "Cliquez pour connaître les réponses!"
 
+
+# CONFIRMATION
+
 thank-you: "MERCI!"
 thank-you-sub: "VOS COORDONNEES ONT BIEN ETE PRISES EN COMPTE."
 confirmation-text: "Vous recevrez vos autocollants Delta d'ici 4 à 8 semaines."
+
+
+# NON WINNER
 
 non-winner-sentence: "PAS DE CHANCE !"
 non-winner-sub: "Il s'en est fallu de peu. Nous sommes désolés que vous n'ayez pas gagné."
 non-winner-text: "Nous sommes désolés que vous n'ayez pas gagné, mais nous espérons que vous avez aimé découvrir notre réseau et tout ce que nous avons à offrir cet été. Nous vous remercions de votre participation et de votre soutien à Delta. "
 
+# WINNER
+
 winner-sentence: "FÉLICITATIONS!"
 winner-text: "Vous êtes un véritable expert de Delta. Pour recevoir vos stickers Delta, veuillez nous communiquer vos coordonnées."
 
+
+# QUESTIONS AND ANSWERS
 
 questions:
   question_1: 
@@ -78,3 +94,14 @@ questions:
     correctAnswerDescription: "Delta offre des correspondances faciles vers plus de 200 destinations à travers les États-Unis."
 
 
+# USER FORM TYPE
+
+userForm:
+  firstName: "Prénom"
+  lastName: "Nom"
+  email: "Email"
+  adress: "Adresse 1"
+  adress2: "Adresse 2"
+  zipCode: "Code Postal"
+  city: "Ville"
+  country: "Pays"

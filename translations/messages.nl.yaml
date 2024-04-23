@@ -87,3 +87,12 @@ questions:
     correctAnswerDescription: "Delta biedt soepele aansluitingen naar meer dan 200 bestemmingen verspreid over de VS."
 
 
+userForm:
+  firstName: "Voornaam"
+  lastName: "Achternaam"
+  email: "E-mail"
+  adress: "Straat/Huisnummer"
+  adress2: "Postbus"
+  zipCode: "Postcode"
+  city: "Stad"
+  country: "Land"

@@ -29,18 +29,8 @@ class QuizAnswerType extends AbstractType
                 'choice_translation_domain' =>'messages',
                 'expanded' => true, // bouton radio
                 'multiple' => false, 
-                // 'required' => true,
-
-            
+                // 'required' => true,            
             ])
-            // ->add('question', TextType::class, [
-            //     'label' => false,
-            //     'choices' => $options['answers'], 
-            //     'choice_label' => 'answer', 
-            //     'expanded' => true, // bouton radio
-            //     'multiple' => false, 
-            //     'required' => true, 
-            // ])
             ->add('submit', SubmitType::class, [
                 'label' => 'action-buttons.next',
                 'attr' => [

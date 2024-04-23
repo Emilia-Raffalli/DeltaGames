@@ -24,7 +24,7 @@ non-winner-text: "Sorry you didn’t win, but we hope
 you enjoyed learning about Delta’s network and all we have to offer this
 summer.Thank you for your participation and support of Delta."
 
-winner-sentence: "CONGRATULATIONS!!"
+winner-sentence: "CONGRATULATIONS!"
 winner-text: "You're a true Delta genius. To redeem your Delta stickers, please provide us with your details."
 
 questions:
@@ -85,3 +85,12 @@ questions:
     correctAnswerDescription: "Delta offers easy connections to more than 200 destinations throughout the USA."
 
 
+userForm:
+  firstName: "First name"
+  lastName: "Last name"
+  email: "Email"
+  adress: "Adress 1"
+  adress2: "Adress 2"
+  zipCode: "Postal code"
+  city: "City"
+  country: "Country"

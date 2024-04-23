@@ -23,28 +23,28 @@ class UserType extends AbstractType
             ->add('firstName', TypeTextType::class, [
                 'label'=> false,
                 'attr' => [
-                    'placeholder' => 'Prénom',
+                    'placeholder' => 'userForm.firstName',
                     'class' => 'form-control border-0 form-delta'
                 ]
             ])
             ->add('lastName', TypeTextType::class, [
                 'label'=> false,
                 'attr' => [
-                    'placeholder' => 'Nom',
+                    'placeholder' => 'userForm.lastName',
                     'class' => 'form-control border-0 form-delta'
                 ]
             ])
             ->add('email', EmailType::class, [
                 'label'=> false,
                 'attr' => [
-                    'placeholder' => 'Email',
+                    'placeholder' => 'userForm.email',
                     'class' => 'form-control border-0 form-delta'
                 ]
             ])
             ->add('adress', TypeTextType::class, [
                 'label'=> false,
                 'attr' => [
-                    'placeholder' => 'Adresse',
+                    'placeholder' => 'userForm.adress',
                     'class' => 'form-control border-0 form-delta'
                 ]
             ])     
@@ -52,33 +52,33 @@ class UserType extends AbstractType
                 'label'=> false,
                 'required' => false,
                 'attr' => [
-                    'placeholder' => "Complément d'adresse",
+                    'placeholder' => "userForm.adress2",
                     'class' => 'form-control border-0 form-delta'
                 ]
             ])    
             ->add('zipCode', TypeTextType::class, [
                 'label'=> false,
                 'attr' => [
-                    'placeholder' => "Code postal",
+                    'placeholder' => "userForm.zipCode",
                     'class' => 'form-control border-0 form-delta'
                 ]
             ])
             ->add('city', TypeTextType::class, [
                 'label'=> false,
                 'attr' => [
-                    'placeholder' => "Ville",
+                    'placeholder' => "userForm.city",
                     'class' => 'form-control border-0 form-delta'
                 ]
             ])
             ->add('country', TypeTextType::class, [
                 'label'=> false,
                 'attr' => [
-                    'placeholder' => "Pays",
+                    'placeholder' => "userForm.country",
                     'class' => 'form-control border-0 form-delta'
                 ]
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Confirmer',
+                'label' => 'action-buttons.confirm',
                 'attr' => [
                     'class' => 'btn-delta text-white btn border-2 bg-delta-red fw-bold border-white rounded-5 px-5 fs-4'
                 ]

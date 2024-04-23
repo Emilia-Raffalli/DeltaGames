@@ -81,3 +81,13 @@ questions:
       answer_4: "D. Ninguna de las anteriores"
     correctAnswerDescription: "Delta ofrece conexiones cómodas a más de 200 destinos en todo EE.UU."
 
+
+userForm:
+  firstName: "Nombre"
+  lastName: "Apellidos"
+  email: "Correo electrónico"
+  adress: "Dirección 1"
+  adress2: "Dirección 2"
+  zipCode: "Código postal"
+  city: "Ciudad"
+  country: "País"
