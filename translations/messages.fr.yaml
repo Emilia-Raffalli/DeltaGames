@@ -8,6 +8,8 @@ sub-header: "Dans ce cas, voici votre chance de tester vos connaissances et de g
 
 question: "QUESTION"
 summary-answers: "RÉPONSES DU QUIZ"
+summary-answers-sub: "Dommage, vous n'avez pas trouvé toutes les bonnes réponses.<br>
+Découvrez les bonnes réponses ci-dessous."
 
 
 # BUTTONS

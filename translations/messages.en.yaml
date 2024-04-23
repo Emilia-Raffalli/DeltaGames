@@ -3,8 +3,12 @@
 
 h3Home: "Are you an airline geek&nbsp;? A Delta genius&nbsp;?"
 sub-header: "If so, now is your chance to test your knowledge and win some fun Delta stickers."
+
 question: "QUESTION"
+
 summary-answers: "SUMMARY OF CORRECT ANSWERS"
+summary-answers-sub: "Too bad, you didn’t get all the answers right.<br> 
+Find the correct answers below."
 
 action-buttons:
   close: "Close"

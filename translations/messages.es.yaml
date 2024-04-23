@@ -5,7 +5,10 @@ h3Home: "¿Eres friki de las aerolìneas ? ¿Eres Delta genius ?"
 sub-header: "Si es así, esta es tu oportunidad para poner a prueba tus conocimientos y ganar unos divertidos stickers de Delta."
 
 question: "PREGUNTA"
+
 summary-answers: "RESUMEN DE RESPUESTAS CORRECTAS"
+summary-answers-sub: "Lástima que no acertaste en todas las respuestas.<br>
+Encuentre las respuestas correctas a continuación."
 
 action-buttons:
   close: "Cerrar"

@@ -5,7 +5,10 @@ h3Home: "Sind Sie einAirline-Geek ? Ein Delta-Experte&nbsp;?"
 sub-header: "Wenn ja, haben Sie jetzt die Chance, Ihr Wissen zu testen und ein paar lustige Delta-Aufkleber zu gewinnen."
 
 question: "FRAGE"
+
 summary-answers: "QUIZ-ANTWORTEN"
+summary-answers-sub: "Schade, dass Sie nicht alle Antworten wussten.<br>
+Die richtigen Antworten finden Sie unten."
 
 action-buttons:
   close: "Schließen"
