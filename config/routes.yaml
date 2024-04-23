@@ -3,7 +3,14 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
-    prefix: /{_locale}
+    prefix:
+        en: ''
+        fr: /{_locale}
+        de: /{_locale}
+        es: /{_locale}
+        nl: /{_locale}
+        it: /{_locale}
+
     defaults:
         _locale: 'fr' 
     requirements:

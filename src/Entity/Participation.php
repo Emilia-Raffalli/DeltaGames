@@ -5,8 +5,9 @@ namespace App\Entity;
 use App\Repository\ParticipationRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Doctrine\DBAL\Types\Types;
 
 #[ORM\Entity(repositoryClass: ParticipationRepository::class)]
 class Participation
@@ -19,21 +20,22 @@ class Participation
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $userSession = null;
 
-    /**
-     * @var Collection<int, Question>
-     */
     #[ORM\ManyToMany(targetEntity: Question::class, inversedBy: 'participations')]
     private Collection $questions;
 
-    /**
-     * @var Collection<int, Question>
-     */
     #[ORM\ManyToMany(targetEntity: Answer::class, inversedBy: 'participations')]
     private Collection $selectedAnswers;
 
     #[ORM\OneToOne(inversedBy: 'participation', cascade: ['persist', 'remove'])]
     private ?User $user = null;
 
+    #[Gedmo\Timestampable(on: 'create')]
+    #[ORM\Column(type: Types::DATETIME_IMMUTABLE, nullable: true)]
+    private ?\DateTimeInterface $createdAt = null;
+
+    #[Gedmo\Timestampable(on: 'update')]
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
+    private ?\DateTimeInterface $updatedAt = null;
 
     public function __construct()
     {
@@ -83,7 +85,7 @@ class Participation
     }
 
 
-        /**
+    /**
      * @return Collection<int, Question>
      */
     public function getSelectedAnswers(): Collection
@@ -119,5 +121,27 @@ class Participation
         return $this;
     }
 
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
 
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    public function setCreatedAt(?\DateTimeInterface $createdAt): static
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): static
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
 }

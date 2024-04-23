@@ -9,7 +9,7 @@
     <div class="container text-center d-flex flex-column">
             <div class="row">
                 <div class="col-12">
-                    <div class="languagewrapper">
+                    {# <div class="languagewrapper">
 
                         <div class="languagemenu d-flex mx-auto justify-content-end">
                             <a href="./fr/" class="flag_link"><img
@@ -30,7 +30,67 @@
                             <a href="./es/" class="flag_link"><img
                                     src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Spain_flat.png"
                                     alt="Spain" title="Spain" class="flag">ES</a>
+                        </div> #}
+
+                        {# <div class="dropdown show" data-controller="quiz">
+                            <a class="btn btn-secondary btn-langage" href="#" role="button" id="dropdownMenuLink"   data-action="click->quiz#toggle">
+                                <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/England_flat.png" alt="English" title="English" class="flag">
+                                EN
+                                <i class="bi bi-caret-down-fill"></i>
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" data-quiz-target="dropDownContent">
+                                <a class="dropdown-item" href="#">
+                                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/France_flat.png" alt="Français" title="Français" class="flag">FR
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Germany_flat.png"
+                                    alt="Deutsch" title="Deutsch" class="flag">DE
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Italy_flat.png"
+                                    alt="Italiano" title="Italiano" class="flag">IT
+                                </a>
+                                                                <a class="dropdown-item" href="#">
+                                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Netherlands.png"
+                                    alt="netherland" title="netherland" class="flag">NL
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Spain_flat.png"
+                                    alt="Spain" title="Spain" class="flag">ES
+                                </a>
+                            </div>
+                        </div> #}
+
+
+
+
+                        <div class="dropdown show mt-1" data-controller="quiz">
+                            <a class="btn-langage" href="#" role="button" id="dropdownMenuLink" data-action="click->quiz#toggle" data-target="quiz.dropdown">
+                                <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/England_flat.png" alt="English" title="English" class="flag flag-btn-langage" data-quiz-target="flagImgBtn">
+                                EN
+                                <i class="bi bi-caret-down-fill"></i>
+                            </a>
+
+                            <div class="dropdown-menu ddContent" aria-labelledby="dropdownMenuLink" data-quiz-target="dropDownContent">
+                                <a class="dropdown-item" href="#" data-action="click->quiz#selectLanguage" data-lang="FR" data-quiz-target="dropDownLink">
+                                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/France_flat.png" alt="Français" title="Français" class="flag" data-quiz-target="dropDownLinkImg">FR
+                                </a>
+                                <a class="dropdown-item" href="#" data-action="click->quiz#selectLanguage" data-lang="DE" data-quiz-target="dropDownLink">
+                                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Germany_flat.png" alt="Deutsch" title="Deutsch" class="flag" data-quiz-target="dropDownLinkImg">DE
+                                </a>
+                                <a class="dropdown-item" href="#" data-action="click->quiz#selectLanguage" data-lang="IT" data-quiz-target="dropDownLink">
+                                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Italy_flat.png" alt="Italiano" title="Italiano" class="flag" data-quiz-target="dropDownLinkImg">IT
+                                </a>
+                                <a class="dropdown-item" href="#" data-action="click->quiz#selectLanguage" data-lang="NL" data-quiz-target="dropDownLink">
+                                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Netherlands.png" alt="netherland" title="netherland" class="flag" data-quiz-target="dropDownLinkImg">NL
+                                </a>
+                                <a class="dropdown-item" href="#" data-action="click->quiz#selectLanguage" data-lang="ES" data-quiz-target="dropDownLink">
+                                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Spain_flat.png" alt="Spain" title="Spain" class="flag" data-quiz-target="dropDownLinkImg">ES
+                                </a>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -56,7 +116,7 @@
                         <div class="gif-box col-12 col-lg-12">
                         </div>
 
-                        <div class="col-12 mt-4 mt-lg-5 mb-5">
+                        <div class="col-12 mt-4 mt-lg-5 mb-5 d-flex justify-content-center">
                             {% if app.request.attributes.get('_route') == 'app_success'%}
                                 <a href=""
                                     class="btn-delta text-white btn border-2 bg-delta-red fw-bold border-white rounded-5 px-5 fs-4">
@@ -78,26 +138,26 @@
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     
     
-    
+{#     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/lang.js"> </script>
+    <script src="assets/js/lang.js"> </script> #}
 
-    <script>
-        AOS.init();
-        $(".answers").on('click', function () {
-            $('.answers').removeClass('selected');
-            $(this).addClass('selected');
-        });
-        $(document).ready(function () {
-            $('.languagemenu a').each(function () {
-                var alt = $(this).children('img').attr('alt');
-                $(this).append('<span class="languagetext">' + alt + '</span>');
-            });
-        });
-    </script>
+    // <script>
+    //     AOS.init();
+    //     $(".answers").on('click', function () {
+    //         $('.answers').removeClass('selected');
+    //         $(this).addClass('selected');
+    //     });
+    //     $(document).ready(function () {
+    //         $('.languagemenu a').each(function () {
+    //             var alt = $(this).children('img').attr('alt');
+    //             $(this).append('<span class="languagetext">' + alt + '</span>');
+    //         });
+    //     });
+    // </script>
 </body>
 
 {% endblock %}

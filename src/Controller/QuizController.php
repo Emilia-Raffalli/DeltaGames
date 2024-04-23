@@ -116,6 +116,8 @@ class QuizController extends AbstractController
                 }
             }
 
+             //dd($participation);
+
             $nextQuestionId = $questionId + 1;
 
             return $this->redirectToRoute('app_quiz', ['id' => $nextQuestionId]);

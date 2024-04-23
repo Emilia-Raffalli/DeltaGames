@@ -18,10 +18,18 @@
         {% if question %}
             
             <div class="row d-flex justify-content-center">
-                <div class="col-12 col-lg-6 ">
+                <div class="col-12 col-lg-9 ">
                     <div class="first d-flex flex-column justify-content-center height-less">
-                        <h3 class="fs-3 text-center text-white fw-bold" data-aos="zoom-in-down"> {{'question'|trans}} {{ question.id }} </h3>
-                        <p class="text-light m-0">{{ hint|trans }}</p>
+                        {% if question.id == 1 %}
+                            <span class="text-primary text-center question mb-3">{{'warm-up-question'|trans}}</span>
+                        {% else %}
+                            <span class="text-primary text-center question mb-3">{{'question'|trans}} {{ question.id }}</span>
+                        {% endif %}
+                        {# <h3 class="fs-3 text-center text-white fw-bold" data-aos="zoom-in-down"> {{'question'|trans}} {{ question.id }} </h3> #}
+                        {# <p class="text-light m-0">{{ hint|trans }}</p> #}
+                        <p class="sub-header quiz text-primary">
+                            {{ hint|trans|raw|capitalize }}
+                        </p> 
                     </div>
                 </div>
             </div>
@@ -32,7 +40,7 @@
 
                         <div class="col-md-12">
                             <div class="text-box-won rounded-5">
-                                <p class="fs-3 py-3 px-4 p-lg-4 fw-bold text-start text-primary text-start">
+                                <p class="fs-3 py-3 px-4 p-lg-4 fw-bold text-start text-primary text-start questionContent">
                                     {{ questionTmp | trans|raw }}
                                 </p>
                             </div>

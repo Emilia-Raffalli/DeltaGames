@@ -7,6 +7,8 @@ h3Home: "Êtes-vous un passionné d'aviation&nbsp;? Un expert de Delta&nbsp;?"
 sub-header: "Dans ce cas, voici votre chance de tester vos connaissances et de gagner quelques stickers amusants Delta. "
 
 question: "QUESTION"
+warm-up-question: "ÉCHAUFFEMENT"
+
 summary-answers: "RÉPONSES DU QUIZ"
 summary-answers-sub: "Dommage, vous n'avez pas trouvé toutes les bonnes réponses.<br>
 Découvrez les bonnes réponses ci-dessous."

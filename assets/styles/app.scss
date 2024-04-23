@@ -24,6 +24,13 @@ h3 {
     line-height: 1.9rem;
 }
 
+.sub-header.quiz {
+    font-family: 'WhitneyCond-Semibold';
+    letter-spacing:0.8px;
+    font-size:2rem;
+    // line-height: 1.9rem;
+}
+
 
 .gif-box {
     background: url('../images/DL-Stickers_FINAL.gif') no-repeat center;
@@ -334,4 +341,54 @@ footer {
     cursor: pointer !important;
     z-index: 101;
 }
+
+span.question {
+    text-transform: uppercase;
+    font-family: 'WhitneyCond-Semibold';
+    font-size:1.3rem;
+}
+
+.dropdown.show {
+    background-color: white;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 3px 0px;
+    z-index:101;
+}
+
+.dropdown.show a{
+    color:#000000;
+    text-decoration: none;
+}
+
+.btn-langage {
+    width:100%;
+}
+
+.questionContent {
+    line-height:2.5rem;
+}
+
+.dropdown-menu.ddContent {
+    display: block;
+    width: 100px;
+    border: none;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.dropdown-menu.ddContent.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+// .dropdown-menu.show {
+//     /* When the 'show' class is added, reveal the dropdown menu */
+//     opacity: 1;
+// }
+
 
