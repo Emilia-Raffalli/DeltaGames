@@ -366,6 +366,11 @@ span.question {
     width:100%;
 }
 
+a.btn-langage  {
+    padding: 3px 15px!important;
+    text-align: left!important;
+}
+
 .questionContent {
     line-height:2.5rem;
 }
@@ -378,6 +383,7 @@ span.question {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    --bs-dropdown-min-width: none!important;
 }
 
 .dropdown-menu.ddContent.visible {
@@ -391,4 +397,8 @@ span.question {
 //     opacity: 1;
 // }
 
+.flag-img {
+    width: 30px; 
+    height: auto; 
 
+}

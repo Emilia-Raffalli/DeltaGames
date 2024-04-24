@@ -7,8 +7,8 @@
 <body class="bg01 bg-blue-delta d-flex flex-column">
 
     <div class="container text-center d-flex flex-column">
-            <div class="row">
-                <div class="col-12">
+            <div class="row d-flex justify-content-end">
+                <div class="col-1">
                     {# <div class="languagewrapper">
 
                         <div class="languagemenu d-flex mx-auto justify-content-end">
@@ -66,10 +66,10 @@
 
 
                         <div class="dropdown show mt-1" data-controller="quiz">
-                            <a class="btn-langage" href="#" role="button" id="dropdownMenuLink" data-action="click->quiz#toggle" data-target="quiz.dropdown">
+                            <a class="btn-langage dropdown-item" href="#" role="button" id="dropdownMenuLink" data-action="click->quiz#toggle" data-quiz-target="linkLangage">
                                 <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/England_flat.png" alt="English" title="English" class="flag flag-btn-langage" data-quiz-target="flagImgBtn">
                                 EN
-                                <i class="bi bi-caret-down-fill"></i>
+                                {# <i class="bi bi-caret-down-fill"></i> #}
                             </a>
 
                             <div class="dropdown-menu ddContent" aria-labelledby="dropdownMenuLink" data-quiz-target="dropDownContent">
