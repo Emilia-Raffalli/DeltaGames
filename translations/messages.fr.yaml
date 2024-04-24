@@ -1,6 +1,17 @@
 # translations/messages.fr.yaml
 
 
+#PAGE TITLES
+
+pageTitle:
+  app_won: "Féliciations!"
+  app_lost: "Pas de chance"
+  app_answers: "Réponses du quiz"
+  app_start: "Delta Air"
+  app_success: "Merci!"
+  app_quiz: "Delta Quiz"
+
+
 # HOME
 
 h3Home: "Êtes-vous un passionné d'aviation&nbsp;? Un expert de Delta&nbsp;?"

@@ -1,6 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} {{ pageTitle }} {% endblock %}
+{% block title %}
+    {% if app.request.attributes.get('_route') == 'app_won'%}
+        {{ pageTitle.app_won }} 
+    {% elseif app.request.attributes.get('_route') == 'app_lost'%}
+        {{ pageTitle.app_lost }}
+    {% elseif app.request.attributes.get('_route') == 'app_answers'%}
+        {{ pageTitle.app_answers }}
+    {% endif %}
+{% endblock %}
 
 {% block body %}
 

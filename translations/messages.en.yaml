@@ -1,6 +1,18 @@
 # translations/messages.fr.yaml
 # hello: Hello1
 
+
+#PAGE TITLES
+
+pageTitle:
+  app_won: "Game win!"
+  app_lost: "Bummer"
+  app_answers: "Summary of correct answers"
+  app_start: "Delta Air"
+  app_success: "Thank You!"
+  app_quiz: "Delta Quiz"
+
+
 h3Home: "Are you an airline geek&nbsp;? A Delta genius&nbsp;?"
 sub-header: "If so, now is your chance to test your knowledge and win some fun Delta stickers."
 

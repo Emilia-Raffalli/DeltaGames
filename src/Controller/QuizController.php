@@ -20,21 +20,28 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\Form\FormError;
 use Symfony\Component\Mime\Address;
+use Symfony\Config\Framework\TranslatorConfig;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class QuizController extends AbstractController
 {
 
     #[Route('/', name: 'app_start')]
     #[Route('/thank-you', name: 'app_success')]
-    public function homeQuiz(SessionInterface $session,
+    public function homeQuiz(SessionInterface $session, TranslatorInterface $translator
     ): Response
     {
         if (!$session->isStarted()) {
             $session->start();
         }
 
+        $pageTitle = [
+            'app_start' => $translator->trans('pageTitle.app_start'),
+            'app_success' => $translator->trans('pageTitle.app_success'),
+        ];
+
         return $this->render('quiz/index.html.twig', [
-            'pageTitle' => 'Start Now',
+            'pageTitle' => $pageTitle,
         ]);
     }
 
@@ -46,6 +53,7 @@ class QuizController extends AbstractController
         QuestionRepository $questionRepository, 
         ParticipationRepository $participationRepository, 
         EntityManagerInterface $em,
+        TranslatorInterface $translator,
         int $id = null
     ): Response {
 
@@ -116,16 +124,22 @@ class QuizController extends AbstractController
                 }
             }
 
-            // dd($participation);
+                // dd($participation);
 
-            $nextQuestionId = $questionId + 1;
+                $nextQuestionId = $questionId + 1;
 
-            return $this->redirectToRoute('app_quiz', ['id' => $nextQuestionId]);
+                return $this->redirectToRoute('app_quiz', ['id' => $nextQuestionId]);
+            }
         }
-    }
+
+        $pageTitle = [
+            'app_quiz' => $translator->trans('pageTitle.app_quiz'),
+        ];
+
+        // dd($pageTitle);
 
         return $this->render('quiz/quiz.html.twig', [
-            'pageTitle' => 'Delta Air',
+            'pageTitle' => $pageTitle,
             'question' => $question,
             'form' => $question ? $form->createView() : null,
             'answers' => $answers,
@@ -143,9 +157,9 @@ class QuizController extends AbstractController
         Request $request, 
         ParticipationRepository $participationRepository, 
         EntityManagerInterface $em,
-        UserRepository $userRepository,
         MailerInterface $mailer,
-        QuestionRepository $questionRepository
+        QuestionRepository $questionRepository,
+        TranslatorInterface $translator
         ): Response
     {
     
@@ -179,12 +193,19 @@ class QuizController extends AbstractController
 
         // $mailer->send($email);
 
-        dd($user);
         return $this->redirectToRoute('app_success');
     }
 
+    $pageTitle = [
+        'app_won' => $translator->trans('pageTitle.app_won'),
+        'app_lost' => $translator->trans('pageTitle.app_lost'),
+        'app_answers' => $translator->trans('pageTitle.app_answers')
+    ];
+
+    // dd($pageTitle);
+
         return $this->render('quiz/template-quiz.html.twig', [
-            'pageTitle' => 'Game win',
+            'pageTitle' => $pageTitle,
             'participation' => $participation,
             'form' => $form->createView(),
             'errorMessage' => isset($errorMessage) ? $errorMessage : null,
