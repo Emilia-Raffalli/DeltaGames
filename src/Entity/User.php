@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
-use DateTimeImmutable;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\DBAL\Types\Types;
 
@@ -42,12 +41,12 @@ class User
     private ?string $country = null;
 
     #[Gedmo\Timestampable(on: 'create')]
-    #[ORM\Column(name: 'created', type: Types::DATETIME_IMMUTABLE, nullable: true)]
-    private ?DateTimeImmutable $createdAt;
+    #[ORM\Column(type: Types::DATETIME_IMMUTABLE, nullable: true)]
+    private ?\DateTimeInterface $createdAt = null;
 
     #[Gedmo\Timestampable(on: 'update')]
-    #[ORM\Column(name: 'updated', type: Types::DATETIME_MUTABLE, nullable: true)]
-    private ?DateTimeImmutable $updatedAt;
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
+    private ?\DateTimeInterface $updatedAt = null;
 
     public function getId(): ?int
     {

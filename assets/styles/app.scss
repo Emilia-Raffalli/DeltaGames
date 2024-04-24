@@ -42,7 +42,7 @@ h3 {
 
 .first {
     background-color: transparent;
-    height: 170px;
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -384,6 +384,8 @@ a.btn-langage  {
     visibility: hidden;
     pointer-events: none;
     --bs-dropdown-min-width: none!important;
+    position:absolute;
+    top:45px;
 }
 
 .dropdown-menu.ddContent.visible {

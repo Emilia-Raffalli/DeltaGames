@@ -116,7 +116,7 @@ class QuizController extends AbstractController
                 }
             }
 
-             //dd($participation);
+            // dd($participation);
 
             $nextQuestionId = $questionId + 1;
 
@@ -179,6 +179,7 @@ class QuizController extends AbstractController
 
         // $mailer->send($email);
 
+        dd($user);
         return $this->redirectToRoute('app_success');
     }
 

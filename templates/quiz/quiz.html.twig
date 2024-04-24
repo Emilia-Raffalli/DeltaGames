@@ -6,9 +6,6 @@
 {% set questionTmp = 'questions.question_'~ question.id ~ '.questionText' %}
 {% set hint = 'questions.question_'~ question.id ~ '.hint' %}
 
-{# <p>{{ 'questions.question_1.answers.answer_1'|trans }} #}
-
-
 
 <body class="bg01 bg-blue-delta d-flex flex-column">
 
@@ -26,8 +23,6 @@
                         {% else %}
                             <span class="text-primary text-center question mb-3">{{'question'|trans}} {{ question.id }}</span>
                         {% endif %}
-                        {# <h3 class="fs-3 text-center text-white fw-bold" data-aos="zoom-in-down"> {{'question'|trans}} {{ question.id }} </h3> #}
-                        {# <p class="text-light m-0">{{ hint|trans }}</p> #}
                         <p class="sub-header quiz text-primary">
                             {{ hint|trans|raw|capitalize }}
                         </p> 
