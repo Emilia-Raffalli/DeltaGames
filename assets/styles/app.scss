@@ -313,6 +313,9 @@ span.question {
 .dropdown.show a{
     color:#000000;
     text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .btn-langage {
