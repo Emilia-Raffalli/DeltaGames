@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} {{ pageTitle }} {% endblock %}
+{% block title %} {{ pageTitle.app_quiz }} {% endblock %}
 
 {% block body %}
 {% set questionTmp = 'questions.question_'~ question.id ~ '.questionText' %}
@@ -42,7 +42,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-4">
+                        <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-1 mt-lg-4">
 
 
                             {% for answer in form.answer %}
@@ -51,12 +51,12 @@
                                 {# {{dump(answer)}} #}
                                     <div class="custom-answer fw-bold form-control btn-answer rounded-5 mx-auto choice bg-light fs-4 text-primary text-start px-4 pointer">
                                         {{ form_widget(answer) }}
-                                        {{ form_label(answer, answerKey|trans, {'label_attr': {'class': 'w-100 pointer'}}) }}
+                                        {{ form_label(answer, answerKey|trans, {'label_attr': {'class': 'w-100 pointer answerChoice'}}) }}
                                     </div>
                                 </div>
                             {% endfor %}
 
-                            <div class="col-12 mt-4 mt-lg-5 mb-5">
+                            <div class="col-12 mt-2 mt-lg-5 mb-5">
                                 {{ form_row(form.submit) }}
                             </div>
                         </div>
