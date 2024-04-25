@@ -13,13 +13,11 @@
 {% block body %}
 
 <body class="bg01 bg-blue-delta d-flex flex-column">
-
-    <div class="container text-center d-flex flex-column">
+    {% include "_partials/_translation.html.twig" %}
+    <div class="container-fluid p-5 pt-0 text-center d-flex flex-column">
         
-        {% include "_partials/_translation.html.twig" %}
-
         <div class="row d-flex justify-content-center">
-            <div class="col col-lg-6 col-12 ">
+            <div class="col col-12 col-lg-6">
 
                 {% if app.request.attributes.get('_route') == 'app_won'%}
 
@@ -32,7 +30,7 @@
 
                     {{ form_start(form, {'attr': {'class': 'row g-3 mx-auto mb-1'}}) }}
                         <div class="col-md-12">
-                            <div class="text-box d-flex flex-column justify-content-center align-items-center">
+                            <div class="text-box mt-4 d-flex flex-column justify-content-center align-items-center">
                                 <div class="row g-3 p-4 p-lg-4 text-start gy-4 align-items-center">
                                     <div class="col-md-6">
                                         {{ form_row(form.firstName) }}
@@ -69,14 +67,14 @@
 
                 {% elseif app.request.attributes.get('_route') == 'app_lost'%}
 
-                    <div class="first d-flex flex-column justify-content-center">
+                    <div class="first d-flex first d-flex flex-column justify-content-center">
                             <h3 class="text-primary text-center fw-bold" data-aos="zoom-in-down">
                                 {{ 'non-winner-sentence'|trans|raw }}
                             </h3>
                             <p class="sub-header text-primary">{{'non-winner-sub'|trans|raw}}</p>
                     </div>
                     <div class="row d-flex justify-content-center">
-                        <div class=" col-12 col-md-12 col-lg-12 text-box fly_box d-flex flex-column justify-content-center align-items-center">
+                        <div class="text-box fly_box d-flex flex-column justify-content-center align-items-center">
                             <p class="fs-3 p-4 fw-bold text-center text-primary m-0">
                                 {{'non-winner-text'|trans|raw }}
                             </p>

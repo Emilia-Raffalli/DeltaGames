@@ -8,11 +8,8 @@
 
 
 <body class="bg01 bg-blue-delta d-flex flex-column">
-
-    <div class="container text-center d-flex flex-column transition">
-
-        {% include "_partials/_translation.html.twig" %}
-
+    {% include "_partials/_translation.html.twig" %}
+    <div class="ccontainer-fluid p-5 pt-0 text-center d-flex flex-column transition">
         {% if question %}
             
             <div class="row d-flex justify-content-center">
@@ -30,24 +27,27 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col" data-controller="quiz">
-                    {{ form_start(form, {'attr': {'class': 'row g-3 w-50 mx-auto mb-1 d-flex flex-column justify-content-center'}})}}
+            {# <div class="row d-flex flex-column justify-content-center"> #}
+                {# <div class="col" data-controller="quiz"> #}
+                    {{ form_start(form, {
+                        'attr': {
+                        'class':'row d-flex justify-content-center flex-column align-items-center',
+                        'data-controller':'quiz'
+                    }})}}
 
-                        <div class="col-md-12">
-                            <div class="text-box-won rounded-5">
-                                <p class="fs-3 py-3 px-4 p-lg-4 fw-bold text-start text-primary text-start questionContent">
+                        <div class="col-12 col-lg-6">
+                            <div class="text-box-won rounded-5 d-flex align-items-center mb-4">
+                                <p class="fs-3 py-3 px-4 p-lg-4 fw-bold text-center text-primary text-start questionContent mb-0">
                                     {{ questionTmp | trans|raw }}
                                 </p>
                             </div>
                         </div>
 
-                        <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-1 mt-lg-4">
-
+                        <div class="col-10 col-lg-6 d-flex flex-column align-items-center mt-1 mt-lg-4">
 
                             {% for answer in form.answer %}
                                 {% set answerKey = 'questions.question_' ~ question.id ~ '.answers.answer_' ~ loop.index %}
-                                <div class="col-12 col-md-9 col-lg-9 mb-3">
+                                <div class="col-12 col-lg-9 mb-3">
                                 {# {{dump(answer)}} #}
                                     <div class="custom-answer fw-bold form-control btn-answer rounded-5 mx-auto choice bg-light fs-4 text-primary text-start px-4 pointer">
                                         {{ form_widget(answer) }}
@@ -56,13 +56,16 @@
                                 </div>
                             {% endfor %}
 
-                            <div class="col-12 mt-2 mt-lg-5 mb-5">
-                                {{ form_row(form.submit) }}
-                            </div>
+                            {{ form_widget(form.submit) }}
+                             {# {{ form_row(form.submit, {
+                        'attr': {
+                        'class':'row d-flex justify-content-center mx-auto',
+                        'data-controller':'quiz'
+                    }})}} #}
                         </div>
                     {{ form_end(form) }}
-                </div>
-            </div>
+                {# </div> #}
+            {# </div> #}
         {% endif %}
     </div>
     {% include "_partials/_footer.html.twig" %}

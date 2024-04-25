@@ -21,7 +21,7 @@ question: "QUESTION"
 warm-up-question: "ÉCHAUFFEMENT"
 
 summary-answers: "RÉPONSES DU QUIZ"
-summary-answers-sub: "Dommage, vous n'avez pas trouvé toutes les bonnes réponses.<br>
+summary-answers-sub: "Dommage, vous n'avez pas trouvé toutes les bonnes réponses.
 Découvrez les bonnes réponses ci-dessous."
 
 
@@ -58,7 +58,7 @@ winner-text: "Vous êtes un véritable expert de Delta. Pour recevoir vos sticke
 
 questions:
   question_1: 
-    questionText: "Quelle est votre nouvelle liaison préférée dans le programme Delta Summer 2024 ?"
+    questionText: "Quelle est votre nouvelle liaison préférée dans le programme Delta Summer 2024&nbsp;?"
     hint: "Ne vous inquiétez pas, vous y arriverez."
     answers:
       answer_1: "A. Munich à New York-JFK"

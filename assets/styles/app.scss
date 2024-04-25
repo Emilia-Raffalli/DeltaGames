@@ -17,18 +17,13 @@ h3 {
     letter-spacing:0.8px;
 }
 
-.sub-header {
-    font-family: 'WhitneyCond-Semibold';
-    letter-spacing:0.8px;
-    font-size:1.7rem;
-    line-height: 1.9rem;
-}
 
-.sub-header.quiz {
+
+.sub-header.quiz, .sub-header {
     font-family: 'WhitneyCond-Semibold';
     letter-spacing:0.8px;
-    font-size:2rem;
-    // line-height: 1.9rem;
+    font-size:2.5rem;
+    line-height: normal;
 }
 
 
@@ -42,7 +37,7 @@ h3 {
 
 .first {
     background-color: transparent;
-    height: 180px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,12 +48,10 @@ h3 {
 // }
 
 .bg01 {
-    // background: url(../images/01.png) no-repeat center;
     background: url('../images/Welcome-Screen_Background-Plane_1920x1080_FINAL-new-bg.png') no-repeat center;
-    background-size:120%;
-    background-position-y:-10;
-    min-height: 100vh!important;
-    position:relative;
+    background-size: cover; 
+    background-position: center; 
+    min-height: 100vh; 
 }
 
 .bg-blue-delta {
@@ -75,18 +68,14 @@ h3 {
 
 .selected {
     border: 2px solid white !important;
-    background-color: #799fca !important;
-    color: white !important;
+    background-color: #bcd9fb !important;
+    color: #003a70 !important;
 }
 
 .bg-dark-red {
     background-color: #c01933;
 }
 
-.btn:hover {
-    background-color: #9f1429;
-    cursor: pointer,!important;
-}
 
 button {
     cursor: pointer,!important;
@@ -162,7 +151,7 @@ input::placeholder {
 }
 
 .text-box-won {
-    height: fit-content;
+    height: auto;
     background-color: #fff;
 }
 
@@ -177,15 +166,33 @@ input.form-delta {
     color: #003a70 !important;
     background-color: #f9f9f9 !important;
     font-weight: bold !important;
-    height: 48px;
+    border-radius: 0.9rem;
+    height: 4rem;
 }
 
 .btn-delta {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     cursor:pointer!important;
     text-transform: uppercase;
     font-family: 'WhitneyCond-Semibold';
+    background-color:#c01933;
+    border:2px solid white;
+    color:white;
+    font-weight: bold;
+    border-radius:2rem;
+    padding:0.2rem 3rem;
 }
+
+.btn-delta:hover {
+    background-color: #9f1429;
+    cursor: pointer,!important;
+}
+
+.btn-delta:active {
+    background-color: #9f1429!important;
+    cursor: pointer,!important;
+}
+
 
 .choice {
     cursor:pointer!important;
@@ -195,35 +202,16 @@ input.form-delta {
     font-size:1.4rem;
 }
 
-// @font-face {
-//     font-family: 'Calibri';
-//     src: url('Calibri-LightItalic.eot');
-//     src: local('Calibri Light Italic'), local('Calibri-LightItalic'),
-//         url('Calibri-LightItalic.eot?#iefix') format('embedded-opentype'),
-//         url('Calibri-LightItalic.woff2') format('woff2'),
-//         url('Calibri-LightItalic.woff') format('woff'),
-//         url('Calibri-LightItalic.ttf') format('truetype');
-//     font-weight: 300;
-//     font-style: italic;
-// }
-
 
 footer {
     justify-content: flex-end;
     padding-right:3rem;
-    // position: relative;
 }
 
 .logo-footer {
     background:url(../images/new-logo-delta.png) no-repeat center;
-    background-size: cover;
+    background-size: contain;
     height:30px;
-}
-
-.img-statue {
-    position: absolute;
-    bottom: 0;
-    left: 180px;
 }
 
 .langage {
@@ -240,7 +228,7 @@ footer {
     /* height:35px; */
     background: url('http://www.foxrep.com/wp-content/uploads/2017/11/Down-Arrow-PNG.png') no-repeat right 10px center #ffffff;
     background-size: 20px auto;
-    border: 1px solid #000000;
+    border: 1px solid white;
 }
 
 .select_wrap span {
@@ -259,8 +247,6 @@ footer {
     background: #ffffff;
     margin: 0;
     padding: 10px 0;
-    /* border:1px solid #000000; */
-    /* border-top:0; */
 }
 
 .select_wrap ul li {
@@ -280,14 +266,17 @@ footer {
     background-color: #acd4f7;
 }
 
-// .custom-answer {
-//     background-color: #fff!important;
-//     cursor:pointer!important;
-//     border-radius: 2rem;
-// }
-
 .custom-answer input[type="radio"] {
     display:none;
+}
+
+.custom-answer {
+    padding:1.2rem!important;
+}
+
+.custom-answer:hover {
+    background-color: #bcd9fb!important;
+    // border:2px solid white!important;
 }
 
 .pointer {
@@ -329,6 +318,7 @@ a.btn-langage  {
 
 .questionContent {
     line-height:2.3rem;
+    font-size:2rem;
 }
 
 .dropdown-menu.ddContent {
@@ -363,19 +353,15 @@ a.btn-langage  {
 }
 
 
-@media (max-width: 768px) {
-    .w-75,
-    .w-50 {
-        width: 100% !important;
-    }
+@media screen and (max-width: 768px) {
+    // .w-75,
+    // .w-50 {
+    //     width: 100% !important;
+    // }
 
-    h3 {
-        font-size: 1.6rem !important;
-    }
-
-    .btn-delta{
-        width: 100%;
-    }
+    // h3 {
+    //     font-size: 1.6rem !important;
+    // }
 
     .text-box,
     .gif-box {
@@ -386,41 +372,27 @@ a.btn-langage  {
         padding: 0 20px;
     }
 
-    h3 {
-        font-size: 1rem;
-    }
+    // h3 {
+    //     font-size: 1rem;
+    // }
 
     .first {
         background-color: transparent;
-        // height: 120px;
+        height: 200px!important;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .bg01 {
-        background: url(../images/01.png) no-repeat center;
-        // background-size: 440%; 
-        // background-position-y: 15%; 
-        min-height: 100vh;
-    }
 
-    .img-statue {
-        display: none;
-    }
-
-    .questionContent {
-        line-height:1.6rem;
-    }
+    // .questionContent {
+    //     line-height:1.6rem;
+    // }
 
     .answerChoice {
-        font-size:1.2rem;
+        font-size:1.6rem;
     }
 
-    .sub-header.quiz, .sub-header {
-        font-size: 1.6rem;
-        line-height: 1.7rem;
-    }
     span.question {
         font-size: 1rem;
     }
@@ -428,26 +400,21 @@ a.btn-langage  {
     footer {
         padding: 0rem 0.5rem;
     }
+
     .logo-footer {
         background:url(../images/logo-BLC.png) no-repeat center;
         background-size: cover;
         height:30px;
-        
+    }
+
+    .btn.btn-delta{
+        width: 100%!important;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .bg01 {
-        background: url(../images/Welcome-Screen_Background-Plane_1920x1080_FINAL-new-bg.png) no-repeat center;
-        background-size: cover;
-        min-height: 100vh;
-    }
 
-    .img-statue {
-        display: none;
-    }
-
-    .first {
-        height:300px;
-    }
+    // .first {
+    //     height:200px;
+    // }
 }
