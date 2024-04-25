@@ -1,36 +1,35 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    {% if app.request.attributes.get('_route') == 'app_won'%}
+    {% if app.request.attributes.get('_route') == 'app_won' %}
         {{ pageTitle.app_won }} 
-    {% elseif app.request.attributes.get('_route') == 'app_lost'%}
+    {% elseif app.request.attributes.get('_route') == 'app_lost' %}
         {{ pageTitle.app_lost }}
-    {% elseif app.request.attributes.get('_route') == 'app_answers'%}
+    {% elseif app.request.attributes.get('_route') == 'app_answers' %}
         {{ pageTitle.app_answers }}
     {% endif %}
 {% endblock %}
 
 {% block body %}
-
 <body class="bg01 bg-blue-delta d-flex flex-column">
     {% include "_partials/_translation.html.twig" %}
     <div class="container-fluid p-5 pt-0 text-center d-flex flex-column">
         
-        <div class="row d-flex justify-content-center">
-            <div class="col col-12 col-lg-6">
+        <div class="wrap d-flex flex-column justify-content-center">
+            <div class="row d-flex justify-content-center">
 
-                {% if app.request.attributes.get('_route') == 'app_won'%}
+                {% if app.request.attributes.get('_route') == 'app_won' %}
 
-                    <div class="first d-flex flex-column justify-content-center">
-                            <h3 class="text-primary text-start fw-bold" data-aos="zoom-in-down">
-                                {{ 'winner-sentence'|trans|raw }}
-                            </h3>
-                            <p class="sub-header text-primary">{{'winner-text'|trans|raw}}</p>
+                    <div class="row first d-flex flex-column justify-content-center mt-5">
+                        <h3 class="col-12 col-lg-9 text-primary text-center fw-bold" data-aos="zoom-in-down">
+                            {{ 'winner-sentence'|trans|raw }}
+                        </h3>
+                        <p class="sub-header text-primary m-0">{{ 'winner-text'|trans|raw }}</p>
                     </div>
-
-                    {{ form_start(form, {'attr': {'class': 'row g-3 mx-auto mb-1'}}) }}
-                        <div class="col-md-12">
-                            <div class="text-box mt-4 d-flex flex-column justify-content-center align-items-center">
+                    
+                    {{ form_start(form, {'attr': {'class': 'row d-flex justify-content-center g-3 mx-auto mb-1'}}) }}
+                        <div class="col-12 col-lg-6">
+                            <div class="text-box d-flex flex-column justify-content-center align-items-center">
                                 <div class="row g-3 p-4 p-lg-4 text-start gy-4 align-items-center">
                                     <div class="col-md-6">
                                         {{ form_row(form.firstName) }}
@@ -63,60 +62,57 @@
                             {{ form_row(form.submit) }}
                         </div>
                     {{ form_end(form)}}
+                
 
+                {% elseif app.request.attributes.get('_route') == 'app_lost' %}
 
-                {% elseif app.request.attributes.get('_route') == 'app_lost'%}
-
-                    <div class="first d-flex first d-flex flex-column justify-content-center">
-                            <h3 class="text-primary text-center fw-bold" data-aos="zoom-in-down">
-                                {{ 'non-winner-sentence'|trans|raw }}
-                            </h3>
-                            <p class="sub-header text-primary">{{'non-winner-sub'|trans|raw}}</p>
+                    <div class="row first d-flex flex-column justify-content-center">
+                        <h3 class="col-12 col-lg-9 text-primary text-center fw-bold" data-aos="zoom-in-down">
+                            {{ 'non-winner-sentence'|trans|raw }}
+                        </h3>
+                        <p class="sub-header text-primary">{{ 'non-winner-sub'|trans|raw }}</p>
                     </div>
                     <div class="row d-flex justify-content-center">
-                        <div class="text-box fly_box d-flex flex-column justify-content-center align-items-center">
+                        <div class="col-12 col-md-9 col-lg-6 text-box fly_box d-flex flex-column justify-content-center align-items-center">
                             <p class="fs-3 p-4 fw-bold text-center text-primary m-0">
-                                {{'non-winner-text'|trans|raw }}
+                                {{ 'non-winner-text'|trans|raw }}
                             </p>
                         </div>
                     </div>
                     <div class="col-12 mt-4 mt-lg-5 mb-5">
-                        <a href="{{ path('app_answers') }}" class="btn-delta text-white btn border-2 bg-delta-red fw-bold border-white rounded-5 px-5 fs-4">{{'action-buttons.check-correct-answers'|trans|raw}}</a>
+                        <a href="{{ path('app_answers') }}" class="btn-delta">{{ 'action-buttons.check-correct-answers'|trans|raw }}</a>
                     </div>
 
-                {% elseif app.request.attributes.get('_route') == 'app_answers'%}
-                    <div class="first d-flex flex-column justify-content-center">
-                            <h3 class="text-primary text-center fw-bold" data-aos="zoom-in-down">
-                                {{ 'summary-answers'|trans|raw }}
-                            </h3>
-                            <p class="sub-header text-primary">{{'summary-answers-sub'|trans|raw}}</p>
+                {% elseif app.request.attributes.get('_route') == 'app_answers' %}
+
+                    <div class="row first d-flex flex-column justify-content-center">
+                        <h3 class="text-primary text-center fw-bold" data-aos="zoom-in-down">
+                            {{ 'summary-answers'|trans|raw }}
+                        </h3>
+                        <p class="sub-header text-primary">{{ 'summary-answers-sub'|trans|raw }}</p>
                     </div>
-                    <div class="text-box-won rounded-5 p-4">
+                    <div class="col-12 col-md-9 col-lg-6 text-box-won rounded-5 p-4">
                         {% for question in allQuestions %}
-                        {% set correctAnswerDescription = 'questions.question_' ~ question.id ~ '.correctAnswerDescription' %}
+                            {% set correctAnswerDescription = 'questions.question_' ~ question.id ~ '.correctAnswerDescription' %}
                             <div class="row p-3 {% if loop.last %}{% else %}border-bottom{% endif %} align-items-center">
                                 <div class="col-12 col-lg-4">
-                                    <h3 class="fw-bold fs-5 text-primary">{{'question'|trans}} {{ question.id}}</h3>
+                                    <h3 class="fw-bold fs-5 text-primary">{{ 'question'|trans }} {{ question.id }}</h3>
                                 </div>
                                 <div class="col-12 col-lg-8">
                                     <p class="m-0 text-center text-lg-start">
-                                        {# {{ question.correctAnswerDescription }} #}
-                                        {{ correctAnswerDescription |trans|raw }}
-
+                                        {{ correctAnswerDescription|trans|raw }}
                                     </p>
                                 </div>
                             </div>
                         {% endfor %}
                     </div>
                     <div class="col-12 mt-4 mt-lg-5 mb-5">
-                        <a href="" class="btn-delta text-white btn border-2 bg-delta-red fw-bold border-white rounded-5 px-5 fs-4">{{'action-buttons.close'|trans|raw}}</a>
+                        <a href="" class="btn-delta">{{ 'action-buttons.close'|trans|raw }}</a>
                     </div>
                 {% endif %}
-
             </div>
         </div>
     </div>
-        {% include "_partials/_footer.html.twig" %}
+    {% include "_partials/_footer.html.twig" %}
 </body>
-
 {% endblock %}

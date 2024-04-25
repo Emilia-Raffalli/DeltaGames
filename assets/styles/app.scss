@@ -22,7 +22,7 @@ h3 {
 .sub-header.quiz, .sub-header {
     font-family: 'WhitneyCond-Semibold';
     letter-spacing:0.8px;
-    font-size:2.5rem;
+    font-size:1.9rem;
     line-height: normal;
 }
 
@@ -37,7 +37,7 @@ h3 {
 
 .first {
     background-color: transparent;
-    height: 200px;
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,8 +151,11 @@ input::placeholder {
 }
 
 .text-box-won {
-    height: auto;
+    min-height: 70%;
+    display: flex;
     background-color: #fff;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 
@@ -178,9 +181,12 @@ input.form-delta {
     background-color:#c01933;
     border:2px solid white;
     color:white;
-    font-weight: bold;
+    // font-weight: bold;
     border-radius:2rem;
-    padding:0.2rem 3rem;
+    padding:0.5rem 3rem;
+    // max-height:50px!important;
+    text-decoration: none;
+    min-width:300px;
 }
 
 .btn-delta:hover {
@@ -211,7 +217,7 @@ footer {
 .logo-footer {
     background:url(../images/new-logo-delta.png) no-repeat center;
     background-size: contain;
-    height:30px;
+    height:50px;
 }
 
 .langage {
@@ -272,6 +278,7 @@ footer {
 
 .custom-answer {
     padding:1.2rem!important;
+    border: 2px solid #dee7f3!important;
 }
 
 .custom-answer:hover {
@@ -352,6 +359,9 @@ a.btn-langage  {
 
 }
 
+.wrap {
+    height:80vh;
+}
 
 @media screen and (max-width: 768px) {
     // .w-75,
