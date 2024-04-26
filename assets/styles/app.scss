@@ -178,13 +178,16 @@ input::placeholder {
 }
 
 .text-box-won {
-    min-height: 70%;
+    min-height: 120px;
     display: flex;
     background-color: #fff;
     flex-direction: column;
     justify-content: space-around;
 }
 
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
 
 
 .form-delta::placeholder {
@@ -196,8 +199,8 @@ input.form-delta {
     color: #003a70 !important;
     background-color: #f9f9f9 !important;
     font-weight: bold !important;
-    border-radius: 0.9rem;
-    height: 4rem;
+    border-radius: 0.5rem;
+    height: 3rem;
 }
 
 .btn-delta {
@@ -387,6 +390,13 @@ a.btn-langage  {
 
 }
 
+.answerChoice {
+    font-size:1.1rem;
+}
+
+p.results {
+    font-size:1.6rem;
+}
 // .wrap {
 //     height:80vh;
 // }
@@ -435,14 +445,14 @@ a.btn-langage  {
         font-size:2rem;
     }
 
-    h3.correctAnswers {
-        text-align:center;
-    }
 
     .gif-box {
-        min-height: 200px;
+        min-height: 250px;
     }
 
+    p.results {
+        font-size: 1.3rem;
+    }
     // .sub-header.quiz, .sub-header {
     //     text-align: center;
     // }

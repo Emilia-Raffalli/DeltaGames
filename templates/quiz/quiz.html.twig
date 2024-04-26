@@ -11,7 +11,9 @@
 {# <body class="bg01 bg-blue-delta d-flex flex-column"> #}
 <body>
     {% include "_partials/_translation.html.twig" %}
+    {# <div class="container-fluid p-5 pt-0 text-center d-flex flex-column transition"> #}
     <div class= "mx-3 mx-lg-5">
+        
         <div class="d-flex flex-column justify-content-center">
             {% if question %}
                 
@@ -25,9 +27,9 @@
                             {% else %}
                                 <span class="text-primary text-center question mb-0">{{'question'|trans}} {{ question.id }} / {{ questions|length }}</span>
                             {% endif %}
-                            <p class="sub-header quiz text-primary m-0">
+                            <p class="sub-header quiz text-primary mb-4">
                                 {{ hint|trans|raw|capitalize }}
-                            </p> 
+                                </p> 
                         </div>
                     </div>
                 </div>
@@ -41,7 +43,7 @@
                         }})}}
 
                         <div class="col-12 col-md-9 col-lg-6">
-                            <div class="text-box-won rounded-5 d-flex align-items-center mb-3">
+                            <div class="text-box-won rounded-5 d-flex align-items-center mb-4">
                                 <p class="py-3 px-3 px-lg-4 p-lg-4 fw-bold text-center text-primary text-start questionContent mb-0">
                                     {{ questionTmp | trans|raw }}
                                 </p>

@@ -37,7 +37,7 @@ class QuizAnswerType extends AbstractType
             ->add('submit', SubmitType::class, [
                 'label' => 'action-buttons.next',
                 'attr' => [
-                    'class' => 'btn-delta'
+                    'class' => 'btn-delta mt-3 col-12 col-lg-4'
                 ]
             ])
             ->setAttribute('answer_translation_keys', $options['answer_translation_keys']);

@@ -80,7 +80,7 @@ class UserType extends AbstractType
             ->add('submit', SubmitType::class, [
                 'label' => 'action-buttons.confirm',
                 'attr' => [
-                    'class' => 'btn-delta text-white btn border-2 bg-delta-red fw-bold border-white rounded-5 px-5 fs-4'
+                    'class' => 'btn-delta mt-3 col-12 col-lg-4'
                 ]
             ]);
 // //             ->add('participation', EntityType::class, [
