@@ -63,7 +63,7 @@ h3 {
 .gif-box {
     background: url('../images/DL-Stickers_FINAL.gif') no-repeat center;
     background-size: contain;
-    min-height: 200px;
+    min-height: 400px;
 }
 
 .first {
@@ -437,6 +437,10 @@ a.btn-langage  {
 
     h3.correctAnswers {
         text-align:center;
+    }
+
+    .gif-box {
+        min-height: 200px;
     }
 
     // .sub-header.quiz, .sub-header {
