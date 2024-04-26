@@ -13,7 +13,134 @@
 {% block body %}
 <body>
     {% include "_partials/_translation.html.twig" %}
-    <div class="container-fluid p-5 pt-0 text-center d-flex flex-column">
+    <div class= "mx-3 mx-lg-5">
+
+        <div class="d-flex flex-column justify-content-center mt-5 align-content-center">
+
+{# ROUTE WON #}  
+            {% if app.request.attributes.get('_route') == 'app_won' %}
+                <div class="row d-flex justify-content-center">
+                    <div class="col-12 col-lg-9 ">
+                        <div class="first d-flex flex-column justify-content-center height-less">
+                                <h3 class="text-primary text-center fw-bold" data-aos="zoom-in-down">
+                                    {{ 'winner-sentence'|trans|raw }}
+                                </h3>
+                                <p class="sub-header quiz text-primary m-0">
+                                    {{ 'winner-text'|trans|raw }}
+                                </p>
+                        </div>
+                    </div>
+                </div>
+
+                {{ form_start(form, {'attr': {'class': 'row d-flex justify-content-center g-3 mx-auto mb-1'}}) }}
+                            <div class="col-12 col-lg-6">
+                                <div class="text-box d-flex flex-column justify-content-center align-items-center">
+                                    <div class="row g-3 p-4 p-lg-4 text-start gy-4 align-items-center">
+                                        <div class="col-md-6">
+                                            {{ form_row(form.firstName) }}
+                                        </div>
+                                        <div class="col-md-6">
+                                            {{ form_row(form.lastName) }}
+                                        </div>
+                                        <div class="col-md-12">
+                                            {{ form_row(form.email) }}
+                                        </div>
+                                        <div class="col-12">
+                                            {{ form_row(form.adress) }}
+                                        </div>
+                                        <div class="col-12">
+                                            {{ form_row(form.adress2) }}
+                                        </div>
+                                        <div class="col-md-6">
+                                            {{ form_row(form.zipCode) }}
+                                        </div>
+                                        <div class="col-md-6">
+                                            {{ form_row(form.city) }}
+                                        </div>
+                                        <div class="col-md-12">
+                                            {{ form_row(form.country) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4 mt-lg-5 mb-5">
+                                {{ form_row(form.submit) }}
+                            </div>
+                {{ form_end(form)}}
+
+{# ROUTE LOST #}
+
+            {% elseif app.request.attributes.get('_route') == 'app_lost' %}
+                <div class="row d-flex justify-content-center">
+                    <div class="col-12 col-lg-9 ">
+                        <div class="first d-flex flex-column justify-content-center height-less">
+                                <h3 class="text-primary text-center fw-bold" data-aos="zoom-in-down">
+                                    {{ 'non-winner-sentence'|trans|raw }}
+                                </h3>
+                                <p class="sub-header quiz text-primary m-0">
+                                    {{ 'non-winner-sub'|trans|raw }}
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-12 col-md-9 col-lg-6 text-box fly_box d-flex flex-column justify-content-center align-items-center">
+                        <p class="fs-3 p-4 fw-bold text-center text-primary m-0">
+                            {{ 'non-winner-text'|trans|raw }}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 mt-4 mt-lg-5 mb-5">
+                    <a href="{{ path('app_answers') }}" class="btn-delta">{{ 'action-buttons.check-correct-answers'|trans|raw }}</a>
+                </div>
+
+{# ROUTE ANSWERS #}  
+
+            {% elseif app.request.attributes.get('_route') == 'app_answers' %}
+                <div class="row d-flex justify-content-center">
+                    <div class="col-12 col-lg-9 ">
+                        <div class="first d-flex flex-column justify-content-center height-less">
+                                <h3 class="text-primary text-center fw-bold" data-aos="zoom-in-down">
+                                    {{ 'summary-answers'|trans|raw }}
+                                </h3>
+                                <p class="sub-header quiz text-primary m-0">
+                                    {{ 'summary-answers-sub'|trans|raw }}
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-9 col-lg-6 text-box-won rounded-5 p-4">
+                    {% for question in allQuestions %}
+                        {% set correctAnswerDescription = 'questions.question_' ~ question.id ~ '.correctAnswerDescription' %}
+                        <div class="row d-flex justify-content-center p-3 {% if loop.last %}{% else %}border-bottom{% endif %} align-items-center">
+                            <div class="col-12 col-lg-4">
+                                <h3 class="fw-bold fs-5 text-primary correctAnswers">{{ 'question'|trans }} {{ question.id }}</h3>
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                <p class="m-0 text-center text-lg-start">
+                                    {{ correctAnswerDescription|trans|raw }}
+                                </p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="col-12 mt-4 mt-lg-5 mb-5">
+                    <a href="" class="btn-delta">{{ 'action-buttons.close'|trans|raw }}</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    {% include "_partials/_footer.html.twig" %}
+</body>
+{% endblock %}
+
+    
+
+
+
+{# a partir de là ancien code #}
+
+    {# <div class="container-fluid p-5 pt-0 text-center d-flex flex-column">
         
         <div class="d-flex flex-column justify-content-center">
             <div class="row d-flex justify-content-center">
@@ -25,46 +152,12 @@
                             {{ 'winner-sentence'|trans|raw }}
                         </h3>
                         <p class="sub-header text-primary m-0">{{ 'winner-text'|trans|raw }}</p>
-                    </div>
+                    </div> #}
                     
-                    {{ form_start(form, {'attr': {'class': 'row d-flex justify-content-center g-3 mx-auto mb-1'}}) }}
-                        <div class="col-12 col-lg-6">
-                            <div class="text-box d-flex flex-column justify-content-center align-items-center">
-                                <div class="row g-3 p-4 p-lg-4 text-start gy-4 align-items-center">
-                                    <div class="col-md-6">
-                                        {{ form_row(form.firstName) }}
-                                    </div>
-                                    <div class="col-md-6">
-                                        {{ form_row(form.lastName) }}
-                                    </div>
-                                    <div class="col-md-12">
-                                        {{ form_row(form.email) }}
-                                    </div>
-                                    <div class="col-12">
-                                        {{ form_row(form.adress) }}
-                                    </div>
-                                    <div class="col-12">
-                                        {{ form_row(form.adress2) }}
-                                    </div>
-                                    <div class="col-md-6">
-                                        {{ form_row(form.zipCode) }}
-                                    </div>
-                                    <div class="col-md-6">
-                                        {{ form_row(form.city) }}
-                                    </div>
-                                    <div class="col-md-12">
-                                        {{ form_row(form.country) }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mt-4 mt-lg-5 mb-5">
-                            {{ form_row(form.submit) }}
-                        </div>
-                    {{ form_end(form)}}
+                    
                 
 
-                {% elseif app.request.attributes.get('_route') == 'app_lost' %}
+                {# {% elseif app.request.attributes.get('_route') == 'app_lost' %}
 
                     <div class="row first d-flex flex-column justify-content-center">
                         <h3 class="col-12 col-lg-9 text-primary text-center fw-bold" data-aos="zoom-in-down">
@@ -81,9 +174,9 @@
                     </div>
                     <div class="col-12 mt-4 mt-lg-5 mb-5">
                         <a href="{{ path('app_answers') }}" class="btn-delta">{{ 'action-buttons.check-correct-answers'|trans|raw }}</a>
-                    </div>
+                    </div> #}
 
-                {% elseif app.request.attributes.get('_route') == 'app_answers' %}
+                {# {% elseif app.request.attributes.get('_route') == 'app_answers' %}
 
                     <div class="row first d-flex flex-column justify-content-center">
                         <h3 class="text-primary text-center fw-bold" data-aos="zoom-in-down">
@@ -112,7 +205,7 @@
                 {% endif %}
             </div>
         </div>
-    </div>
-    {% include "_partials/_footer.html.twig" %}
+    </div> #}
+    {# {% include "_partials/_footer.html.twig" %}
 </body>
-{% endblock %}
+{% endblock %} #}
