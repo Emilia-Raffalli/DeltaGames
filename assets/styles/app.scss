@@ -20,9 +20,8 @@ body {
 
 
 html.intro {
-    /* L'image est positionnée en fond et est centrée */
-    background: url('../images/Welcome-Screen_Background-Plane_1920x1080_FINAL-new-bg.png') no-repeat center center fixed;
-    /* Ajout de la propriété avec les préfixes pour tous les moteurs de rendu */
+    // background: url('../images/Welcome-Screen_Background-Plane_1920x1080_FINAL-new-bg.png') no-repeat center center fixed;
+    background: url('../images/Welcome-Screen_Background-Plane_1920x1080_FINAL-new-bg.png') no-repeat center bottom fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -54,7 +53,7 @@ h3 {
 
 .sub-header.quiz, .sub-header {
     font-family: 'WhitneyCond-Semibold';
-    font-size:1.5rem;
+    font-size:1.7rem;
     line-height: normal;
     text-align: center;
 }
@@ -64,11 +63,12 @@ h3 {
     background: url('../images/DL-Stickers_FINAL.gif') no-repeat center;
     background-size: contain;
     min-height: 400px;
+    max-height: 400px;
 }
 
 .first {
     background-color: transparent;
-    height: 180px;
+    height: 130px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -248,7 +248,8 @@ footer {
 .logo-footer {
     background:url(../images/new-logo-delta.png) no-repeat center;
     background-size: contain;
-    height:50px;
+    height:40px;
+    margin-top:15px;
 }
 
 .langage {
@@ -356,7 +357,7 @@ a.btn-langage  {
 
 .questionContent {
     line-height:normal;
-    font-size:1.3rem;
+    font-size:1.4rem;
 }
 
 .dropdown-menu.ddContent {
@@ -391,7 +392,7 @@ a.btn-langage  {
 }
 
 .answerChoice {
-    font-size:1.1rem;
+    font-size:1.2rem;
 }
 
 p.results {
@@ -413,7 +414,7 @@ p.results {
 
     .first {
         background-color: transparent;
-        height: 150px!important;
+        height: 160px!important;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -447,7 +448,7 @@ p.results {
 
 
     .gif-box {
-        min-height: 250px;
+        min-height: 300px;
     }
 
     p.results {
@@ -457,6 +458,13 @@ p.results {
     //     text-align: center;
     // }
 
+
 }
 
+
+@media screen and (max-width:400px) {
+    .gif-box {
+        min-height:none!important;
+    }
+}
 

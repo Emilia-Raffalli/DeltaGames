@@ -33,7 +33,7 @@ winner-text: "Sei un vero genio Delta. Per ottenere gli adesivi Delta, ti preghi
 
 questions:
   question_1: 
-    questionText: "Qual è la nuova rotta del network estivo 2024 di Delta che preferisci ?"
+    questionText: "Qual è la nuova rotta del network estivo 2024 di Delta che preferisci&nbsp;?"
     hint: "Non preoccuparti, ce la farai."
     answers:
       answer_1: "A. Monaco di Baviera - New York-JFK​"
@@ -46,7 +46,7 @@ questions:
 
 
   question_2: 
-    questionText: "Da quanti paesi in Europa, Medio Oriente, Africa e India (EMEAI) Delta offre collegamenti non-stop per gli USA ?"
+    questionText: "Da quanti paesi in Europa, Medio Oriente, Africa e India (EMEAI) Delta offre collegamenti non-stop per gli USA&nbsp;?"
     hint: "Non importa il paese di provenienza, Delta è la scelta ideale per volare negli USA."
     answers:
       answer_1: "A. 20"
@@ -68,7 +68,7 @@ questions:
 
 
   question_4: 
-    questionText: "Quanti voli non-stop opererà Delta dalla regione EMEAI questa estate ?"
+    questionText: "Quanti voli non-stop opererà Delta dalla regione EMEAI questa estate&nbsp;?"
     hint: "C'è un posto per tutti all'interno della più grande programmazione transatlantica di sempre di Delta."
     answers:
       answer_1: "A. Più di 700"
@@ -79,7 +79,7 @@ questions:
 
 
   question_5: 
-    questionText: "Delta offre comode coincidenze verso quante destinazioni negli USA ?"
+    questionText: "Delta offre comode coincidenze verso quante destinazioni negli USA&nbsp;?"
     hint: "C'è tanto da esplorare negli USA."
     answers:
       answer_1: "A. Meno di 150"

@@ -90,7 +90,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-12 mt-lg-5 mb-5 d-flex justify-content-center">
+                <div class="col-12 mt-0 mb-3 mb-lg-5 d-flex justify-content-center">
                     <a href="{{ path('app_answers') }}" class="btn-delta mt-3 col-12 col-md-8 col-lg-4">{{ 'action-buttons.check-correct-answers'|trans|raw }}</a>
                 </div>
 
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-8 col-lg-5 text-box-won rounded-5 p-3 p-lg-4 shadow">
+                <div class="col-12 col-md-8 col-lg-6 text-box-won rounded-5 p-3 p-lg-4 shadow">
                     {% for question in allQuestions %}
                         {% set correctAnswerDescription = 'questions.question_' ~ question.id ~ '.correctAnswerDescription' %}
                         <div class="row d-flex justify-content-center p-3 {% if loop.last %}{% else %}border-bottom{% endif %} align-items-center">
@@ -124,8 +124,8 @@
                         </div>
                     {% endfor %}
                 </div>
-                <div class="col-12 mt-4 mt-lg-5 mb-5 d-flex justify-content-center">
-                    <a href="" class="btn-delta mt-3 col-12 col-md-8 col-lg-4">{{ 'action-buttons.close'|trans|raw }}</a>
+                <div class="col-12 mt-0 mb-3 mb-lg-0 d-flex justify-content-center">
+                    <a href="https://fr.delta.com/fr" class="btn-delta mt-3 col-12 col-md-8 col-lg-4">{{ 'action-buttons.close'|trans|raw }}</a>
                 </div>
             {% endif %}
         </div>
