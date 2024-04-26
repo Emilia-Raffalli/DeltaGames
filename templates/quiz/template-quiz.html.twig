@@ -15,12 +15,12 @@
     {% include "_partials/_translation.html.twig" %}
     <div class= "mx-3 mx-lg-5">
 
-        <div class="d-flex flex-column justify-content-center mt-5 align-content-center">
+        <div class="d-flex flex-column justify-content-center mt-5 align-items-center">
 
 {# ROUTE WON #}  
             {% if app.request.attributes.get('_route') == 'app_won' %}
                 <div class="row d-flex justify-content-center">
-                    <div class="col-12 col-lg-9 ">
+                    <div class="col-12 ">
                         <div class="first d-flex flex-column justify-content-center height-less">
                                 <h3 class="text-primary text-center fw-bold" data-aos="zoom-in-down">
                                     {{ 'winner-sentence'|trans|raw }}
@@ -63,7 +63,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 mt-4 mt-lg-5 mb-5">
+                            <div class="col-12 mt-4 mt-lg-5 mb-5 d-flex justify-content-center">
                                 {{ form_row(form.submit) }}
                             </div>
                 {{ form_end(form)}}
@@ -72,7 +72,7 @@
 
             {% elseif app.request.attributes.get('_route') == 'app_lost' %}
                 <div class="row d-flex justify-content-center">
-                    <div class="col-12 col-lg-9 ">
+                    <div class="col-12 ">
                         <div class="first d-flex flex-column justify-content-center height-less">
                                 <h3 class="text-primary text-center fw-bold" data-aos="zoom-in-down">
                                     {{ 'non-winner-sentence'|trans|raw }}
@@ -90,7 +90,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-12 mt-4 mt-lg-5 mb-5">
+                <div class="col-12 mt-4 mt-lg-5 mb-5 d-flex justify-content-center">
                     <a href="{{ path('app_answers') }}" class="btn-delta">{{ 'action-buttons.check-correct-answers'|trans|raw }}</a>
                 </div>
 
@@ -98,7 +98,7 @@
 
             {% elseif app.request.attributes.get('_route') == 'app_answers' %}
                 <div class="row d-flex justify-content-center">
-                    <div class="col-12 col-lg-9 ">
+                    <div class="col-12 ">
                         <div class="first d-flex flex-column justify-content-center height-less">
                                 <h3 class="text-primary text-center fw-bold" data-aos="zoom-in-down">
                                     {{ 'summary-answers'|trans|raw }}
@@ -124,7 +124,7 @@
                         </div>
                     {% endfor %}
                 </div>
-                <div class="col-12 mt-4 mt-lg-5 mb-5">
+                <div class="col-12 mt-4 mt-lg-5 mb-5 d-flex justify-content-center">
                     <a href="" class="btn-delta">{{ 'action-buttons.close'|trans|raw }}</a>
                 </div>
             {% endif %}
