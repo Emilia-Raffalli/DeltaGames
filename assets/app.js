@@ -12,22 +12,37 @@ import './styles/lan.scss';
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const allChoices = document.querySelectorAll(".choice");
+    const inputChoices = document.querySelectorAll(".inputChoice");
 
-    allChoices.forEach(function(choice) {
-        choice.addEventListener("click", selectAnswer);
-    });
+    // allChoices.forEach(function(choice) {
+    //     choice.addEventListener("click", selectAnswer);
+    // });
 
-    function selectAnswer(event) {
-        const clickedChoice = event.currentTarget;
+    // function selectAnswer(event) {
+    //     const clickedChoice = event.currentTarget;
         
-        allChoices.forEach(function(choice) {
-            choice.classList.remove("selected");
-        });
+    //     allChoices.forEach(function(choice) {
+    //         choice.classList.remove("selected");
+    //     });
 
-        clickedChoice.classList.add("selected");
-    }
+    //     clickedChoice.classList.add("selected");
+    // }
+
+    
+    inputChoices.forEach(function(inputChoice) {
+        inputChoice.addEventListener('change', function() {
+            if (this.checked) {
+                document.querySelectorAll('.choice').forEach(function(choice) {
+                    choice.classList.remove('selected');
+                });
+                this.parentNode.classList.add('selected');
+            }
+        });
+    });
+    
 });
+
+
 
 
 //ouverture et fermeture liste au click
@@ -41,17 +56,17 @@ $('.select_wrap').mouseleave(function() {
 });
 
 //au click sur un li
-$('.select_wrap ul li').click(function() {
-    //on recupere son contenu
-    var affichage = $(this).html();
-    //on recupere sa valeur
-    var valeur = $(this).attr('data-value');
+// $('.select_wrap ul li').click(function() {
+//     //on recupere son contenu
+//     var affichage = $(this).html();
+//     //on recupere sa valeur
+//     var valeur = $(this).attr('data-value');
     
-    //on affiche son contenu dans le span
-    $('.select_wrap span').html(affichage);
-    //on attribue sa valeur à l'input
-    $('.select_wrap input').val(valeur);
-});
+//     //on affiche son contenu dans le span
+//     $('.select_wrap span').html(affichage);
+//     //on attribue sa valeur à l'input
+//     $('.select_wrap input').val(valeur);
+// });
 
 AOS.init();
 $(".answers").on('click', function () {

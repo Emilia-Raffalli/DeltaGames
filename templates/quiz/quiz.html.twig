@@ -1,15 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} {{ pageTitle.app_quiz }} {% endblock %}
+{% block title %} {{ pageTitle.app_quiz }} 
+{% endblock %}
 
 {% block body %}
-{% set questionTmp = 'questions.question_'~ question.id ~ '.questionText' %}
-{% set hint = 'questions.question_'~ question.id ~ '.hint' %}
+    {% set questionTmp = 'questions.question_'~ question.id ~ '.questionText' %}
+    {% set hint = 'questions.question_'~ question.id ~ '.hint' %}
 
 
-<body class="bg01 bg-blue-delta d-flex flex-column">
+{# <body class="bg01 bg-blue-delta d-flex flex-column"> #}
+<body>
     {% include "_partials/_translation.html.twig" %}
-    <div class="container-fluid p-5 pt-0 text-center d-flex flex-column transition">
+    {# <div class="container-fluid p-5 pt-0 text-center d-flex flex-column transition"> #}
+    <div class= "mx-3 mx-lg-5">
+        
         <div class="wrap d-flex flex-column justify-content-center">
             {% if question %}
                 
@@ -17,11 +21,13 @@
                     <div class="col-12 col-lg-9 ">
                         <div class="first d-flex flex-column justify-content-center height-less">
                             {% if question.id == 1 %}
-                                <span class="text-primary text-center question mb-3">{{'warm-up-question'|trans}}</span>
+                                <h3 class="text-primary text-center fw-bold" data-aos="zoom-in-down">
+                                    {{'warm-up-question'|trans}}
+                                </h3>
                             {% else %}
-                                <span class="text-primary text-center question mb-3">{{'question'|trans}} {{ question.id }}</span>
+                                <span class="text-primary text-center question mb-0">{{'question'|trans}} {{ question.id }}</span>
                             {% endif %}
-                            <p class="sub-header quiz text-primary">
+                            <p class="sub-header quiz text-primary m-0">
                                 {{ hint|trans|raw|capitalize }}
                             </p> 
                         </div>
@@ -38,19 +44,19 @@
 
                         <div class="col-12 col-md-9 col-lg-6">
                             <div class="text-box-won rounded-5 d-flex align-items-center mb-4">
-                                <p class="fs-3 py-3 px-4 p-lg-4 fw-bold text-center text-primary text-start questionContent mb-0">
+                                <p class="py-3 px-1 px-lg-4 p-lg-4 fw-bold text-center text-primary text-start questionContent mb-0">
                                     {{ questionTmp | trans|raw }}
                                 </p>
                             </div>
                         </div>
 
-                        <div class="ccol-12 col-md-9 col-lg-6 d-flex flex-column align-items-center mt-1 mt-lg-4">
+                        <div class="col-12 col-md-9 col-lg-6 d-flex flex-column align-items-center mt-1">
 
                             {% for answer in form.answer %}
                                 {% set answerKey = 'questions.question_' ~ question.id ~ '.answers.answer_' ~ loop.index %}
                                 <div class="col-12 col-lg-9 mb-3">
                                 {# {{dump(answer)}} #}
-                                    <div class="custom-answer fw-bold form-control btn-answer rounded-5 mx-auto choice bg-light fs-4 text-primary text-start px-4 pointer">
+                                    <div class="custom-answer fw-bold form-control btn-answer rounded-5 mx-auto choice bg-light text-primary text-start px-4 pointer">
                                         {{ form_widget(answer) }}
                                         {{ form_label(answer, answerKey|trans, {'label_attr': {'class': 'w-100 pointer answerChoice'}}) }}
                                     </div>

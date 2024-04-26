@@ -192,6 +192,7 @@ class QuizController extends AbstractController
         // ]);
 
         // $mailer->send($email);
+        // dd($user);
 
         return $this->redirectToRoute('app_success');
     }

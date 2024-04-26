@@ -19,7 +19,7 @@ class QuizAnswerType extends AbstractType
     {
         $builder
             ->add('answer', ChoiceType::class, [
-                'label' => false,
+                'label' => true,
                 'attr'=> [
                     'class'=> 'w-100',
                     // 'data-target' => 'selectedAnswer'
@@ -27,8 +27,11 @@ class QuizAnswerType extends AbstractType
                 'choices' => $options['answers'], 
                 'choice_label' => 'answer', 
                 'choice_translation_domain' =>'messages',
-                'expanded' => true, // bouton radio
+                'expanded' => true,
                 'multiple' => false, 
+                'choice_attr' => function(){
+                    return ['class' => 'inputChoice'];
+                },
                 // 'required' => true,            
             ])
             ->add('submit', SubmitType::class, [
