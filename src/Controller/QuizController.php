@@ -61,6 +61,8 @@ class QuizController extends AbstractController
             return $this->redirectToRoute('app_start');
         }
 
+        $questions = $questionRepository->findAll();
+
         $questionId = $id; 
 
         // 1- Récupérer la participation de l'utilisateur
@@ -143,7 +145,8 @@ class QuizController extends AbstractController
             'question' => $question,
             'form' => $question ? $form->createView() : null,
             'answers' => $answers,
-            'formError' => isset($formError) ? $formError : null 
+            'formError' => isset($formError) ? $formError : null,
+            'questions' => $questions 
         ]);
     }
 

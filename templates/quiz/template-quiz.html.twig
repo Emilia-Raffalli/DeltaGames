@@ -11,11 +11,11 @@
 {% endblock %}
 
 {% block body %}
-<body class="bg01 bg-blue-delta d-flex flex-column">
+<body>
     {% include "_partials/_translation.html.twig" %}
     <div class="container-fluid p-5 pt-0 text-center d-flex flex-column">
         
-        <div class="wrap d-flex flex-column justify-content-center">
+        <div class="d-flex flex-column justify-content-center">
             <div class="row d-flex justify-content-center">
 
                 {% if app.request.attributes.get('_route') == 'app_won' %}

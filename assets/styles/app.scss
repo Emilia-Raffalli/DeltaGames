@@ -18,7 +18,8 @@ body {
     height:100vh;
 }
 
-html {
+
+html.intro {
     /* L'image est positionnée en fond et est centrée */
     background: url('../images/Welcome-Screen_Background-Plane_1920x1080_FINAL-new-bg.png') no-repeat center center fixed;
     /* Ajout de la propriété avec les préfixes pour tous les moteurs de rendu */
@@ -28,10 +29,22 @@ html {
     background-size: cover;
     }
 
+html.quiz {
+    /* L'image est positionnée en fond et est centrée */
+    background: url('../images/Quiz-Screen_Background-Plane_1920x1080_FINAL.png') no-repeat center center fixed;
+    /* Ajout de la propriété avec les préfixes pour tous les moteurs de rendu */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+    
+
+
 h3 {
     letter-spacing:-1px;
     // font-size:3rem;
-    font-size:1.9rem;
+    font-size:2.4rem;
     text-transform: uppercase;
     font-family: 'WhitneyCond-Semibold';
     font-weight:500;
@@ -50,7 +63,7 @@ h3 {
 .gif-box {
     background: url('../images/DL-Stickers_FINAL.gif') no-repeat center;
     background-size: contain;
-    min-height: 350px;
+    min-height: 200px;
 }
 
 .first {
@@ -201,6 +214,7 @@ input.form-delta {
     // max-height:50px!important;
     text-decoration: none;
     min-width:300px;
+    text-align: center;
 }
 
 .btn-delta:hover {
@@ -379,8 +393,7 @@ a.btn-langage  {
 
 @media screen and (max-width: 768px) {
 
-    .text-box,
-    .gif-box {
+    .text-box {
         min-height: 220px;
     }
 
@@ -404,19 +417,23 @@ a.btn-langage  {
         padding: 0rem 0.5rem;
     }
 
-    .logo-footer {
-        background:url(../images/logo-BLC.png) no-repeat center;
-        background-size: cover;
-        height:30px;
-    }
+    // .logo-footer {
+    //     background:url(../images/logo-BLC.png) no-repeat center;
+    //     background-size: cover;
+    //     height:30px;
+    // }
 
     .btn.btn-delta{
         width: 100%!important;
     }
 
-    // .wrap {
-    //     height:none!important;
-    // }
+    .wrap {
+        height:100vh;
+    }
+
+    h3 {
+        font-size:2rem;
+    }
 
     // .sub-header.quiz, .sub-header {
     //     text-align: center;
