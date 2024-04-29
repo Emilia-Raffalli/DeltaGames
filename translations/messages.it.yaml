@@ -1,7 +1,7 @@
 # translations/messages.fr.yaml
 # hello: Hello1
 
-h3Home: "Sei un geek delle compagnie aeree? un genio di Delta ?"
+h3Home: "SEI UN GEEK DELLE COMPAGNIE AEREE?<br> UN GENIO DI DELTA?"
 sub-header: "Se è così, ora hai la possibilità di mettere alla prova le tue conoscenze e di vincere alcuni divertenti adesivi Delta."
 
 question: "DOMANDA"
@@ -13,10 +13,10 @@ summary-answers-sub: "Peccato che non hai dato tutte le risposte giuste.
 Trova le risposte corrette qui sotto."
 
 action-buttons:
-  close: "Chiudere"
+  close: "CHIUDERE"
   next: "Successiva"
-  play: "Pronti...Via!"
-  confirm: "Confermo i miei riferimenti"
+  play: "PRONTI ... VIA!"
+  confirm: "CONFERMO I MIEI RIFERIMENTI"
   check-correct-answers: "Controlla le riposte giuste!"
 
 
@@ -25,7 +25,7 @@ thank-you-sub: "I TUOI DATI SONO STATI CONFERMATI."
 confirmation-text: "Riceverai i tuoi adesivi Delta entro 4-8 settimane."
 
 non-winner-sentence: "CHE PECCATO!"
-non-winner-sub: "Ci sei andato vicino. Ci dispiace che tu non abbia vinto."
+non-winner-sub: "Ci sei andato vicino."
 non-winner-text: "Ci dispiace che tu non abbia vinto, ma speriamo che ti sia piaciuto saperne di più sul network Delta e su tutto ciò che abbiamo da offrire quest'estate. Grazie per la tua partecipazione e per il tuo sostegno a Delta."
 
 winner-sentence: "CONGRATULAZIONI!"
@@ -33,7 +33,7 @@ winner-text: "Sei un vero genio Delta. Per ottenere gli adesivi Delta, ti preghi
 
 questions:
   question_1: 
-    questionText: "Qual è la nuova rotta del network estivo 2024 di Delta che preferisci&nbsp;?"
+    questionText: "Qual è la nuova rotta del network estivo 2024 di Delta che preferisci?"
     hint: "Non preoccuparti, ce la farai."
     answers:
       answer_1: "A. Monaco di Baviera - New York-JFK​"
@@ -46,40 +46,40 @@ questions:
 
 
   question_2: 
-    questionText: "Da quanti paesi in Europa, Medio Oriente, Africa e India (EMEAI) Delta offre collegamenti non-stop per gli USA&nbsp;?"
+    questionText: "Da quanti paesi in Europa, Medio Oriente, Africa e India (EMEAI) Delta offre collegamenti non-stop per gli USA?"
     hint: "Non importa il paese di provenienza, Delta è la scelta ideale per volare negli USA."
     answers:
       answer_1: "A. 20"
       answer_2: "B. 25"
       answer_3: "C. 22"
       answer_4: "D. 30"
-    correctAnswerDescription: "Delta collega 20 paesi con voli nonstop per gli Stati Uniti dalla regione EMEAI"
+    correctAnswerDescription: "Delta collega 20 paesi con voli nonstop per gli Stati Uniti dalla regione EMEAI."
 
 
   question_3: 
-    questionText: "Qual è la destinazione #1 di Delta negli USA ?"
+    questionText: "Qual è la destinazione #1 di Delta negli USA?"
     hint: "Questa città non è mai stata così vicina, grazie ai voli non-stop da 29 città nella regione EMEAI."
     answers:
       answer_1: "A. Los Angeles"
       answer_2: "B. New York-JFK"
       answer_3: "C. Atlanta"
       answer_4: "D. Boston"
-    correctAnswerDescription: "New York non è mai stata così vicina ed è la destinazione numero 1 di Delta dalla regione EMEAI"
+    correctAnswerDescription: "New York non è mai stata così vicina ed è la destinazione numero 1 di Delta dalla regione EMEAI."
 
 
   question_4: 
-    questionText: "Quanti voli non-stop opererà Delta dalla regione EMEAI questa estate&nbsp;?"
+    questionText: "Quanti voli non-stop opererà Delta dalla regione EMEAI questa estate?"
     hint: "C'è un posto per tutti all'interno della più grande programmazione transatlantica di sempre di Delta."
     answers:
       answer_1: "A. Più di 700"
       answer_2: "B. Meno di 600​ "
       answer_3: "C. Fino a 680​"
       answer_4: "D. Nessuno dei numeri sopra indicati"
-    correctAnswerDescription: "Delta opererà fino a 680 voli settimanali quest'estate dalla regione EMEAI"
+    correctAnswerDescription: "Delta opererà fino a 680 voli settimanali quest'estate dalla regione EMEAI."
 
 
   question_5: 
-    questionText: "Delta offre comode coincidenze verso quante destinazioni negli USA&nbsp;?"
+    questionText: "Delta offre comode coincidenze verso quante destinazioni negli USA?"
     hint: "C'è tanto da esplorare negli USA."
     answers:
       answer_1: "A. Meno di 150"

@@ -1,7 +1,7 @@
 # translations/messages.fr.yaml
 # hello: Hello1
 
-h3Home: "¿Eres friki de las aerolìneas ? ¿Eres Delta genius ?"
+h3Home: '¿ERES FRIKI DE LAS AEROLÍNEAS? <br> ¿ERES "DELTA GENIUS"?'
 sub-header: "Si es así, esta es tu oportunidad para poner a prueba tus conocimientos y ganar unos divertidos stickers de Delta."
 
 question: "PREGUNTA"
@@ -13,10 +13,10 @@ summary-answers-sub: "Lástima que no acertaste en todas las respuestas.<br>
 Encuentre las respuestas correctas a continuación."
 
 action-buttons:
-  close: "Cerrar"
-  next: "Siguientes"
+  close: "CERRAR"
+  next: "Siguiente"
   play: "¡valos a ello! "
-  confirm: "Confirmo mis datos"
+  confirm: "CONFIRMO MIS DATOS"
   check-correct-answers: "¡comprueba las respuestas que has acertado!"
 
 thank-you: "¡Gracias !"
@@ -24,7 +24,7 @@ thank-you-sub: "TUS DATOS SE HAN CONFIRMADO."
 confirmation-text: "Recibirás tus stickers Delta dentro de 4-8 semanas."
 
 non-winner-sentence: "¡QUÉ PENA!"
-non-winner-sub: "Por los pelos. Sentimos que no hayas ganado."
+non-winner-sub: "Por los pelos."
 non-winner-text: "Sentimos que no hayas ganado, pero esperamos que hayas disfrutado conociendo la red Delta y todo lo que podemos ofrecerte este verano. Gracias por tu participación y apoyo a Delta."
 
 winner-sentence: "¡ENHORABUENA!"
@@ -38,7 +38,7 @@ questions:
       answer_1: "A. Múnich - Nueva York-JFK​"
       answer_2: "B. Nápoles - Nueva York-JFK"
       answer_3: "C. Shannon - Nueva York-JFK"
-      answer_4: "D. Dublín - Minneapolis-St.​"
+      answer_4: "D. Dublín - Minneapolis-St. Paul"
       answer_5: "E. Todas los anteriores"
     correctAnswerDescription: "Todas las respuestas son correctas. Cualquier ruta nueva podría ser tu favorita."
 
@@ -73,18 +73,23 @@ questions:
       answer_2: "B. Menos de 600 "
       answer_3: "C. Hasta 680 ​"
       answer_4: "D. Ninguna de las anteriores"
-    correctAnswerDescription: "Delta operará hasta 680 vuelos semanales este verano desde EMEAI"
+    correctAnswerDescription: "Delta operará hasta 680 vuelos semanales este verano desde EMEAI."
 
 
   question_5: 
     questionText: "¿A cuántos destinos de EE.UU. ofrece Delta conexiones cómodas?"
     hint: "Más para explorar EE.UU."
     answers:
-      answer_1: "A. A menos de 150"
-      answer_2: "B. A más de 200 "
+      answer_1: "A. Menos de 150"
+      answer_2: "B. Más de 200"
       answer_3: "C. Hasta 100 "
       answer_4: "D. Ninguna de las anteriores"
     correctAnswerDescription: "Delta ofrece conexiones cómodas a más de 200 destinos en todo EE.UU."
+
+
+
+
+
 
 
 userForm:

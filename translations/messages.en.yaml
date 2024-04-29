@@ -13,7 +13,7 @@ pageTitle:
   app_quiz: "Delta Quiz"
 
 
-h3Home: "Are you an airline geek&nbsp;? A Delta genius&nbsp;?"
+h3Home: "ARE YOU AN AIRLINE GEEK?<br> A DELTA GENIUS?"
 sub-header: "If so, now is your chance to test your knowledge and win some fun Delta stickers."
 
 question: "QUESTION"
@@ -25,10 +25,10 @@ summary-answers-sub: "Too bad, you didn’t get all the answers right.
 Find the correct answers below."
 
 action-buttons:
-  close: "Close"
+  close: "CLOSE"
   next: "Next"
   play: "I am ready, let's go!"
-  confirm: "I confirm my details"
+  confirm: "I CONFIRM MY DETAILS"
   check-correct-answers: "Check the correct answers!"
 
 
@@ -37,17 +37,17 @@ thank-you-sub: "YOUR DETAILS HAVE BEEN CONFIRMED."
 confirmation-text: "You’ll be receiving your Delta stickers within 4 to 8 weeks."
 
 non-winner-sentence: "BUMMER!"
-non-winner-sub: "So close. Sorry you didn't win."
-non-winner-text: "Sorry you didn’t win, but we hope
-you enjoyed learning about Delta’s network and all we have to offer this
-summer.Thank you for your participation and support of Delta."
+non-winner-sub: "So close."
+non-winner-text: "Sorry you didn’t win, but we hope you enjoyed learning about Delta’s network and all we have to offer this summer. Thank you for your participation and support of Delta.
+"
 
 winner-sentence: "CONGRATULATIONS!"
-winner-text: "You're a true Delta genius. To redeem your Delta stickers, please provide us with your details."
+winner-text: "You're a true Delta genius.
+To redeem your Delta stickers, please provide your details below."
 
 questions:
   question_1: 
-    questionText: "What's your favorite new route in the Delta Summer 2024 network ?"
+    questionText: "What's your favorite new route in the Delta Summer 2024 network?"
     hint: "No worries, you’ll get it right."
     answers:
       answer_1: "A. Munich to New York-JFK"

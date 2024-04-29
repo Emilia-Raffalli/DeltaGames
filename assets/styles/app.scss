@@ -66,9 +66,9 @@ h3 {
     max-height: 400px;
 }
 
-.first {
+.first, .first-bummer {
     background-color: transparent;
-    height: 130px;
+    height: 185px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -420,6 +420,8 @@ p.results {
         align-items: center;
     }
 
+
+
     span.question {
         font-size: 1rem;
     }
@@ -462,9 +464,22 @@ p.results {
 }
 
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:576px) {
     .gif-box {
         min-height:none!important;
+    }
+
+    h3 {
+        font-size:1.9rem;
+        margin-top:0.8rem;
+    }
+
+    .sub-header.quiz, .sub-header {
+        font-size:1.5rem;
+    }
+
+    .first-bummer {
+        height:100px;
     }
 }
 

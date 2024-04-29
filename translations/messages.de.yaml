@@ -1,7 +1,7 @@
 # translations/messages.fr.yaml
 # hello: Hello1
 
-h3Home: "Sind Sie einAirline-Geek ? Ein Delta-Experte&nbsp;?"
+h3Home: "SIND SIE EIN AIRLINE-GEEK?<br> EIN DELTA-EXPERTE?"
 sub-header: "Wenn ja, haben Sie jetzt die Chance, Ihr Wissen zu testen und ein paar lustige Delta-Aufkleber zu gewinnen."
 
 question: "FRAGE"
@@ -13,10 +13,10 @@ summary-answers-sub: "Schade, dass Sie nicht alle Antworten wussten.<br>
 Die richtigen Antworten finden Sie unten."
 
 action-buttons:
-  close: "Schließen"
+  close: "BEENDEN"
   next: "Weiter"
   play: "Ich bin bereit, es kann losgehen!"
-  confirm: "Daten bestätigen und absenden"
+  confirm: "DATEN BESTÄTIGEN UND ABSENDEN"
   check-correct-answers: "Zu den richtigen Antworten!"
 
 
@@ -25,7 +25,7 @@ thank-you-sub: "IHRE DATEN WURDEN ÜBERMITTELT."
 confirmation-text: "Sie erhalten Ihre Delta Aufkleber innerhalb der nächsten 4-8 Wochen."
 
 non-winner-sentence: "SCHADE!"
-non-winner-sub: "Das war knapp. Es tut uns sehr leid, dass Sie nicht gewonnen haben."
+non-winner-sub: "Das war knapp."
 non-winner-text: "Es tut uns sehr leid, dass Sie nicht gewonnen haben. Wir hoffen, dass es Ihnen gefallen hat, mehr über das Delta-Netzwerk und alles, was wir diesen Sommer zu bieten haben, zu erfahren. Vielen Dank für Ihre Teilnahme und Ihre Unterstützung von Delta."
 
 winner-sentence: "HERZLICHEN GLÜCKWUNSCH!"
@@ -33,7 +33,7 @@ winner-text: "Sie sind ein wahres Delta-Genie. Um Ihre Delta-Aufkleber einzulös
 
 questions:
   question_1: 
-    questionText: "Was ist Ihre neue Delta Lieblingsstrecke im Sommerflugplan 2024 ?"
+    questionText: "Was ist Ihre neue Delta Lieblingsstrecke im Sommerflugplan 2024?"
     hint: "Keine Sorge, Sie schaffen das."
     answers:
       answer_1: "A. München - New York-JFK"
@@ -57,7 +57,7 @@ questions:
 
 
   question_3: 
-    questionText: "Welches ist Deltas Nummer 1 Destination in den USA ?"
+    questionText: "Welches ist Deltas Nummer 1 Destination in die USA?"
     hint: "Diese Stadt war noch nie so nah mit Nonstop-Flügen von 29 Städten in EMEAI."
     answers:
       answer_1: "A. Los Angeles"
@@ -68,7 +68,7 @@ questions:
 
 
   question_4: 
-    questionText: "Wie viele wöchentliche Nonstop-Flüge bietet Delta in diesem Sommer von EMEAI aus an ?"
+    questionText: "Wie viele wöchentliche Nonstop-Flüge bietet Delta in diesem Sommer von EMEAI aus an?"
     hint: "Mit Deltas größtem Transatlantikflugplan aller Zeiten gibt es einen Sitzplatz für jeden."
     answers:
       answer_1: "A. Mehr als 700 "
@@ -79,7 +79,7 @@ questions:
 
 
   question_5: 
-    questionText: "Delta bietet bequeme Verbindungen zu wie vielen Zielen in den USA an ?"
+    questionText: "Delta bietet bequeme Verbindungen zu wie vielen Zielen in den USA an?"
     hint: "Mehr zu entdecken in den USA."
     answers:
       answer_1: "A. Weniger als 150"

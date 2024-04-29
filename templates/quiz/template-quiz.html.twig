@@ -22,18 +22,18 @@
                 <div class="row d-flex justify-content-center mb-3">
                     <div class="col-12 ">
                         <div class="first d-flex flex-column justify-content-center height-less">
-                                <h3 class="text-primary text-center fw-bold" data-aos="zoom-in-down">
+                                <h3 class="col-lg-6 text-primary text-center fw-bold" data-aos="zoom-in-down">
                                     {{ 'winner-sentence'|trans|raw }}
                                 </h3>
-                                <p class="sub-header quiz text-primary m-0">
+                                <p class="col-lg-8 col-md-9 sub-header quiz text-primary m-0">
                                     {{ 'winner-text'|trans|raw }}
                                 </p>
                         </div>
                     </div>
                 </div>
 
-                {{ form_start(form, {'attr': {'class': 'row d-flex justify-content-center g-3 mx-auto mb-1'}}) }}
-                            <div class="col-12 col-md-8 col-lg-5">
+                {{ form_start(form, {'attr': {'class': 'row d-flex flex-column align-items-center justify-content-center g-3 mx-auto mb-1 mt-1 mt-lg-0'}}) }}
+                            <div class="col-12 col-md-8 col-lg-6">
                                 <div class="text-box d-flex flex-column justify-content-center align-items-center shadow">
                                     <div class="row g-3 p-4 p-lg-4 text-start gy-4 align-items-center">
                                         <div class="col-md-6">
@@ -63,9 +63,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 mt-4 mt-lg-5 mb-5 d-flex justify-content-center">
-                                {{ form_row(form.submit) }}
+                            <div class="col-12 col-md-8 col-lg-6 mt-4 mb-5 d-flex justify-content-center">
+                                {{ form_widget(form.submit) }}
                             </div>
+
+                            {# {{ form_row(form.submit, {'attr': {'class': 'col-12 mt-4 mt-lg-5 mb-5 d-flex justify-content-center'}}) }} #}
+
+
                 {{ form_end(form)}}
 
 {# ROUTE LOST #}
@@ -73,7 +77,7 @@
             {% elseif app.request.attributes.get('_route') == 'app_lost' %}
                 <div class="row d-flex justify-content-center mx-auto">
                     <div class="col-12">
-                        <div class="first d-flex flex-column justify-content-center">
+                        <div class="first-bummer d-flex flex-column justify-content-center">
                                 <h3 class="text-primary text-center fw-bold" data-aos="zoom-in-down">
                                     {{ 'non-winner-sentence'|trans|raw }}
                                 </h3>
@@ -83,15 +87,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="row d-flex justify-content-center mx-auto mb-3">
+                <div class="row d-flex justify-content-center mx-auto mb-3 mt-3 mt-lg-0">
                     <div class="col-12 col-md-8 col-lg-5 text-box fly_box d-flex flex-column justify-content-center align-items-center shadow">
                         <p class="results p-4 fw-bold text-center text-primary m-0">
                             {{ 'non-winner-text'|trans|raw }}
                         </p>
                     </div>
                 </div>
-                <div class="col-12 mt-0 mb-3 mb-lg-5 d-flex justify-content-center">
-                    <a href="{{ path('app_answers') }}" class="btn-delta mt-3 col-12 col-md-8 col-lg-4">{{ 'action-buttons.check-correct-answers'|trans|raw }}</a>
+                <div class="col-12 mt-4 mb-3 mb-lg-5 d-flex justify-content-center">
+                    <a href="{{ path('app_answers') }}" class="btn-delta col-12 col-md-8 col-lg-4">{{ 'action-buttons.check-correct-answers'|trans|raw }}</a>
                 </div>
 
 {# ROUTE ANSWERS #}  
@@ -124,8 +128,8 @@
                         </div>
                     {% endfor %}
                 </div>
-                <div class="col-12 mt-0 mb-3 mb-lg-0 d-flex justify-content-center">
-                    <a href="https://fr.delta.com/" class="btn-delta mt-3 col-12 col-md-8 col-lg-4">{{ 'action-buttons.close'|trans|raw }}</a>
+                <div class="col-12 mt-4 mb-3 mb-lg-0 d-flex justify-content-center">
+                    <a href="https://fr.delta.com/" class="btn-delta col-12 col-md-8 col-lg-4">{{ 'action-buttons.close'|trans|raw }}</a>
                 </div>
             {% endif %}
         </div>

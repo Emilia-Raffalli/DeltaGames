@@ -1,7 +1,7 @@
 # translations/messages.fr.yaml
 # hello: Hello1
 
-h3Home: "Bent u een Luchtvaartfan ? Een Delta-Kenner ?"
+h3Home: "BENT U EEN LUCHTVAARTFAN?<br>EEN DELTA-KENNER?"
 sub-header: "Zo ja, dan is dit uw kans om uw kennis te testen en een aantal leuke Delta-stickers te winnen."
 
 question: "VRAAG"
@@ -14,10 +14,10 @@ Hieronder vindt u de juiste antwoorden."
 
 
 action-buttons:
-  close: "Sluit af"
+  close: "SLUIT AF"
   next: "Ga door"
   play: "Ik zit klaar, starten maar!"
-  confirm: "Bevestig en verstuur"
+  confirm: "BEVESTIG EN VERSTUUR"
   check-correct-answers: "Controleer de juiste antwoorden!"
 
 
@@ -27,7 +27,7 @@ confirmation-text: "Binnen 4 tot 8 weken ontvangt u uw Delta stickers."
 
 
 non-winner-sentence: "HELAAS!"
-non-winner-sub: "U was zo dichtbij. Jammer dat u niet won."
+non-winner-sub: "U was zo dichtbij."
 non-winner-text: "Jammer dat u niet won, maar we hopen dat u met plezier iets hebt opgestoken over Delta’s netwerk en alles wat we deze zomer hebben te bieden. Hartelijk dank voor uw deelname en vertrouwen in Delta."
 
 
@@ -36,7 +36,7 @@ winner-text: "U bent een echte Delta-kenner. Geef uw contactgegevens aan ons doo
 
 questions:
   question_1: 
-    questionText: "Wat is uw favoriete route in het Delta Zomernetwerk 2024 ?"
+    questionText: "Wat is uw favoriete route in het Delta Zomernetwerk 2024?"
     hint: "Geen zorgen, het komt goed."
     answers:
       answer_1: "A. München naar New York-JFK​"
@@ -49,7 +49,7 @@ questions:
 
 
   question_2: 
-    questionText: "Vanuit hoeveel landen in Europa, het Midden-Oosten, Afrika en India (EMEAI) biedt Delta rechtstreekse vluchten aan naar de VS ?"
+    questionText: "Vanuit hoeveel landen in Europa, het Midden-Oosten, Afrika en India (EMEAI) biedt Delta rechtstreekse vluchten aan naar de VS?"
     hint: "Uit welk land u ook komt, Delta is uw perfecte keuze naar de VS."
     answers:
       answer_1: "A. 20"

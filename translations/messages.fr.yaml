@@ -14,7 +14,7 @@ pageTitle:
 
 # HOME
 
-h3Home: "Êtes-vous un passionné d'aviation&nbsp;?<br> Un expert de Delta&nbsp;?"
+h3Home: "ÊTES-VOUS UN PASSIONNÉ D'AVIATION&nbsp;?<br>UN EXPERT DE DELTA ?"
 sub-header: "Dans ce cas, voici votre chance de tester vos connaissances et de gagner quelques stickers amusants Delta. "
 
 question: "QUESTION"
@@ -28,24 +28,24 @@ Découvrez les bonnes réponses ci-dessous."
 # BUTTONS
 
 action-buttons:
-  close: "Fermer"
+  close: "FERMER"
   next: "Suivant"
   play: "Je me lance !"
-  confirm: "Je confirme mes coordonnées"
-  check-correct-answers: "Cliquez pour connaître les réponses!"
+  confirm: "JE CONFIRME MES COORDONNÉES"
+  check-correct-answers: "CLIQUEZ POUR CONNAITRE LES RÉPONSES&nbsp;!"
 
 
 # CONFIRMATION
 
 thank-you: "MERCI !"
-thank-you-sub: "VOS COORDONNEES ONT BIEN ETE PRISES EN COMPTE."
+thank-you-sub: "VOS COORDONNÉES ONT BIEN ÉTÉ PRISES EN COMPTE. "
 confirmation-text: "Vous recevrez vos autocollants Delta d'ici 4 à 8 semaines."
 
 
 # NON WINNER
 
-non-winner-sentence: "PAS DE CHANCE !"
-non-winner-sub: "Il s'en est fallu de peu. Nous sommes désolés que vous n'ayez pas gagné."
+non-winner-sentence: "PAS DE CHANCE&nbsp;!"
+non-winner-sub: "Il s'en est fallu de peu."
 non-winner-text: "Nous sommes désolés que vous n'ayez pas gagné, mais nous espérons que vous avez aimé découvrir notre réseau et tout ce que nous avons à offrir cet été. Nous vous remercions de votre participation et de votre soutien à Delta. "
 
 # WINNER
@@ -80,7 +80,7 @@ questions:
 
   question_3: 
     questionText: "Quelle est la destination principale de Delta vers les États-Unis ?"
-    hint: "Cette ville n'a jamais été aussi proche avec des vols sans escale depuis 29 villes de la zone EMEAI. "
+    hint: "Cette ville n'a jamais été aussi proche avec des vols sans escale depuis 29 villes de la zone EMEAI."
     answers:
       answer_1: "A. Los Angeles "
       answer_2: "B. New York-JFK"
@@ -90,7 +90,7 @@ questions:
 
   question_4: 
     questionText: "Quel est le nombre de vols hebdomadaires sans escale assurés par Delta au départ de la zone EMEAI cet été ?"
-    hint: "Chacun trouvera forcément un siège à sa convenance avec le plus grand programme transatlantique jamais proposé par Delta. "
+    hint: "Chacun trouvera forcément un siège à sa convenance avec le plus grand programme transatlantique jamais proposé par Delta."
     answers:
       answer_1: "A. Plus de 700"
       answer_2: "B. Moins de 600"
@@ -99,7 +99,7 @@ questions:
     correctAnswerDescription: "Delta va opérer jusqu'à 680 vols par semaine cet été au départ de la région EMEAI."
 
   question_5: 
-    questionText: "Pour combien de destinations aux États-Unis Delta propose-t-elle des correspondances faciles ?"
+    questionText: "En correspondance de ses vols transtlantique, Delta offre un large choix de destinations aux États-Unis. Combien&nbsp;?"
     hint: "Plus à découvrir dans tous les États-Unis."
     answers:
       answer_1: "A. Moins de 150"
