@@ -12,6 +12,11 @@ pageTitle:
   app_quiz: "Delta Quiz"
 
 
+#ERROR MESSAGES 
+
+errorMessages:
+  quiz_already_answered: "Vous ne pouvez participer qu'une seule fois au quiz."
+
 # HOME
 
 h3Home: "ÊTES-VOUS UN PASSIONNÉ D'AVIATION&nbsp;?<br>UN EXPERT DE DELTA ?"

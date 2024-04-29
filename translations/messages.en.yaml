@@ -13,7 +13,13 @@ pageTitle:
   app_quiz: "Delta Quiz"
 
 
-h3Home: "ARE YOU AN AIRLINE GEEK?<br> A DELTA GENIUS?"
+#ERROR MESSAGES 
+
+errorMessages:
+  quiz_already_answered: "You can only take part in this quiz once."
+
+
+h3Home: "ARE YOU AN AIRLINE GEEK?<br> A Delta GENIUS?"
 sub-header: "If so, now is your chance to test your knowledge and win some fun Delta stickers."
 
 question: "QUESTION"

@@ -37,6 +37,9 @@ class Participation
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $updatedAt = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?string $uniqParticipationId = null;
+
     public function __construct()
     {
         $this->questions = new ArrayCollection();
@@ -141,6 +144,18 @@ class Participation
     public function setUpdatedAt(?\DateTimeInterface $updatedAt): static
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getUniqParticipationId(): ?string
+    {
+        return $this->uniqParticipationId;
+    }
+
+    public function setUniqParticipationId(?string $uniqParticipationId): static
+    {
+        $this->uniqParticipationId = $uniqParticipationId;
 
         return $this;
     }

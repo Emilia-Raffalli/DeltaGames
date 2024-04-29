@@ -19,6 +19,7 @@ use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\Form\FormError;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Mime\Address;
 use Symfony\Config\Framework\TranslatorConfig;
 use Symfony\Contracts\Translation\TranslatorInterface;
@@ -26,22 +27,39 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class QuizController extends AbstractController
 {
 
+    private $requestStack;
+
+    public function __construct(RequestStack $requestStack,
+    ) {
+        $this->requestStack = $requestStack;
+    }
+
     #[Route('/', name: 'app_start')]
     #[Route('/thank-you', name: 'app_success')]
     public function homeQuiz(SessionInterface $session, TranslatorInterface $translator
     ): Response
     {
-        if (!$session->isStarted()) {
+        /*if (!$session->isStarted()) {
             $session->start();
-        }
+        }*/
 
         $pageTitle = [
             'app_start' => $translator->trans('pageTitle.app_start'),
             'app_success' => $translator->trans('pageTitle.app_success'),
         ];
 
+        // if ($session->get('errorMessages')) {
+        //     $errorMessages = $session->get('errorMessages');
+        //     // dd($errorMessages);
+        // }
+
+        $uniqId = uniqid();
+        $this->requestStack->getSession()->clear();
+        $this->requestStack->getSession()->set('uniqId', $uniqId);
+
         return $this->render('quiz/index.html.twig', [
             'pageTitle' => $pageTitle,
+            // 'errorMessages' => $errorMessages? $errorMessages:null
         ]);
     }
 
@@ -57,26 +75,69 @@ class QuizController extends AbstractController
         int $id = null
     ): Response {
 
-        if ($id == null) {
+        if (($id == null) || ($this->requestStack->getSession()->get('uniqId') == null)) {
             return $this->redirectToRoute('app_start');
         }
+
+        $uniqId = $this->requestStack->getSession()->get('uniqId');
+
+        // dd($this->requestStack->getSession()->get('uniqId'));
+
+        // if ($id == null) {
+        //     return $this->redirectToRoute('app_start');
+        // }
 
         $questions = $questionRepository->findAll();
 
         $questionId = $id; 
 
+        $pageTitle = [
+            'app_quiz' => $translator->trans('pageTitle.app_quiz'),
+        ];
+
         // 1- Récupérer la participation de l'utilisateur
         $userSession = $session->getId();
-        $participation = $participationRepository->findOneBy(['userSession' => $userSession]);
+        $participation = $participationRepository->findOneBy(['uniqParticipationId' => $uniqId]);
 
-        // 2- Créer une participation si elle n'existe pas
-        if (!$participation) {
+    
+
+        // Générer un message d'erreur si l'utilisateur a déjà participé au quiz, et rediriger vers page start
+        // $errorMessages = [];
+        // if ($participation !== null && $participation->getSelectedAnswers()->count() > 0) {
+        //     $errorMessages [] = [
+        //         'quiz_already_answered' => $translator->trans('errorMessages.quiz_already_answered')
+        //     ];
+        //     $session->set('errorMessages', $errorMessages);
+        //     return $this->redirectToRoute('app_start');
+        // }
+
+        // if (('app_quiz') && $participation !== null) {
+        //     $totalQuestions = count($questionRepository->findAll());
+        //     $answeredQuestions = $participation->getQuestions()->count();
+        
+        //     if ($answeredQuestions >= $totalQuestions) {
+        //         $errorMessages [] = [
+        //             'quiz_already_answered' => $translator->trans('errorMessages.quiz_already_answered')
+        //         ];
+        //         $session->set('errorMessages', $errorMessages);
+
+        //         return $this->redirectToRoute('app_start');
+        //     }
+        // }
+
+
+
+        // 2- Créer une participation 
             $participation = new Participation();
             $participation->setUserSession($userSession);
+            $participation->setUniqParticipationId($uniqId);
+            // dd($participation);
+
             $em->persist($participation);
             $em->flush();
-        }
-
+        
+            // dd($participation);
+        
         // Récupérer la première question et ses réponses associées
         $question = $questionRepository->find($questionId);
         if($question != null) {
@@ -134,10 +195,6 @@ class QuizController extends AbstractController
             }
         }
 
-        $pageTitle = [
-            'app_quiz' => $translator->trans('pageTitle.app_quiz'),
-        ];
-
         // dd($pageTitle);
 
         return $this->render('quiz/quiz.html.twig', [
@@ -146,7 +203,8 @@ class QuizController extends AbstractController
             'form' => $question ? $form->createView() : null,
             'answers' => $answers,
             'formError' => isset($formError) ? $formError : null,
-            'questions' => $questions 
+            'questions' => $questions ,
+            'errorMessage' => isset($errorMessage)? $errorMessage:null
         ]);
     }
 

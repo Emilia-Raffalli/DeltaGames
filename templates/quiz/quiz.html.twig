@@ -15,6 +15,7 @@
     <div class= "mx-3 mx-lg-5">
         
         <div class="d-flex flex-column justify-content-center">
+
             {% if question %}
                 
                 <div class="row d-flex justify-content-center">
@@ -28,7 +29,7 @@
                                 <span class="text-primary text-center question mb-0">{{'question'|trans}} {{ question.id }}/{{ questions|length }}</span>
                             {% endif %}
                             <p class="sub-header quiz text-primary mb-4">
-                                {{ hint|trans|raw|capitalize }}
+                                {{ hint|trans|raw }}
                                 </p> 
                         </div>
                     </div>
