@@ -104,16 +104,16 @@
                 <div class="row d-flex justify-content-center mb-3">
                     <div class="col-12 ">
                         <div class="first d-flex flex-column justify-content-center height-less">
-                                <h3 class="text-primary text-center fw-bold" data-aos="zoom-in-down">
+                                <h3 class="col-lg-6 col-md-9 text-primary text-center fw-bold" data-aos="zoom-in-down">
                                     {{ 'summary-answers'|trans|raw }}
                                 </h3>
-                                <p class="sub-header quiz text-primary m-0">
+                                <p class="col-lg-8 col-md-9 sub-header quiz text-primary m-0">
                                     {{ 'summary-answers-sub'|trans|raw }}
                                 </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-8 col-lg-6 text-box-won rounded-5 p-3 p-lg-4 shadow">
+                <div class="col-12 col-md-8 col-lg-6 text-box-won rounded-5 p-3 p-lg-4 shadow mt-3 mt-lg-0">
                     {% for question in allQuestions %}
                         {% set correctAnswerDescription = 'questions.question_' ~ question.id ~ '.correctAnswerDescription' %}
                         <div class="row d-flex justify-content-center p-3 {% if loop.last %}{% else %}border-bottom{% endif %} align-items-center">
@@ -128,7 +128,7 @@
                         </div>
                     {% endfor %}
                 </div>
-                <div class="col-12 mt-4 mb-3 mb-lg-0 d-flex justify-content-center">
+                <div class="col-12 col-lg-4 mt-4 mb-3 mb-lg-0 d-flex justify-content-center">
                     <a href="https://fr.delta.com/" class="btn-delta col-12 col-md-8 col-lg-4">{{ 'action-buttons.close'|trans|raw }}</a>
                 </div>
             {% endif %}
