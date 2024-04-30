@@ -95,9 +95,8 @@
                     </div>
                 </div>
                 <div class="col-12 mt-4 mb-3 mb-lg-5 d-flex justify-content-center" data-controller="quiz">
-                    {# <a href="{{ path('app_answers') }}" class="btn-delta col-12 col-md-8 col-lg-4">{{ 'action-buttons.check-correct-answers'|trans|raw }}</a> #}
-                    <button type="submit" class="btn-delta col-12 col-md-8 col-lg-4" data-url="{{ path('app_answers') }}" data-action="click->quiz#openWindow">{{ 'action-buttons.check-correct-answers'|trans|raw }}</button>
-
+                    <a href="{{ path('app_answers') }}" class="btn-delta col-12 col-md-8 col-lg-4">{{ 'action-buttons.check-correct-answers'|trans|raw }}</a>
+                    {# <button type="submit" class="btn-delta col-12 col-md-8 col-lg-4" data-url="{{ path('app_answers') }}" data-action="click->quiz#openWindow">{{ 'action-buttons.check-correct-answers'|trans|raw }}</button> #}
                 </div>
 
 {# ROUTE ANSWERS #}  
@@ -131,7 +130,8 @@
                     {% endfor %}
                 </div>
                 <div class="col-12 col-lg-4 mt-4 mb-3 mb-lg-0 d-flex justify-content-center" data-controller="quiz">
-                    <button class="btn-delta col-12 col-md-8 col-lg-4" data-action="click->quiz#closeWindow">{{ 'action-buttons.close'|trans|raw }}</button>
+                    {# <button class="btn-delta col-12 col-md-8 col-lg-4" data-action="click->quiz#closeWindow">{{ 'action-buttons.close'|trans|raw }}</button> #}
+                    <a href ="https://pro.delta.com/content/agency/erp/en/emeai-2024-summer-network-.html" class="btn-delta col-12 col-md-8 col-lg-4">{{ 'action-buttons.close'|trans|raw }}</a>
                 </div>
             {% endif %}
         </div>

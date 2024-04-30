@@ -195,6 +195,7 @@ class QuizController extends AbstractController
             }
         }
 
+
         // dd($pageTitle);
 
         return $this->render('quiz/quiz.html.twig', [
