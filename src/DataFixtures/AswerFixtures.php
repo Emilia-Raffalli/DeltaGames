@@ -28,8 +28,8 @@ class AswerFixtures extends Fixture implements DependentFixtureInterface
             ],
             QuestionFixtures::QUESTION_3 => [
                 ["A. Los Angeles", false],
-                ["B. New York-JFK", false],
-                ["C. Atlanta", true],
+                ["B. New York-JFK", true],
+                ["C. Atlanta", false],
                 ["D. Boston", false],
             ],
             QuestionFixtures::QUESTION_4 => [
