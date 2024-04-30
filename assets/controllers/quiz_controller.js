@@ -5,7 +5,6 @@ export default class extends Controller {
     openedWindow = null; 
 
     connect() {
-        console.log('Hello');
         //récupération des informations de langues dans le localStorage 
         this.loadLanguageFromLocalStorage();
     }
@@ -15,13 +14,40 @@ export default class extends Controller {
     }
 
     loadLanguageFromLocalStorage() {
-        const selectedLanguage = localStorage.getItem('selectedLanguage');
-        if (selectedLanguage) {
-            const { flagImg, languageText, flagTitle } = JSON.parse(selectedLanguage);
-            const firstLangButton = this.linkLangageTarget;
-            if (firstLangButton) {
-                firstLangButton.innerHTML = `<img src="${flagImg}" alt="${flagTitle}" class="flag-img">${languageText}`;
-            }
+        let langCode = document.getElementById('langCode').value
+
+        console.log('langCode')
+        console.log(langCode)
+
+        let selectedLanguage = JSON.stringify({
+            flagImg: "https://flagcdn.com/w2560/gb.png",
+            languageText: "EN",
+            flagTitle: "English"
+        });
+
+        let langElement = document.getElementById(langCode)
+        console.log(langElement)
+        if(langElement) {
+            console.log(langElement)
+            const flagImg = langElement.src;
+            const languageText = langCode.toUpperCase();
+            const flagTitle = langElement.getAttribute('title');
+
+            selectedLanguage = JSON.stringify({
+                flagImg,
+                languageText,
+                flagTitle
+            });
+
+            localStorage.setItem('selectedLanguage', selectedLanguage);
+        }
+    
+        const { flagImg, languageText, flagTitle } = JSON.parse(selectedLanguage);
+        
+        const firstLangButton = this.linkLangageTarget;
+    
+        if (firstLangButton) {
+            firstLangButton.innerHTML = `<img src="${flagImg}" alt="${flagTitle}" class="flag-img">${languageText}`;
         }
     }
 
@@ -43,20 +69,21 @@ export default class extends Controller {
         }
     }
 
+
+    // // openWindow(event) {
+    
+    // //     const url = event.currentTarget.dataset.url;
+    // //     this.openedWindow = window.open(url);
+    // //     // console.log(url);
+    // // }
     // openWindow(event) {
-    
     //     const url = event.currentTarget.dataset.url;
-    //     this.openedWindow = window.open(url);
-    //     // console.log(url);
+    //     window.open(url);
     // }
-    openWindow(event) {
-        const url = event.currentTarget.dataset.url;
-        window.open(url);
-    }
     
-    closeWindow() {
-        window.close();       
-    }
+    // closeWindow() {
+    //     window.close();       
+    // }
 
 }
 

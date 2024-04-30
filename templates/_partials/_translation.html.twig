@@ -5,23 +5,23 @@
             </a>
             <div class="dropdown-menu ddContent" aria-labelledby="dropdownMenuLink" data-quiz-target="dropDownContent">
                 <a class="dropdown-item" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'fr'})) }}" data-action="click->quiz#selectLanguage" data-lang="FR" data-quiz-target="dropDownLink">
-                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/France_flat.png" alt="Français" title="Français" class="flag me-1" data-quiz-target="dropDownLinkImg">FR
+                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/France_flat.png" alt="Français" title="Français" class="flag me-1" data-quiz-target="dropDownLinkImg" id="fr">FR
                 </a>
-                <a class="dropdown-item" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'en'})) }}" data-action="click->quiz#selectLanguage" data-lang="FR" data-quiz-target="dropDownLink">
+                <a class="dropdown-item" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'en'})) }}" data-action="click->quiz#selectLanguage" data-lang="EN" data-quiz-target="dropDownLink">
                     {# <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/England_flat.png" alt="English" title="English" class="flag me-1" data-quiz-target="dropDownLinkImg">EN #}
-                    <img src="https://flagcdn.com/w2560/gb.png" alt="English" title="English" class="flag me-1" data-quiz-target="dropDownLinkImg">EN
+                    <img src="https://flagcdn.com/w2560/gb.png" alt="English" title="English" class="flag me-1" data-quiz-target="dropDownLinkImg" id="en">EN
                 </a>
                 <a class="dropdown-item" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'de'})) }}" data-action="click->quiz#selectLanguage" data-lang="DE" data-quiz-target="dropDownLink">
-                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Germany_flat.png" alt="Deutsch" title="Deutsch" class="flag me-1" data-quiz-target="dropDownLinkImg">DE
+                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Germany_flat.png" alt="Deutsch" title="Deutsch" class="flag me-1" data-quiz-target="dropDownLinkImg" id="de">DE
                 </a>
                 <a class="dropdown-item" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'it'})) }}" data-action="click->quiz#selectLanguage" data-lang="IT" data-quiz-target="dropDownLink">
-                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Italy_flat.png" alt="Italiano" title="Italiano" class="flag me-1" data-quiz-target="dropDownLinkImg">IT
+                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Italy_flat.png" alt="Italiano" title="Italiano" class="flag me-1" data-quiz-target="dropDownLinkImg" id="it">IT
                 </a>
                 <a class="dropdown-item" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'nl'})) }}" data-action="click->quiz#selectLanguage" data-lang="NL" data-quiz-target="dropDownLink">
-                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Netherlands.png" alt="netherland" title="netherland" class="flag me-1" data-quiz-target="dropDownLinkImg">NL
+                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Netherlands.png" alt="netherland" title="netherland" class="flag me-1" data-quiz-target="dropDownLinkImg" id="nl">NL
                 </a>
                 <a class="dropdown-item" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'es'})) }}" data-action="click->quiz#selectLanguage" data-lang="ES" data-quiz-target="dropDownLink">
-                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Spain_flat.png" alt="Spain" title="Spain" class="flag me-1" data-quiz-target="dropDownLinkImg">ES
+                    <img src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/Spain_flat.png" alt="Spain" title="Spain" class="flag me-1" data-quiz-target="dropDownLinkImg" id="es">ES
                 </a>
             </div>
         </div>

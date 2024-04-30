@@ -12,6 +12,6 @@ controllers:
         it: /{_locale}
 
     defaults:
-        _locale: 'fr' 
+        _locale: 'en' 
     requirements:
         _locale: 'fr|en|de|it|nl|es' 
