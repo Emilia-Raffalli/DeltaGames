@@ -4,10 +4,10 @@
 #PAGE TITLES
 
 pageTitle:
-  app_won: "Féliciations!"
+  app_won: "Félicitations!"
   app_lost: "Pas de chance"
   app_answers: "Réponses du quiz"
-  app_start: "Delta Air"
+  app_start: "Delta Air Lines"
   app_success: "Merci!"
   app_quiz: "Delta Quiz"
 

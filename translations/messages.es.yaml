@@ -1,6 +1,17 @@
 # translations/messages.fr.yaml
 # hello: Hello1
 
+#PAGE TITLES
+
+pageTitle:
+  app_won: "¡Enhorabuena!"
+  app_lost: "¡Qué pena!"
+  app_answers: "Resumen de respuestas correctas"
+  app_start: "Delta Air Lines"
+  app_success: "¡Gracias!"
+  app_quiz: "Delta Quiz"
+
+
 h3Home: '¿ERES FRIKI DE LAS AEROLÍNEAS? <br> ¿ERES "DELTA GENIUS"?'
 sub-header: "Si es así, esta es tu oportunidad para poner a prueba tus conocimientos y ganar unos divertidos stickers de Delta."
 
@@ -19,7 +30,7 @@ action-buttons:
   confirm: "CONFIRMO MIS DATOS"
   check-correct-answers: "¡comprueba las respuestas que has acertado!"
 
-thank-you: "¡Gracias !"
+thank-you: "¡Gracias!"
 thank-you-sub: "TUS DATOS SE HAN CONFIRMADO."
 confirmation-text: "Recibirás tus stickers Delta dentro de 4-8 semanas."
 

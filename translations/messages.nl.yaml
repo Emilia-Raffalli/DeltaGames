@@ -1,6 +1,15 @@
 # translations/messages.fr.yaml
 # hello: Hello1
 
+pageTitle:
+  app_won: "!Gefeliciteerd!"
+  app_lost: "Helaas!"
+  app_answers: "De juiste antwoorden op de quizvragen"
+  app_start: "Delta Air Lines"
+  app_success: "Artelijk dank!"
+  app_quiz: "Delta Quiz"
+
+
 h3Home: "BENT U EEN LUCHTVAARTFAN?<br>EEN DELTA-KENNER?"
 sub-header: "Zo ja, dan is dit uw kans om uw kennis te testen en een aantal leuke Delta-stickers te winnen."
 
@@ -21,7 +30,7 @@ action-buttons:
   check-correct-answers: "Controleer de juiste antwoorden!"
 
 
-thank-you: "HARTELIJK DANK !"
+thank-you: "HARTELIJK DANK!"
 thank-you-sub: "WIJ HEBBEN UW CONTACTGEGEVENS ONTVANGEN."
 confirmation-text: "Binnen 4 tot 8 weken ontvangt u uw Delta stickers."
 
