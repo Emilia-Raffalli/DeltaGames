@@ -99,8 +99,6 @@ class QuizController extends AbstractController
         $userSession = $session->getId();
         $participation = $participationRepository->findOneBy(['uniqParticipationId' => $uniqId]);
 
-    
-
         // Générer un message d'erreur si l'utilisateur a déjà participé au quiz, et rediriger vers page start
         // $errorMessages = [];
         // if ($participation !== null && $participation->getSelectedAnswers()->count() > 0) {
@@ -128,15 +126,17 @@ class QuizController extends AbstractController
 
 
         // 2- Créer une participation 
-            $participation = new Participation();
-            $participation->setUserSession($userSession);
-            $participation->setUniqParticipationId($uniqId);
-            // dd($participation);
+            if (!$participation) {
+                $participation = new Participation();
+                $participation->setUserSession($userSession);
+                $participation->setUniqParticipationId($uniqId);
+                // dd($participation);
+                $em->persist($participation);
+                $em->flush();
+            
+                // dd($participation);
+            }
 
-            $em->persist($participation);
-            $em->flush();
-        
-            // dd($participation);
         
         // Récupérer la première question et ses réponses associées
         $question = $questionRepository->find($questionId);
@@ -158,12 +158,14 @@ class QuizController extends AbstractController
             $selectedAnswer = $form->get('answer')->getData();
             // dd($selectedAnswer);
 
-             // Ajouter les données à la session de participation
+             // Ajouter les données à la  participation
             if (!$participation->getQuestions()->contains($question)) {
                 $participation->addQuestion($question);
                 $participation->addSelectedAnswer($selectedAnswer);
                 $em->persist($participation);
                 $em->flush();
+
+                // dd($participation->getSelectedAnswers()->toArray());
             }
             
             $maxQuestionId = $questionRepository->findMaxQuestionId();
@@ -172,6 +174,8 @@ class QuizController extends AbstractController
 
                 $totalSelectedAnswers = $participation->getSelectedAnswers()->toArray();
                 // $countCorrectAnswers = 0;
+
+                // dd($totalSelectedAnswers);
 
                 $hasWin = TRUE;
                 foreach ($totalSelectedAnswers as $answer) {
@@ -226,38 +230,54 @@ class QuizController extends AbstractController
     {
     
     $allQuestions = $questionRepository->findAll();
+    
+    // dd($this->requestStack->getSession()->get('uniqId'));
+
+    if($this->requestStack->getSession()->get('uniqId') !== null) {
+        $uniqId = $this->requestStack->getSession()->get('uniqId');
+        $participation = $participationRepository->findOneBy(['uniqParticipationId' => $uniqId]);
+
+        $errorMessage = null; 
+
+        $user = new User();
+        $form = $this->createForm(UserType::class, $user);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $em->persist($user);
+            $em->flush();
+            
+            // dd($participation);
+            // dd($participation->getUser());
+            // dd($user);
+            $participation->setUser($user);
+            $em->persist($participation);
+            $em->flush();
+
+            // $email = (new TemplatedEmail())
+            // ->from('e.raffalli@hotmail.fr')
+            // ->to(new Address($user->getEmail()))
+            // ->subject('Merci pour votre participation!')
+            // ->htmlTemplate('email/signup.html.twig')
+            // ->locale('fr')
+            // ->context([
+            //     'username' => $user->getFirstName().' '.$user->getLastName(),
+            // ]);
+
+            // $mailer->send($email);
+            // dd($user);
+
+            return $this->redirectToRoute('app_success');
+        }
 
 
-    $userSession = $session->getId();
-    $participation = $participationRepository->findOneBy(['userSession' => $userSession]);
 
-    $errorMessage = null; 
-
-    $user = new User();
-    $form = $this->createForm(UserType::class, $user);
-
-    $form->handleRequest($request);
-
-    if ($form->isSubmitted() && $form->isValid()) {
-
-        $em->persist($user);
-        $em->flush();
-
-        // $email = (new TemplatedEmail())
-        // ->from('e.raffalli@hotmail.fr')
-        // ->to(new Address($user->getEmail()))
-        // ->subject('Merci pour votre participation!')
-        // ->htmlTemplate('email/signup.html.twig')
-        // ->locale('fr')
-        // ->context([
-        //     'username' => $user->getFirstName().' '.$user->getLastName(),
-        // ]);
-
-        // $mailer->send($email);
-        // dd($user);
-
-        return $this->redirectToRoute('app_success');
     }
+    // dd($participation->getSelectedAnswers()->toArray());
+
+    
 
     $pageTitle = [
         'app_won' => $translator->trans('pageTitle.app_won'),
