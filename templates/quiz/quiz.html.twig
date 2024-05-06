@@ -8,10 +8,8 @@
     {% set hint = 'questions.question_'~ question.id ~ '.hint' %}
 
 
-{# <body class="bg01 bg-blue-delta d-flex flex-column"> #}
 <body>
     {% include "_partials/_translation.html.twig" %}
-    {# <div class="container-fluid p-5 pt-0 text-center d-flex flex-column transition"> #}
     <div class= "mx-3 mx-lg-5">
         
         <div class="d-flex flex-column justify-content-center">
@@ -35,45 +33,36 @@
                     </div>
                 </div>
 
-                {# <div class="row d-flex flex-column justify-content-center"> #}
-                    {# <div class="col" data-controller="quiz"> #}
-                        {{ form_start(form, {
-                            'attr': {
-                            'class':'row d-flex justify-content-center flex-column align-items-center',
-                            'data-controller':'quiz'
-                        }})}}
+                {{ form_start(form, {
+                    'attr': {
+                    'class':'row d-flex justify-content-center flex-column align-items-center',
+                    'data-controller':'quiz'
+                }})}}
 
-                        <div class="col-12 col-md-9 col-lg-6">
-                            <div class="text-box-won rounded-5 d-flex align-items-center mb-4">
-                                <p class="py-3 px-3 px-lg-4 p-lg-4 fw-bold text-center text-primary text-start questionContent mb-0">
-                                    {{ questionTmp | trans|raw }}
-                                </p>
+                <div class="col-12 col-md-9 col-lg-6">
+                    <div class="text-box-won rounded-5 d-flex align-items-center mb-4">
+                        <p class="py-3 px-3 px-lg-4 p-lg-4 fw-bold text-center text-primary text-start questionContent mb-0">
+                            {{ questionTmp | trans|raw }}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-9 col-lg-6 d-flex flex-column align-items-center mt-1">
+
+                    {% for answer in form.answer %}
+                        {% set answerKey = 'questions.question_' ~ question.id ~ '.answers.answer_' ~ loop.index %}
+                        <div class="col-12 col-lg-9 mb-3">
+                            <div class="custom-answer fw-bold form-control btn-answer rounded-5 mx-auto choice bg-light text-primary text-start px-4 pointer">
+                                {{ form_widget(answer) }}
+                                {{ form_label(answer, answerKey|trans, {'label_attr': {'class': 'w-100 pointer answerChoice'}}) }}
                             </div>
                         </div>
+                    {% endfor %}
 
-                        <div class="col-12 col-md-9 col-lg-6 d-flex flex-column align-items-center mt-1">
+                    {{ form_widget(form.submit) }}
+                </div>
+                {{ form_end(form) }}
 
-                            {% for answer in form.answer %}
-                                {% set answerKey = 'questions.question_' ~ question.id ~ '.answers.answer_' ~ loop.index %}
-                                <div class="col-12 col-lg-9 mb-3">
-                                {# {{dump(answer)}} #}
-                                    <div class="custom-answer fw-bold form-control btn-answer rounded-5 mx-auto choice bg-light text-primary text-start px-4 pointer">
-                                        {{ form_widget(answer) }}
-                                        {{ form_label(answer, answerKey|trans, {'label_attr': {'class': 'w-100 pointer answerChoice'}}) }}
-                                    </div>
-                                </div>
-                            {% endfor %}
-
-                            {{ form_widget(form.submit) }}
-                            {# {{ form_row(form.submit, {
-                                'attr': {
-                                'class':'row d-flex justify-content-center mx-auto',
-                                'data-controller':'quiz'
-                            }})}} #}
-                        </div>
-                        {{ form_end(form) }}
-                    {# </div> #}
-                {# </div> #}
             {% endif %}
         </div>
     </div>
