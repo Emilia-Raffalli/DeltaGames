@@ -21,8 +21,11 @@ use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Mime\Address;
+use Symfony\Component\Mime\Email;
 use Symfony\Config\Framework\TranslatorConfig;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
+
 
 class QuizController extends AbstractController
 {
@@ -256,18 +259,38 @@ class QuizController extends AbstractController
             $em->persist($participation);
             $em->flush();
 
-            // $email = (new TemplatedEmail())
-            // ->from('e.raffalli@hotmail.fr')
-            // ->to(new Address($user->getEmail()))
-            // ->subject('Merci pour votre participation!')
-            // ->htmlTemplate('email/signup.html.twig')
-            // ->locale('fr')
-            // ->context([
-            //     'username' => $user->getFirstName().' '.$user->getLastName(),
-            // ]);
+            $email = (new Email())
+            ->from('e.raffalli@hotmail.fr')
+            ->to('e.raffalli@hotmail.fr')
+            ->subject('Test mail!')
+            ->text('Merci pour votre participation!')
+            ->html('<p>See Twig integration for better HTML integration!</p>');
 
-            // $mailer->send($email);
+        try {
+            $mailer->send($email);
+            return $this->redirectToRoute('app_success');
+        } catch (TransportExceptionInterface $e) {
+            // En cas d'erreur, capture l'exception et affiche le message
+            return new Response('Erreur lors de l\'envoi de l\'email : ' . $e->getMessage());
+        }
+
+
+        //     $email = (new Email())
+        //     ->from('e.raffalli@hotmail.fr')
+        //     ->to('e.raffalli@hotmail.fr')
+        //     //->cc('cc@example.com')
+        //     //->bcc('bcc@example.com')
+        //     //->replyTo('fabien@example.com')
+        //     //->priority(Email::PRIORITY_HIGH)
+        //     ->subject('Time for Symfony Mailer!')
+        //     ->text('Sending emails is fun again!')
+        //     ->html('<p>See Twig integration for better HTML integration!</p>');
+
+        // $mailer->send($email);
+
             // dd($user);
+        
+
 
             return $this->redirectToRoute('app_success');
         }
